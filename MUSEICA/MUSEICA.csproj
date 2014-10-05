@@ -88,8 +88,10 @@
     <Compile Include="Persistence\IClientePersister.cs" />
     <Compile Include="Persistence\IPrenotazionePersister.cs" />
     <Compile Include="Persistence\ISalaPersister.cs" />
+    <Compile Include="Persistence\ITipologiaPersister.cs" />
     <Compile Include="Persistence\PrenotazionePersister.cs" />
     <Compile Include="Persistence\SalaPersister.cs" />
+    <Compile Include="Persistence\TipologiaPersister.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
