@@ -55,9 +55,7 @@ namespace MUSEICA.Persistence
                 _xmlDocument.Load(fileName);
             }
 
-            #endregion
-
-            #region ISalaLoader
+            #endregion           
 
             public List<Sala> LoadSale()
             {
@@ -78,7 +76,7 @@ namespace MUSEICA.Persistence
                 }
                 return sale;
             }
-            #endregion
+            
         }
         #endregion
 
