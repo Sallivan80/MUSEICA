@@ -222,10 +222,7 @@ namespace MUSEICA.Persistence
                     _xmlDocument.DocumentElement.InsertAfter(clienteNode, _xmlDocument.DocumentElement.LastChild);
                 }
                 _xmlDocument.Save(_fileName);
-            }
-
-
-           
+            }           
         }
 
         #endregion
