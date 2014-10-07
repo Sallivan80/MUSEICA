@@ -69,7 +69,7 @@ namespace MUSEICA.Persistence
                     string idPrenotazione = node.SelectSingleNode("IdPrenotazione").InnerText;
                     Cliente cliente = LoadClienteNodes(node.SelectSingleNode("Cliente"));
                     Sala sala = LoadSalaNodes(node.SelectSingleNode("Sala"));
-                    DateTime data = DateTime.Parse (node.SelectSingleNode("Indirizzo").InnerText);
+                    DateTime data = DateTime.Parse (node.SelectSingleNode("Data").InnerText);
                     int oraInizio = Convert.ToInt32( node.SelectSingleNode("OraInizio").InnerText);
                     int oraFine = Convert.ToInt32(node.SelectSingleNode("OraFine").InnerText);
                     PrenotazioneSingola prenotazione= new PrenotazioneSingola(idPrenotazione, cliente, sala, data,oraInizio,oraFine);
@@ -103,32 +103,27 @@ namespace MUSEICA.Persistence
             private Cliente LoadClienteNodes(XmlNode clienteNode)
             {
                 Cliente result = null; ;
-                XmlNodeList nodes = clienteNode.ChildNodes;
-                foreach (XmlNode node in nodes)
-                {
-                    string nome = node.SelectSingleNode("Nome").InnerText;
-                    string cognome = node.SelectSingleNode("Cognome").InnerText;
-                    string telefono = node.SelectSingleNode("Telefono").InnerText;
-                    string indirizzo = node.SelectSingleNode("Indirizzo").InnerText;
+                
+                    string nome = clienteNode.SelectSingleNode("Nome").InnerText;
+                    string cognome = clienteNode.SelectSingleNode("Cognome").InnerText;
+                    string telefono = clienteNode.SelectSingleNode("Telefono").InnerText;
+                    string indirizzo = clienteNode.SelectSingleNode("Indirizzo").InnerText;
                     result = new Cliente(nome, cognome, telefono, indirizzo);
 
-                }
+                
                 return result;
             }
 
             private Sala LoadSalaNodes(XmlNode salaNode)
             {
-                Sala result = null; ;
-                XmlNodeList nodes = salaNode.ChildNodes;
+                Sala result = null; 
 
-                foreach (XmlNode node in nodes)
-                {
-                    string idSala = node.SelectSingleNode("IdSala").InnerText;
-                    string indirizzo = node.SelectSingleNode("Indirizzo").InnerText;
-                    string nomeSala = node.SelectSingleNode("NomeSala").InnerText;
-                    ITipologiaSala tipologia = TipologiaSalaFactory.GetTipologia(node.SelectSingleNode("Tipologia").InnerText);
+                string idSala = salaNode.SelectSingleNode("IdSala").InnerText;
+                string indirizzo = salaNode.SelectSingleNode("Indirizzo").InnerText;
+                string nomeSala = salaNode.SelectSingleNode("NomeSala").InnerText;
+                ITipologiaSala tipologia = TipologiaSalaFactory.GetTipologia(salaNode.SelectSingleNode("Tipologia").InnerText);
                     result = new Sala(idSala, indirizzo, nomeSala, tipologia);
-                }
+               
 
                 return result;
             }
@@ -140,7 +135,7 @@ namespace MUSEICA.Persistence
                     string idPrenotazione = node.SelectSingleNode("IdPrenotazione").InnerText;
                     Cliente cliente = LoadClienteNodes(node.SelectSingleNode("Cliente"));
                     Sala sala = LoadSalaNodes(node.SelectSingleNode("Sala"));
-                    DateTime data = DateTime.Parse(node.SelectSingleNode("Indirizzo").InnerText);
+                    DateTime data = DateTime.Parse(node.SelectSingleNode("Data").InnerText);
                     int oraInizio = Convert.ToInt32(node.SelectSingleNode("OraInizio").InnerText);
                     int oraFine = Convert.ToInt32(node.SelectSingleNode("OraFine").InnerText);
                     PrenotazioneSingola prenotazione = new PrenotazioneSingola(idPrenotazione, cliente, sala, data, oraInizio, oraFine);
@@ -183,13 +178,11 @@ namespace MUSEICA.Persistence
 
                 foreach (XmlNode node in nodes)
                 {
-                    string idPrenotazione = node.SelectSingleNode("IdPrenotazione").InnerText;
-                   
-                   
+                    string idPrenotazione = node.SelectSingleNode("IdPrenotazione").InnerText;                  
 
-                    if (prenotazioneSingola.IdPrenotazione.ToLower().Equals(prenotazioneSingola.IdPrenotazione.ToLower()))
+                    if (idPrenotazione.ToLower()==prenotazioneSingola.IdPrenotazione.ToLower())
                     {
-                        node.SelectSingleNode("Data").InnerText = prenotazioneSingolaToSave.Data.ToString();
+                        node.SelectSingleNode("Data").InnerText = prenotazioneSingolaToSave.Data.ToShortDateString();
                         node.SelectSingleNode("OraInizio").InnerText = prenotazioneSingolaToSave.OraInizio.ToString();
                         node.SelectSingleNode("OraFine").InnerText = prenotazioneSingolaToSave.OraFine.ToString();
 
@@ -203,61 +196,7 @@ namespace MUSEICA.Persistence
                 {
                     XmlElement prenotazioneSingolaNode = _xmlDocument.CreateElement("PrenotazioneSingola");
 
-                    XmlElement idPrenotazioneElement = _xmlDocument.CreateElement("IdPrenotazione");
-
-                    //CLIENTE
-                    XmlElement clienteNode = _xmlDocument.CreateElement("Cliente");
-                        XmlElement nomeElement = _xmlDocument.CreateElement("Nome");
-                        XmlElement cognomeElement = _xmlDocument.CreateElement("Cognome");
-                        XmlElement telefonoElement = _xmlDocument.CreateElement("Telefono");
-                        XmlElement indirizzoElement = _xmlDocument.CreateElement("Indirizzo");
-
-                    //SALA
-                    XmlElement salaNode = _xmlDocument.CreateElement("Sala");
-                        XmlElement idSalaElement = _xmlDocument.CreateElement("IdSala");
-                        XmlElement indirizzoSalaElement = _xmlDocument.CreateElement("Indirizzo");
-                        XmlElement nomeSalaElement = _xmlDocument.CreateElement("NomeSala");
-                        XmlElement tipologiaElement = _xmlDocument.CreateElement("Tipologia");  
-  
-                    XmlElement dataElement = _xmlDocument.CreateElement("Data");
-                    XmlElement oraInizioElement = _xmlDocument.CreateElement("OraInizio");
-                    XmlElement oraFineElement = _xmlDocument.CreateElement("OraFine");
-
-
-                    idPrenotazioneElement.InnerText = prenotazioneSingola.IdPrenotazione;
-                    //CLIENTE
-                        nomeElement.InnerText = prenotazioneSingola.Cliente.Nome;
-                        cognomeElement.InnerText = prenotazioneSingola.Cliente.Cognome;
-                        telefonoElement.InnerText = prenotazioneSingola.Cliente.Telefono;
-                        indirizzoElement.InnerText = prenotazioneSingola.Cliente.Indirizzo;
-
-                        clienteNode.AppendChild(nomeElement);
-                        clienteNode.AppendChild(cognomeElement);
-                        clienteNode.AppendChild(telefonoElement);
-                        clienteNode.AppendChild(indirizzoElement);
-
-                    //SALA
-                        idSalaElement.InnerText = prenotazioneSingola.Sala.IdSala;
-                        indirizzoElement.InnerText = prenotazioneSingola.Sala.Indirizzo;
-                        nomeSalaElement.InnerText = prenotazioneSingola.Sala.NomeSala;
-                        tipologiaElement.InnerText = prenotazioneSingola.Sala.Tipo.NomeTipologia;
-
-                        salaNode.AppendChild(idSalaElement);
-                        salaNode.AppendChild(indirizzoSalaElement);
-                        salaNode.AppendChild(nomeSalaElement);
-                        salaNode.AppendChild(tipologiaElement);
-
-                    dataElement.InnerText = prenotazioneSingola.Data.ToString();
-                    oraInizioElement.InnerText = prenotazioneSingola.OraInizio.ToString();
-                    oraFineElement.InnerText = prenotazioneSingola.OraFine.ToString();
-
-
-                    prenotazioneSingolaNode.AppendChild(idPrenotazioneElement);
-                    prenotazioneSingolaNode.AppendChild(clienteNode);
-                    prenotazioneSingolaNode.AppendChild(salaNode);
-                    prenotazioneSingolaNode.AppendChild(dataElement);
-                    prenotazioneSingolaNode.AppendChild(oraInizioElement);
-                    prenotazioneSingolaNode.AppendChild(oraFineElement);                    
+                    CreaNodoPrenotazioneSingola(prenotazioneSingolaNode, prenotazioneSingola);                                    
 
                    
                     _xmlDocument.DocumentElement.InsertAfter(prenotazioneSingolaNode, _xmlDocument.DocumentElement.LastChild);
@@ -265,10 +204,96 @@ namespace MUSEICA.Persistence
                 _xmlDocument.Save(_fileName);
             }
 
+          
             public void SaveUpdatePrenotazionePeriodica(PrenotazionePeriodica prenotazione)
             {
-              
-            }           
+                PrenotazionePeriodica prenotazionePeriodicaToSave = prenotazione;
+
+                XmlElement prenotazionePeriodicaNode = _xmlDocument.CreateElement("PrenotazionePeriodica");
+                foreach(PrenotazioneSingola p in prenotazionePeriodicaToSave.Prenotazioni)
+                {
+                    XmlElement prenotazioneSingolaNode = _xmlDocument.CreateElement("PrenotazioneSingola");
+
+                    CreaNodoPrenotazioneSingola(prenotazioneSingolaNode, p);
+
+                    prenotazionePeriodicaNode.AppendChild(prenotazioneSingolaNode);
+                }
+
+                _xmlDocument.DocumentElement.InsertAfter(prenotazionePeriodicaNode, _xmlDocument.DocumentElement.LastChild);
+                _xmlDocument.Save(_fileName);
+
+            }
+
+            #region CreaNodi private
+            private void CreaNodoPrenotazioneSingola(XmlElement prenotazioneSingolaNode, PrenotazioneSingola prenotazioneSingola)
+            {
+                XmlElement idPrenotazioneElement = _xmlDocument.CreateElement("IdPrenotazione");
+                XmlElement clienteNode = _xmlDocument.CreateElement("Cliente");
+                XmlElement salaNode = _xmlDocument.CreateElement("Sala");
+                XmlElement dataElement = _xmlDocument.CreateElement("Data");
+                XmlElement oraInizioElement = _xmlDocument.CreateElement("OraInizio");
+                XmlElement oraFineElement = _xmlDocument.CreateElement("OraFine");
+
+
+                idPrenotazioneElement.InnerText = prenotazioneSingola.IdPrenotazione;
+
+                //CLIENTE
+                CreaNodoCliente(clienteNode, prenotazioneSingola);
+                //SALA
+                CreaNodoSala(salaNode, prenotazioneSingola);
+
+                dataElement.InnerText = prenotazioneSingola.Data.ToString();
+                oraInizioElement.InnerText = prenotazioneSingola.OraInizio.ToString();
+                oraFineElement.InnerText = prenotazioneSingola.OraFine.ToString();
+
+
+                prenotazioneSingolaNode.AppendChild(idPrenotazioneElement);
+                prenotazioneSingolaNode.AppendChild(clienteNode);
+                prenotazioneSingolaNode.AppendChild(salaNode);
+                prenotazioneSingolaNode.AppendChild(dataElement);
+                prenotazioneSingolaNode.AppendChild(oraInizioElement);
+                prenotazioneSingolaNode.AppendChild(oraFineElement);
+            }
+            private void CreaNodoCliente(XmlElement clienteNode, PrenotazioneSingola prenotazioneSingola)
+            {
+                XmlElement nomeElement = _xmlDocument.CreateElement("Nome");
+                XmlElement cognomeElement = _xmlDocument.CreateElement("Cognome");
+                XmlElement telefonoElement = _xmlDocument.CreateElement("Telefono");
+                XmlElement indirizzoElement = _xmlDocument.CreateElement("Indirizzo");
+
+                nomeElement.InnerText = prenotazioneSingola.Cliente.Nome;
+                cognomeElement.InnerText = prenotazioneSingola.Cliente.Cognome;
+                telefonoElement.InnerText = prenotazioneSingola.Cliente.Telefono;
+                indirizzoElement.InnerText = prenotazioneSingola.Cliente.Indirizzo;
+
+                clienteNode.AppendChild(nomeElement);
+                clienteNode.AppendChild(cognomeElement);
+                clienteNode.AppendChild(telefonoElement);
+                clienteNode.AppendChild(indirizzoElement);
+
+
+            }
+
+            private void CreaNodoSala(XmlElement salaNode, PrenotazioneSingola prenotazioneSingola)
+            {
+                XmlElement idSalaElement = _xmlDocument.CreateElement("IdSala");
+                XmlElement indirizzoSalaElement = _xmlDocument.CreateElement("Indirizzo");
+                XmlElement nomeSalaElement = _xmlDocument.CreateElement("NomeSala");
+                XmlElement tipologiaElement = _xmlDocument.CreateElement("Tipologia");
+
+                idSalaElement.InnerText = prenotazioneSingola.Sala.IdSala;
+                indirizzoSalaElement.InnerText = prenotazioneSingola.Sala.Indirizzo;
+                nomeSalaElement.InnerText = prenotazioneSingola.Sala.NomeSala;
+                tipologiaElement.InnerText = prenotazioneSingola.Sala.Tipo.NomeTipologia;
+
+                salaNode.AppendChild(idSalaElement);
+                salaNode.AppendChild(indirizzoSalaElement);
+                salaNode.AppendChild(nomeSalaElement);
+                salaNode.AppendChild(tipologiaElement);
+
+
+            }
+            #endregion
         }
 
         #endregion

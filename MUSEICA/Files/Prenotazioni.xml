@@ -1,0 +1,187 @@
+<Prenotazioni>
+  <PrenotazioneSingola>
+    <IdPrenotazione>000000</IdPrenotazione>
+    <Cliente>
+      <Nome>Nicolas</Nome>
+      <Cognome>Montesi</Cognome>
+      <Telefono>3334012070</Telefono>
+      <Indirizzo>Via ciao</Indirizzo>
+    </Cliente>
+    <Sala>
+      <IdSala>0001</IdSala>
+      <Indirizzo>via della sala</Indirizzo>
+      <NomeSala>nomeSala</NomeSala>
+      <Tipologia>Caparezza</Tipologia>
+    </Sala>
+    <Data>26/08/2014 00:00:00</Data>
+    <OraInizio>16</OraInizio>
+    <OraFine>19</OraFine>
+  </PrenotazioneSingola>
+  <PrenotazionePeriodica>
+    <DataFine>23/08/2014</DataFine>
+    <PrenotazioneSingola>
+      <IdPrenotazione>000000</IdPrenotazione>
+      <Cliente>
+        <Nome>Nicolas</Nome>
+        <Cognome>Montesi</Cognome>
+        <Telefono>3334012070</Telefono>
+        <Indirizzo>Via ciao</Indirizzo>
+      </Cliente>
+      <Sala>
+        <IdSala>0001</IdSala>
+        <Indirizzo>via della sala</Indirizzo>
+        <NomeSala>nomeSala</NomeSala>
+        <Tipologia>Caparezza</Tipologia>
+      </Sala>
+      <Data>21/08/2014</Data>
+      <OraInizio>12</OraInizio>
+      <OraFine>13</OraFine>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <IdPrenotazione>000000</IdPrenotazione>
+      <Cliente>
+        <Nome>Nicolas</Nome>
+        <Cognome>Montesi</Cognome>
+        <Telefono>3334012070</Telefono>
+        <Indirizzo>Via ciao</Indirizzo>
+      </Cliente>
+      <Sala>
+        <IdSala>0001</IdSala>
+        <Indirizzo>via della sala2</Indirizzo>
+        <NomeSala>nomeSala</NomeSala>
+        <Tipologia>Caparezza</Tipologia>
+      </Sala>
+      <Data>22/08/2014</Data>
+      <OraInizio>9</OraInizio>
+      <OraFine>10</OraFine>
+    </PrenotazioneSingola>
+  </PrenotazionePeriodica>
+  <PrenotazioneSingola>
+    <IdPrenotazione>11111</IdPrenotazione>
+    <Cliente>
+      <Nome>Jacopo</Nome>
+      <Cognome>Maiolini</Cognome>
+      <Telefono>123456789</Telefono>
+      <Indirizzo>via borgo</Indirizzo>
+    </Cliente>
+    <Sala>
+      <IdSala>222222</IdSala>
+      <Indirizzo>via sala3</Indirizzo>
+      <NomeSala>nome sala 3</NomeSala>
+      <Tipologia>Morrison</Tipologia>
+    </Sala>
+    <Data>30/05/2014 00:00:00</Data>
+    <OraInizio>20</OraInizio>
+    <OraFine>22</OraFine>
+  </PrenotazioneSingola>
+  <PrenotazionePeriodica>
+    <PrenotazioneSingola>
+      <IdPrenotazione>preper1</IdPrenotazione>
+      <Cliente>
+        <Nome>Mattia</Nome>
+        <Cognome>Tisba</Cognome>
+        <Telefono>123456789</Telefono>
+        <Indirizzo>via cidie</Indirizzo>
+      </Cliente>
+      <Sala>
+        <IdSala>012</IdSala>
+        <Indirizzo>indirizzosala4</Indirizzo>
+        <NomeSala>nomesala4</NomeSala>
+        <Tipologia>Morrison</Tipologia>
+      </Sala>
+      <Data>06/10/2014 00:00:00</Data>
+      <OraInizio>10</OraInizio>
+      <OraFine>12</OraFine>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <IdPrenotazione>preper1</IdPrenotazione>
+      <Cliente>
+        <Nome>Mattia</Nome>
+        <Cognome>Tisba</Cognome>
+        <Telefono>123456789</Telefono>
+        <Indirizzo>via cidie</Indirizzo>
+      </Cliente>
+      <Sala>
+        <IdSala>012</IdSala>
+        <Indirizzo>indirizzosala4</Indirizzo>
+        <NomeSala>nomesala4</NomeSala>
+        <Tipologia>Morrison</Tipologia>
+      </Sala>
+      <Data>13/10/2014 00:00:00</Data>
+      <OraInizio>10</OraInizio>
+      <OraFine>12</OraFine>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <IdPrenotazione>preper1</IdPrenotazione>
+      <Cliente>
+        <Nome>Mattia</Nome>
+        <Cognome>Tisba</Cognome>
+        <Telefono>123456789</Telefono>
+        <Indirizzo>via cidie</Indirizzo>
+      </Cliente>
+      <Sala>
+        <IdSala>012</IdSala>
+        <Indirizzo>indirizzosala4</Indirizzo>
+        <NomeSala>nomesala4</NomeSala>
+        <Tipologia>Morrison</Tipologia>
+      </Sala>
+      <Data>20/10/2014 00:00:00</Data>
+      <OraInizio>10</OraInizio>
+      <OraFine>12</OraFine>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <IdPrenotazione>preper1</IdPrenotazione>
+      <Cliente>
+        <Nome>Mattia</Nome>
+        <Cognome>Tisba</Cognome>
+        <Telefono>123456789</Telefono>
+        <Indirizzo>via cidie</Indirizzo>
+      </Cliente>
+      <Sala>
+        <IdSala>012</IdSala>
+        <Indirizzo>indirizzosala4</Indirizzo>
+        <NomeSala>nomesala4</NomeSala>
+        <Tipologia>Morrison</Tipologia>
+      </Sala>
+      <Data>08/10/2014 00:00:00</Data>
+      <OraInizio>10</OraInizio>
+      <OraFine>12</OraFine>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <IdPrenotazione>preper1</IdPrenotazione>
+      <Cliente>
+        <Nome>Mattia</Nome>
+        <Cognome>Tisba</Cognome>
+        <Telefono>123456789</Telefono>
+        <Indirizzo>via cidie</Indirizzo>
+      </Cliente>
+      <Sala>
+        <IdSala>012</IdSala>
+        <Indirizzo>indirizzosala4</Indirizzo>
+        <NomeSala>nomesala4</NomeSala>
+        <Tipologia>Morrison</Tipologia>
+      </Sala>
+      <Data>15/10/2014 00:00:00</Data>
+      <OraInizio>10</OraInizio>
+      <OraFine>12</OraFine>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <IdPrenotazione>preper1</IdPrenotazione>
+      <Cliente>
+        <Nome>Mattia</Nome>
+        <Cognome>Tisba</Cognome>
+        <Telefono>123456789</Telefono>
+        <Indirizzo>via cidie</Indirizzo>
+      </Cliente>
+      <Sala>
+        <IdSala>012</IdSala>
+        <Indirizzo>indirizzosala4</Indirizzo>
+        <NomeSala>nomesala4</NomeSala>
+        <Tipologia>Morrison</Tipologia>
+      </Sala>
+      <Data>22/10/2014 00:00:00</Data>
+      <OraInizio>10</OraInizio>
+      <OraFine>12</OraFine>
+    </PrenotazioneSingola>
+  </PrenotazionePeriodica>
+</Prenotazioni>
