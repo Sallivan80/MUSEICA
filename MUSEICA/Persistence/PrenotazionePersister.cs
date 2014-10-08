@@ -132,6 +132,7 @@ namespace MUSEICA.Persistence
 
                 return result;
             }
+
             private List<PrenotazioneSingola> LoadPrenotazioniSingoleNodes(XmlNodeList prenotazioniNodes)
             {
                 List<PrenotazioneSingola> result = new List<PrenotazioneSingola>();
@@ -267,7 +268,7 @@ namespace MUSEICA.Persistence
 
             public void SaveUpdatePrenotazionePeriodica(PrenotazionePeriodica prenotazione)
             {
-              
+                
             }           
         }
 
