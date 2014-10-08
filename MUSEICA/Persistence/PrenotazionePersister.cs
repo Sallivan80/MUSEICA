@@ -123,10 +123,11 @@ namespace MUSEICA.Persistence
                 string nomeSala = salaNode.SelectSingleNode("NomeSala").InnerText;
                 ITipologiaSala tipologia = TipologiaSalaFactory.GetTipologia(salaNode.SelectSingleNode("Tipologia").InnerText);
                     result = new Sala(idSala, indirizzo, nomeSala, tipologia);
-               
+
 
                 return result;
             }
+
             private List<PrenotazioneSingola> LoadPrenotazioniSingoleNodes(XmlNodeList prenotazioniNodes)
             {
                 List<PrenotazioneSingola> result = new List<PrenotazioneSingola>();
@@ -178,8 +179,8 @@ namespace MUSEICA.Persistence
 
                 foreach (XmlNode node in nodes)
                 {
-                    string idPrenotazione = node.SelectSingleNode("IdPrenotazione").InnerText;                  
-
+                    string idPrenotazione = node.SelectSingleNode("IdPrenotazione").InnerText;
+                   
                     if (idPrenotazione.ToLower()==prenotazioneSingola.IdPrenotazione.ToLower())
                     {
                         node.SelectSingleNode("Data").InnerText = prenotazioneSingolaToSave.Data.ToShortDateString();
@@ -203,7 +204,6 @@ namespace MUSEICA.Persistence
                 }
                 _xmlDocument.Save(_fileName);
             }
-
           
             public void SaveUpdatePrenotazionePeriodica(PrenotazionePeriodica prenotazione)
             {
@@ -225,19 +225,20 @@ namespace MUSEICA.Persistence
             }
 
             #region CreaNodi private
+
             private void CreaNodoPrenotazioneSingola(XmlElement prenotazioneSingolaNode, PrenotazioneSingola prenotazioneSingola)
             {
                 XmlElement idPrenotazioneElement = _xmlDocument.CreateElement("IdPrenotazione");
-                XmlElement clienteNode = _xmlDocument.CreateElement("Cliente");
-                XmlElement salaNode = _xmlDocument.CreateElement("Sala");
-                XmlElement dataElement = _xmlDocument.CreateElement("Data");
-                XmlElement oraInizioElement = _xmlDocument.CreateElement("OraInizio");
-                XmlElement oraFineElement = _xmlDocument.CreateElement("OraFine");
+                    XmlElement clienteNode = _xmlDocument.CreateElement("Cliente");
+                    XmlElement salaNode = _xmlDocument.CreateElement("Sala");
+                    XmlElement dataElement = _xmlDocument.CreateElement("Data");
+                    XmlElement oraInizioElement = _xmlDocument.CreateElement("OraInizio");
+                    XmlElement oraFineElement = _xmlDocument.CreateElement("OraFine");
 
 
-                idPrenotazioneElement.InnerText = prenotazioneSingola.IdPrenotazione;
+                    idPrenotazioneElement.InnerText = prenotazioneSingola.IdPrenotazione;
 
-                //CLIENTE
+                    //CLIENTE
                 CreaNodoCliente(clienteNode, prenotazioneSingola);
                 //SALA
                 CreaNodoSala(salaNode, prenotazioneSingola);
@@ -254,6 +255,7 @@ namespace MUSEICA.Persistence
                 prenotazioneSingolaNode.AppendChild(oraInizioElement);
                 prenotazioneSingolaNode.AppendChild(oraFineElement);
             }
+
             private void CreaNodoCliente(XmlElement clienteNode, PrenotazioneSingola prenotazioneSingola)
             {
                 XmlElement nomeElement = _xmlDocument.CreateElement("Nome");
@@ -261,15 +263,15 @@ namespace MUSEICA.Persistence
                 XmlElement telefonoElement = _xmlDocument.CreateElement("Telefono");
                 XmlElement indirizzoElement = _xmlDocument.CreateElement("Indirizzo");
 
-                nomeElement.InnerText = prenotazioneSingola.Cliente.Nome;
-                cognomeElement.InnerText = prenotazioneSingola.Cliente.Cognome;
-                telefonoElement.InnerText = prenotazioneSingola.Cliente.Telefono;
-                indirizzoElement.InnerText = prenotazioneSingola.Cliente.Indirizzo;
+                        nomeElement.InnerText = prenotazioneSingola.Cliente.Nome;
+                        cognomeElement.InnerText = prenotazioneSingola.Cliente.Cognome;
+                        telefonoElement.InnerText = prenotazioneSingola.Cliente.Telefono;
+                        indirizzoElement.InnerText = prenotazioneSingola.Cliente.Indirizzo;
 
-                clienteNode.AppendChild(nomeElement);
-                clienteNode.AppendChild(cognomeElement);
-                clienteNode.AppendChild(telefonoElement);
-                clienteNode.AppendChild(indirizzoElement);
+                        clienteNode.AppendChild(nomeElement);
+                        clienteNode.AppendChild(cognomeElement);
+                        clienteNode.AppendChild(telefonoElement);
+                        clienteNode.AppendChild(indirizzoElement);
 
 
             }
@@ -281,18 +283,18 @@ namespace MUSEICA.Persistence
                 XmlElement nomeSalaElement = _xmlDocument.CreateElement("NomeSala");
                 XmlElement tipologiaElement = _xmlDocument.CreateElement("Tipologia");
 
-                idSalaElement.InnerText = prenotazioneSingola.Sala.IdSala;
+                        idSalaElement.InnerText = prenotazioneSingola.Sala.IdSala;
                 indirizzoSalaElement.InnerText = prenotazioneSingola.Sala.Indirizzo;
-                nomeSalaElement.InnerText = prenotazioneSingola.Sala.NomeSala;
-                tipologiaElement.InnerText = prenotazioneSingola.Sala.Tipo.NomeTipologia;
+                        nomeSalaElement.InnerText = prenotazioneSingola.Sala.NomeSala;
+                        tipologiaElement.InnerText = prenotazioneSingola.Sala.Tipo.NomeTipologia;
 
-                salaNode.AppendChild(idSalaElement);
-                salaNode.AppendChild(indirizzoSalaElement);
-                salaNode.AppendChild(nomeSalaElement);
-                salaNode.AppendChild(tipologiaElement);
+                        salaNode.AppendChild(idSalaElement);
+                        salaNode.AppendChild(indirizzoSalaElement);
+                        salaNode.AppendChild(nomeSalaElement);
+                        salaNode.AppendChild(tipologiaElement);
 
-
-            }
+              
+            }           
             #endregion
         }
 
