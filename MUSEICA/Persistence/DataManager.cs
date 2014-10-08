@@ -7,7 +7,7 @@ using MUSEICA.Model;
 
 namespace MUSEICA.Persistence
 {
-    class DataManager
+    public class DataManager
     {
         private IClientePersister _clientePersister;
         private ISalaPersister _salaPersister;
