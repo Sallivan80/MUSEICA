@@ -85,6 +85,7 @@
     <Compile Include="Model\Sala.cs" />
     <Compile Include="Model\TipologiaSalaFactory.cs" />
     <Compile Include="Persistence\ClientePersister.cs" />
+    <Compile Include="Persistence\DataManager.cs" />
     <Compile Include="Persistence\IClientePersister.cs" />
     <Compile Include="Persistence\IPrenotazionePersister.cs" />
     <Compile Include="Persistence\ISalaPersister.cs" />
@@ -132,6 +133,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Files\Prenotazioni.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
