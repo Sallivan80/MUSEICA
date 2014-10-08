@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MUSEICA.ProvaView
 {
-    public partial class PrenotazioneView : Form
+    public partial class PrenotazioneSingolaView : Form
     {
-        public PrenotazioneView()
+        public PrenotazioneSingolaView()
         {
             InitializeComponent();
         }

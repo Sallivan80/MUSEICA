@@ -1,6 +1,6 @@
 ﻿namespace MUSEICA.ProvaView
 {
-    partial class PrenotazioneView
+    partial class PrenotazioneSingolaView
     {
         /// <summary>
         /// Required designer variable.
@@ -30,33 +30,33 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this._panelNomeCognTelEmailIdPrenotazione = new System.Windows.Forms.Panel();
-            this._labelNomeClientePrenotazione = new System.Windows.Forms.Label();
-            this._labelCognomePrenotazione = new System.Windows.Forms.Label();
-            this._labelTelefonoPrenotazione = new System.Windows.Forms.Label();
-            this._labelIdClientePrenotazione = new System.Windows.Forms.Label();
-            this._textBoxNomePrenotazione = new System.Windows.Forms.TextBox();
-            this._textBoxCognomePrenotazione = new System.Windows.Forms.TextBox();
-            this._textBoxTelefonoPrenotazione = new System.Windows.Forms.TextBox();
-            this._comboBoxIdClientePrenotazione = new System.Windows.Forms.ComboBox();
-            this._labelEmailPrenotazione = new System.Windows.Forms.Label();
+            this._textBoxIndirizzoPrenotazione = new System.Windows.Forms.TextBox();
+            this._labelIndirizzoPrenotazione = new System.Windows.Forms.Label();
             this._textBoxEmailPrenotazione = new System.Windows.Forms.TextBox();
+            this._labelEmailPrenotazione = new System.Windows.Forms.Label();
+            this._comboBoxIdClientePrenotazione = new System.Windows.Forms.ComboBox();
+            this._textBoxTelefonoPrenotazione = new System.Windows.Forms.TextBox();
+            this._textBoxCognomePrenotazione = new System.Windows.Forms.TextBox();
+            this._textBoxNomePrenotazione = new System.Windows.Forms.TextBox();
+            this._labelIdClientePrenotazione = new System.Windows.Forms.Label();
+            this._labelTelefonoPrenotazione = new System.Windows.Forms.Label();
+            this._labelCognomePrenotazione = new System.Windows.Forms.Label();
+            this._labelNomeClientePrenotazione = new System.Windows.Forms.Label();
             this._panelSalaTipoPrenotazione = new System.Windows.Forms.Panel();
+            this._comboBoxTipoSalaPrenotazione = new System.Windows.Forms.ComboBox();
+            this._comboBoxSalaPrenotazione = new System.Windows.Forms.ComboBox();
             this._labelTipoSalaPrenotazione = new System.Windows.Forms.Label();
             this._labelSalaPrenotazione = new System.Windows.Forms.Label();
-            this._comboBoxSalaPrenotazione = new System.Windows.Forms.ComboBox();
-            this._comboBoxTipoSalaPrenotazione = new System.Windows.Forms.ComboBox();
             this._panelDataOraInOraFinPrenotazione = new System.Windows.Forms.Panel();
+            this._dateTimePickerDataPrenotazione = new System.Windows.Forms.DateTimePicker();
+            this._labelOraFinePrenotazione = new System.Windows.Forms.Label();
+            this._comboBoxOraFinePrenotazione = new System.Windows.Forms.ComboBox();
             this._comboBoxOraInizioPrenotazione = new System.Windows.Forms.ComboBox();
             this._labelOraInizioPrenotazione = new System.Windows.Forms.Label();
             this._labelDataPrenotazione = new System.Windows.Forms.Label();
-            this._comboBoxOraFinePrenotazione = new System.Windows.Forms.ComboBox();
-            this._labelOraFinePrenotazione = new System.Windows.Forms.Label();
-            this._dateTimePickerDataPrenotazione = new System.Windows.Forms.DateTimePicker();
             this._panelOkAnnullaPrenotazione = new System.Windows.Forms.Panel();
-            this._annullaButton = new System.Windows.Forms.Button();
             this._okButton = new System.Windows.Forms.Button();
-            this._labelIndirizzoPrenotazione = new System.Windows.Forms.Label();
-            this._textBoxIndirizzoPrenotazione = new System.Windows.Forms.TextBox();
+            this._annullaButton = new System.Windows.Forms.Button();
             this._panelNomeCognTelEmailIdPrenotazione.SuspendLayout();
             this._panelSalaTipoPrenotazione.SuspendLayout();
             this._panelDataOraInOraFinPrenotazione.SuspendLayout();
@@ -90,23 +90,76 @@
             this._panelNomeCognTelEmailIdPrenotazione.Size = new System.Drawing.Size(357, 183);
             this._panelNomeCognTelEmailIdPrenotazione.TabIndex = 1;
             // 
-            // _labelNomeClientePrenotazione
+            // _textBoxIndirizzoPrenotazione
             // 
-            this._labelNomeClientePrenotazione.AutoSize = true;
-            this._labelNomeClientePrenotazione.Location = new System.Drawing.Point(16, 21);
-            this._labelNomeClientePrenotazione.Name = "_labelNomeClientePrenotazione";
-            this._labelNomeClientePrenotazione.Size = new System.Drawing.Size(35, 13);
-            this._labelNomeClientePrenotazione.TabIndex = 0;
-            this._labelNomeClientePrenotazione.Text = "Nome";
+            this._textBoxIndirizzoPrenotazione.Location = new System.Drawing.Point(133, 93);
+            this._textBoxIndirizzoPrenotazione.Name = "_textBoxIndirizzoPrenotazione";
+            this._textBoxIndirizzoPrenotazione.Size = new System.Drawing.Size(211, 20);
+            this._textBoxIndirizzoPrenotazione.TabIndex = 12;
+            this._textBoxIndirizzoPrenotazione.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // _labelCognomePrenotazione
+            // _labelIndirizzoPrenotazione
             // 
-            this._labelCognomePrenotazione.AutoSize = true;
-            this._labelCognomePrenotazione.Location = new System.Drawing.Point(16, 46);
-            this._labelCognomePrenotazione.Name = "_labelCognomePrenotazione";
-            this._labelCognomePrenotazione.Size = new System.Drawing.Size(52, 13);
-            this._labelCognomePrenotazione.TabIndex = 1;
-            this._labelCognomePrenotazione.Text = "Cognome";
+            this._labelIndirizzoPrenotazione.AutoSize = true;
+            this._labelIndirizzoPrenotazione.Location = new System.Drawing.Point(16, 96);
+            this._labelIndirizzoPrenotazione.Name = "_labelIndirizzoPrenotazione";
+            this._labelIndirizzoPrenotazione.Size = new System.Drawing.Size(45, 13);
+            this._labelIndirizzoPrenotazione.TabIndex = 11;
+            this._labelIndirizzoPrenotazione.Text = "Indirizzo";
+            // 
+            // _textBoxEmailPrenotazione
+            // 
+            this._textBoxEmailPrenotazione.Location = new System.Drawing.Point(133, 118);
+            this._textBoxEmailPrenotazione.Name = "_textBoxEmailPrenotazione";
+            this._textBoxEmailPrenotazione.Size = new System.Drawing.Size(211, 20);
+            this._textBoxEmailPrenotazione.TabIndex = 9;
+            // 
+            // _labelEmailPrenotazione
+            // 
+            this._labelEmailPrenotazione.AutoSize = true;
+            this._labelEmailPrenotazione.Location = new System.Drawing.Point(16, 121);
+            this._labelEmailPrenotazione.Name = "_labelEmailPrenotazione";
+            this._labelEmailPrenotazione.Size = new System.Drawing.Size(32, 13);
+            this._labelEmailPrenotazione.TabIndex = 8;
+            this._labelEmailPrenotazione.Text = "eMail";
+            // 
+            // _comboBoxIdClientePrenotazione
+            // 
+            this._comboBoxIdClientePrenotazione.FormattingEnabled = true;
+            this._comboBoxIdClientePrenotazione.Location = new System.Drawing.Point(133, 145);
+            this._comboBoxIdClientePrenotazione.Name = "_comboBoxIdClientePrenotazione";
+            this._comboBoxIdClientePrenotazione.Size = new System.Drawing.Size(211, 21);
+            this._comboBoxIdClientePrenotazione.TabIndex = 7;
+            // 
+            // _textBoxTelefonoPrenotazione
+            // 
+            this._textBoxTelefonoPrenotazione.Location = new System.Drawing.Point(133, 68);
+            this._textBoxTelefonoPrenotazione.Name = "_textBoxTelefonoPrenotazione";
+            this._textBoxTelefonoPrenotazione.Size = new System.Drawing.Size(211, 20);
+            this._textBoxTelefonoPrenotazione.TabIndex = 6;
+            // 
+            // _textBoxCognomePrenotazione
+            // 
+            this._textBoxCognomePrenotazione.Location = new System.Drawing.Point(133, 43);
+            this._textBoxCognomePrenotazione.Name = "_textBoxCognomePrenotazione";
+            this._textBoxCognomePrenotazione.Size = new System.Drawing.Size(211, 20);
+            this._textBoxCognomePrenotazione.TabIndex = 5;
+            // 
+            // _textBoxNomePrenotazione
+            // 
+            this._textBoxNomePrenotazione.Location = new System.Drawing.Point(133, 18);
+            this._textBoxNomePrenotazione.Name = "_textBoxNomePrenotazione";
+            this._textBoxNomePrenotazione.Size = new System.Drawing.Size(211, 20);
+            this._textBoxNomePrenotazione.TabIndex = 4;
+            // 
+            // _labelIdClientePrenotazione
+            // 
+            this._labelIdClientePrenotazione.AutoSize = true;
+            this._labelIdClientePrenotazione.Location = new System.Drawing.Point(17, 148);
+            this._labelIdClientePrenotazione.Name = "_labelIdClientePrenotazione";
+            this._labelIdClientePrenotazione.Size = new System.Drawing.Size(51, 13);
+            this._labelIdClientePrenotazione.TabIndex = 3;
+            this._labelIdClientePrenotazione.Text = "Id Cliente";
             // 
             // _labelTelefonoPrenotazione
             // 
@@ -118,59 +171,23 @@
             this._labelTelefonoPrenotazione.Text = "Telefono";
             this._labelTelefonoPrenotazione.Click += new System.EventHandler(this.label4_Click);
             // 
-            // _labelIdClientePrenotazione
+            // _labelCognomePrenotazione
             // 
-            this._labelIdClientePrenotazione.AutoSize = true;
-            this._labelIdClientePrenotazione.Location = new System.Drawing.Point(17, 148);
-            this._labelIdClientePrenotazione.Name = "_labelIdClientePrenotazione";
-            this._labelIdClientePrenotazione.Size = new System.Drawing.Size(51, 13);
-            this._labelIdClientePrenotazione.TabIndex = 3;
-            this._labelIdClientePrenotazione.Text = "Id Cliente";
+            this._labelCognomePrenotazione.AutoSize = true;
+            this._labelCognomePrenotazione.Location = new System.Drawing.Point(16, 46);
+            this._labelCognomePrenotazione.Name = "_labelCognomePrenotazione";
+            this._labelCognomePrenotazione.Size = new System.Drawing.Size(52, 13);
+            this._labelCognomePrenotazione.TabIndex = 1;
+            this._labelCognomePrenotazione.Text = "Cognome";
             // 
-            // _textBoxNomePrenotazione
+            // _labelNomeClientePrenotazione
             // 
-            this._textBoxNomePrenotazione.Location = new System.Drawing.Point(133, 18);
-            this._textBoxNomePrenotazione.Name = "_textBoxNomePrenotazione";
-            this._textBoxNomePrenotazione.Size = new System.Drawing.Size(211, 20);
-            this._textBoxNomePrenotazione.TabIndex = 4;
-            // 
-            // _textBoxCognomePrenotazione
-            // 
-            this._textBoxCognomePrenotazione.Location = new System.Drawing.Point(133, 43);
-            this._textBoxCognomePrenotazione.Name = "_textBoxCognomePrenotazione";
-            this._textBoxCognomePrenotazione.Size = new System.Drawing.Size(211, 20);
-            this._textBoxCognomePrenotazione.TabIndex = 5;
-            // 
-            // _textBoxTelefonoPrenotazione
-            // 
-            this._textBoxTelefonoPrenotazione.Location = new System.Drawing.Point(133, 68);
-            this._textBoxTelefonoPrenotazione.Name = "_textBoxTelefonoPrenotazione";
-            this._textBoxTelefonoPrenotazione.Size = new System.Drawing.Size(211, 20);
-            this._textBoxTelefonoPrenotazione.TabIndex = 6;
-            // 
-            // _comboBoxIdClientePrenotazione
-            // 
-            this._comboBoxIdClientePrenotazione.FormattingEnabled = true;
-            this._comboBoxIdClientePrenotazione.Location = new System.Drawing.Point(133, 145);
-            this._comboBoxIdClientePrenotazione.Name = "_comboBoxIdClientePrenotazione";
-            this._comboBoxIdClientePrenotazione.Size = new System.Drawing.Size(211, 21);
-            this._comboBoxIdClientePrenotazione.TabIndex = 7;
-            // 
-            // _labelEmailPrenotazione
-            // 
-            this._labelEmailPrenotazione.AutoSize = true;
-            this._labelEmailPrenotazione.Location = new System.Drawing.Point(16, 121);
-            this._labelEmailPrenotazione.Name = "_labelEmailPrenotazione";
-            this._labelEmailPrenotazione.Size = new System.Drawing.Size(32, 13);
-            this._labelEmailPrenotazione.TabIndex = 8;
-            this._labelEmailPrenotazione.Text = "eMail";
-            // 
-            // _textBoxEmailPrenotazione
-            // 
-            this._textBoxEmailPrenotazione.Location = new System.Drawing.Point(133, 118);
-            this._textBoxEmailPrenotazione.Name = "_textBoxEmailPrenotazione";
-            this._textBoxEmailPrenotazione.Size = new System.Drawing.Size(211, 20);
-            this._textBoxEmailPrenotazione.TabIndex = 9;
+            this._labelNomeClientePrenotazione.AutoSize = true;
+            this._labelNomeClientePrenotazione.Location = new System.Drawing.Point(16, 21);
+            this._labelNomeClientePrenotazione.Name = "_labelNomeClientePrenotazione";
+            this._labelNomeClientePrenotazione.Size = new System.Drawing.Size(35, 13);
+            this._labelNomeClientePrenotazione.TabIndex = 0;
+            this._labelNomeClientePrenotazione.Text = "Nome";
             // 
             // _panelSalaTipoPrenotazione
             // 
@@ -180,8 +197,24 @@
             this._panelSalaTipoPrenotazione.Controls.Add(this._labelSalaPrenotazione);
             this._panelSalaTipoPrenotazione.Location = new System.Drawing.Point(13, 202);
             this._panelSalaTipoPrenotazione.Name = "_panelSalaTipoPrenotazione";
-            this._panelSalaTipoPrenotazione.Size = new System.Drawing.Size(357, 84);
+            this._panelSalaTipoPrenotazione.Size = new System.Drawing.Size(357, 138);
             this._panelSalaTipoPrenotazione.TabIndex = 10;
+            // 
+            // _comboBoxTipoSalaPrenotazione
+            // 
+            this._comboBoxTipoSalaPrenotazione.FormattingEnabled = true;
+            this._comboBoxTipoSalaPrenotazione.Location = new System.Drawing.Point(133, 43);
+            this._comboBoxTipoSalaPrenotazione.Name = "_comboBoxTipoSalaPrenotazione";
+            this._comboBoxTipoSalaPrenotazione.Size = new System.Drawing.Size(211, 21);
+            this._comboBoxTipoSalaPrenotazione.TabIndex = 11;
+            // 
+            // _comboBoxSalaPrenotazione
+            // 
+            this._comboBoxSalaPrenotazione.FormattingEnabled = true;
+            this._comboBoxSalaPrenotazione.Location = new System.Drawing.Point(133, 18);
+            this._comboBoxSalaPrenotazione.Name = "_comboBoxSalaPrenotazione";
+            this._comboBoxSalaPrenotazione.Size = new System.Drawing.Size(211, 21);
+            this._comboBoxSalaPrenotazione.TabIndex = 10;
             // 
             // _labelTipoSalaPrenotazione
             // 
@@ -201,22 +234,6 @@
             this._labelSalaPrenotazione.TabIndex = 0;
             this._labelSalaPrenotazione.Text = "Sala";
             // 
-            // _comboBoxSalaPrenotazione
-            // 
-            this._comboBoxSalaPrenotazione.FormattingEnabled = true;
-            this._comboBoxSalaPrenotazione.Location = new System.Drawing.Point(133, 18);
-            this._comboBoxSalaPrenotazione.Name = "_comboBoxSalaPrenotazione";
-            this._comboBoxSalaPrenotazione.Size = new System.Drawing.Size(211, 21);
-            this._comboBoxSalaPrenotazione.TabIndex = 10;
-            // 
-            // _comboBoxTipoSalaPrenotazione
-            // 
-            this._comboBoxTipoSalaPrenotazione.FormattingEnabled = true;
-            this._comboBoxTipoSalaPrenotazione.Location = new System.Drawing.Point(133, 43);
-            this._comboBoxTipoSalaPrenotazione.Name = "_comboBoxTipoSalaPrenotazione";
-            this._comboBoxTipoSalaPrenotazione.Size = new System.Drawing.Size(211, 21);
-            this._comboBoxTipoSalaPrenotazione.TabIndex = 11;
-            // 
             // _panelDataOraInOraFinPrenotazione
             // 
             this._panelDataOraInOraFinPrenotazione.Controls.Add(this._dateTimePickerDataPrenotazione);
@@ -225,10 +242,34 @@
             this._panelDataOraInOraFinPrenotazione.Controls.Add(this._comboBoxOraInizioPrenotazione);
             this._panelDataOraInOraFinPrenotazione.Controls.Add(this._labelOraInizioPrenotazione);
             this._panelDataOraInOraFinPrenotazione.Controls.Add(this._labelDataPrenotazione);
-            this._panelDataOraInOraFinPrenotazione.Location = new System.Drawing.Point(13, 292);
+            this._panelDataOraInOraFinPrenotazione.Location = new System.Drawing.Point(12, 346);
             this._panelDataOraInOraFinPrenotazione.Name = "_panelDataOraInOraFinPrenotazione";
             this._panelDataOraInOraFinPrenotazione.Size = new System.Drawing.Size(357, 109);
             this._panelDataOraInOraFinPrenotazione.TabIndex = 12;
+            // 
+            // _dateTimePickerDataPrenotazione
+            // 
+            this._dateTimePickerDataPrenotazione.Location = new System.Drawing.Point(133, 18);
+            this._dateTimePickerDataPrenotazione.Name = "_dateTimePickerDataPrenotazione";
+            this._dateTimePickerDataPrenotazione.Size = new System.Drawing.Size(211, 20);
+            this._dateTimePickerDataPrenotazione.TabIndex = 14;
+            // 
+            // _labelOraFinePrenotazione
+            // 
+            this._labelOraFinePrenotazione.AutoSize = true;
+            this._labelOraFinePrenotazione.Location = new System.Drawing.Point(16, 71);
+            this._labelOraFinePrenotazione.Name = "_labelOraFinePrenotazione";
+            this._labelOraFinePrenotazione.Size = new System.Drawing.Size(47, 13);
+            this._labelOraFinePrenotazione.TabIndex = 13;
+            this._labelOraFinePrenotazione.Text = "Ora Fine";
+            // 
+            // _comboBoxOraFinePrenotazione
+            // 
+            this._comboBoxOraFinePrenotazione.FormattingEnabled = true;
+            this._comboBoxOraFinePrenotazione.Location = new System.Drawing.Point(133, 68);
+            this._comboBoxOraFinePrenotazione.Name = "_comboBoxOraFinePrenotazione";
+            this._comboBoxOraFinePrenotazione.Size = new System.Drawing.Size(211, 21);
+            this._comboBoxOraFinePrenotazione.TabIndex = 12;
             // 
             // _comboBoxOraInizioPrenotazione
             // 
@@ -256,47 +297,14 @@
             this._labelDataPrenotazione.TabIndex = 0;
             this._labelDataPrenotazione.Text = "Data";
             // 
-            // _comboBoxOraFinePrenotazione
-            // 
-            this._comboBoxOraFinePrenotazione.FormattingEnabled = true;
-            this._comboBoxOraFinePrenotazione.Location = new System.Drawing.Point(133, 68);
-            this._comboBoxOraFinePrenotazione.Name = "_comboBoxOraFinePrenotazione";
-            this._comboBoxOraFinePrenotazione.Size = new System.Drawing.Size(211, 21);
-            this._comboBoxOraFinePrenotazione.TabIndex = 12;
-            // 
-            // _labelOraFinePrenotazione
-            // 
-            this._labelOraFinePrenotazione.AutoSize = true;
-            this._labelOraFinePrenotazione.Location = new System.Drawing.Point(16, 71);
-            this._labelOraFinePrenotazione.Name = "_labelOraFinePrenotazione";
-            this._labelOraFinePrenotazione.Size = new System.Drawing.Size(47, 13);
-            this._labelOraFinePrenotazione.TabIndex = 13;
-            this._labelOraFinePrenotazione.Text = "Ora Fine";
-            // 
-            // _dateTimePickerDataPrenotazione
-            // 
-            this._dateTimePickerDataPrenotazione.Location = new System.Drawing.Point(133, 18);
-            this._dateTimePickerDataPrenotazione.Name = "_dateTimePickerDataPrenotazione";
-            this._dateTimePickerDataPrenotazione.Size = new System.Drawing.Size(211, 20);
-            this._dateTimePickerDataPrenotazione.TabIndex = 14;
-            // 
             // _panelOkAnnullaPrenotazione
             // 
             this._panelOkAnnullaPrenotazione.Controls.Add(this._okButton);
             this._panelOkAnnullaPrenotazione.Controls.Add(this._annullaButton);
-            this._panelOkAnnullaPrenotazione.Location = new System.Drawing.Point(12, 407);
+            this._panelOkAnnullaPrenotazione.Location = new System.Drawing.Point(12, 461);
             this._panelOkAnnullaPrenotazione.Name = "_panelOkAnnullaPrenotazione";
             this._panelOkAnnullaPrenotazione.Size = new System.Drawing.Size(357, 41);
             this._panelOkAnnullaPrenotazione.TabIndex = 13;
-            // 
-            // _annullaButton
-            // 
-            this._annullaButton.Location = new System.Drawing.Point(269, 9);
-            this._annullaButton.Name = "_annullaButton";
-            this._annullaButton.Size = new System.Drawing.Size(75, 23);
-            this._annullaButton.TabIndex = 0;
-            this._annullaButton.Text = "Annulla";
-            this._annullaButton.UseVisualStyleBackColor = true;
             // 
             // _okButton
             // 
@@ -307,34 +315,26 @@
             this._okButton.Text = "Ok";
             this._okButton.UseVisualStyleBackColor = true;
             // 
-            // _labelIndirizzoPrenotazione
+            // _annullaButton
             // 
-            this._labelIndirizzoPrenotazione.AutoSize = true;
-            this._labelIndirizzoPrenotazione.Location = new System.Drawing.Point(16, 96);
-            this._labelIndirizzoPrenotazione.Name = "_labelIndirizzoPrenotazione";
-            this._labelIndirizzoPrenotazione.Size = new System.Drawing.Size(45, 13);
-            this._labelIndirizzoPrenotazione.TabIndex = 11;
-            this._labelIndirizzoPrenotazione.Text = "Indirizzo";
+            this._annullaButton.Location = new System.Drawing.Point(269, 9);
+            this._annullaButton.Name = "_annullaButton";
+            this._annullaButton.Size = new System.Drawing.Size(75, 23);
+            this._annullaButton.TabIndex = 0;
+            this._annullaButton.Text = "Annulla";
+            this._annullaButton.UseVisualStyleBackColor = true;
             // 
-            // _textBoxIndirizzoPrenotazione
-            // 
-            this._textBoxIndirizzoPrenotazione.Location = new System.Drawing.Point(133, 93);
-            this._textBoxIndirizzoPrenotazione.Name = "_textBoxIndirizzoPrenotazione";
-            this._textBoxIndirizzoPrenotazione.Size = new System.Drawing.Size(211, 20);
-            this._textBoxIndirizzoPrenotazione.TabIndex = 12;
-            this._textBoxIndirizzoPrenotazione.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // PrenotazioneView
+            // PrenotazioneSingolaView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 457);
+            this.ClientSize = new System.Drawing.Size(382, 514);
             this.Controls.Add(this._panelOkAnnullaPrenotazione);
             this.Controls.Add(this._panelDataOraInOraFinPrenotazione);
             this.Controls.Add(this._panelSalaTipoPrenotazione);
             this.Controls.Add(this._panelNomeCognTelEmailIdPrenotazione);
             this.Controls.Add(this.label1);
-            this.Name = "PrenotazioneView";
+            this.Name = "PrenotazioneSingolaView";
             this.Text = "Prenotazione";
             this.Load += new System.EventHandler(this.PrenotazioneView_Load);
             this._panelNomeCognTelEmailIdPrenotazione.ResumeLayout(false);
