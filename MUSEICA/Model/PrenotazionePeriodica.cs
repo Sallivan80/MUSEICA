@@ -24,6 +24,12 @@ namespace MUSEICA.Model
             set { _dataFine = value; }
         }
 
+        public List<PrenotazioneSingola> Prenotazioni
+        {
+            get { return _prenotazioni; }
+            set { _prenotazioni = value; }
+        }
+
         public override float getCosto()
         {
 
@@ -32,6 +38,7 @@ namespace MUSEICA.Model
                 totalePrenotazionePeriodica += p.getCosto();
             return totalePrenotazionePeriodica;
         }
+
 
         private void CreaPrenotazionePeriodica(List<PrenotazioneSingola> prenotazioniRichieste, DateTime dataFine)
         {
