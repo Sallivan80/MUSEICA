@@ -28,7 +28,16 @@ namespace MUSEICA.ProvaView
 
         private void SetValue()
         {
-           
+            _textBoxNomeCentroSaleProva.Text = CentroSaleProve.GetIstance().Profilo.NomeCentro;
+            _textBoxIndirizzo.Text = CentroSaleProve.GetIstance().Profilo.Indirizzo;
+            _textBoxTelefono.Text = CentroSaleProve.GetIstance().Profilo.Telefono;
+            _textBoxEmail.Text = CentroSaleProve.GetIstance().Profilo.Email;
+
+            _textBoxNomeCentroSaleProva.ReadOnly = !_abilitaModificheImpostaProfilo.Checked;
+            _textBoxIndirizzo.ReadOnly = !_abilitaModificheImpostaProfilo.Checked;
+            _textBoxTelefono.ReadOnly = !_abilitaModificheImpostaProfilo.Checked;
+            _textBoxEmail.ReadOnly = !_abilitaModificheImpostaProfilo.Checked;
+            
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -119,17 +128,6 @@ namespace MUSEICA.ProvaView
         private void ProfiloView_Load(object sender, EventArgs e)
         {
 
-
-            _textBoxNomeCentroSaleProva.Text = CentroSaleProve.GetIstance().Profilo.NomeCentro;
-            _textBoxIndirizzo.Text = CentroSaleProve.GetIstance().Profilo.Indirizzo;
-            _textBoxTelefono.Text = CentroSaleProve.GetIstance().Profilo.Telefono;
-            _textBoxEmail.Text = CentroSaleProve.GetIstance().Profilo.Email;
-
-            _textBoxNomeCentroSaleProva.ReadOnly = _abilitaModificheImpostaProfilo.Checked;
-            _textBoxIndirizzo.ReadOnly = _abilitaModificheImpostaProfilo.Checked;
-            _textBoxTelefono.ReadOnly = _abilitaModificheImpostaProfilo.Checked;
-            _textBoxEmail.ReadOnly = _abilitaModificheImpostaProfilo.Checked;
-            
         }
 
         
