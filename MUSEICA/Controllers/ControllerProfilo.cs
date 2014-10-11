@@ -12,8 +12,12 @@ namespace MUSEICA.Controllers
 {
     public class ControllerProfilo:Controller
     {
+        private Form _view;
 
-        public ControllerProfilo() : base() { }
+        public ControllerProfilo(Form view):base(view)
+        {
+           
+        }
 
         
 

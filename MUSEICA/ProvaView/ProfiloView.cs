@@ -19,10 +19,10 @@ namespace MUSEICA.ProvaView
         private Controller _controller;
         
 
-        public ProfiloView(Controller controller)
+        public ProfiloView()
         {
             InitializeComponent();
-            this._controller = controller;
+            this._controller = new ControllerProfilo(this);
             SetProfiloValue();
             SetPoliticaValue();
             SetSalaValue();
@@ -115,7 +115,10 @@ namespace MUSEICA.ProvaView
 
         }
 
-        private void button2_Click(object sender, EventArgs e) { }
+        private void button2_Click(object sender, EventArgs e) 
+        {
+            this.Controls.Add(new ModificaSala());
+        }
         
 
         private void button1_Click(object sender, EventArgs e) { }

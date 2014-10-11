@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MUSEICA.Persistence;
 using MUSEICA.Model;
-using MUSEICA.ProvaView;
 
 namespace MUSEICA.Controllers
 {
-   public abstract class Controller 
+    public abstract class  Controller
     {
-
        private DataManager _dataManager;
-       //private Main _mainView
+       private Form _view;
        
-       public Controller()
+       public Controller(Form view)
        {
-           this._dataManager = new DataManager();
-           
+           _view = view;
+           if (_dataManager == null)
+               _dataManager = new DataManager();
        }
 
        public void LoadCompenents()
@@ -29,6 +29,11 @@ namespace MUSEICA.Controllers
            CentroSaleProve.GetIstance().Agenda.Prenotazioni = _dataManager.Prenotazioni;
        }
 
-      
+       protected void SetView(Form view)
+       {
+           view.Activate();
+           view.Show();        
+
+       }
     }
 }

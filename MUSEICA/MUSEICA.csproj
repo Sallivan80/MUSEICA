@@ -167,12 +167,6 @@
     <Compile Include="ProvaView\RegistrazioneNuovoClienteView.Designer.cs">
       <DependentUpon>RegistrazioneNuovoClienteView.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProvaView\SalaRegistrazioneView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProvaView\SalaRegistrazioneView.Designer.cs">
-      <DependentUpon>SalaRegistrazioneView.cs</DependentUpon>
-    </Compile>
     <Compile Include="ProvaView\SalaProveView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,9 +229,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProvaView\RegistrazioneNuovoClienteView.resx">
       <DependentUpon>RegistrazioneNuovoClienteView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProvaView\SalaRegistrazioneView.resx">
-      <DependentUpon>SalaRegistrazioneView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProvaView\SalaProveView.resx">
       <DependentUpon>SalaProveView.cs</DependentUpon>

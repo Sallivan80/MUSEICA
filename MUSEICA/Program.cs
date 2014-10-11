@@ -21,10 +21,8 @@ namespace MUSEICA
             
 
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Controller c = new ControllerProfilo();
-            c.LoadCompenents();
-            Application.Run(new ProfiloView(c));
+            Application.SetCompatibleTextRenderingDefault(false);               
+            Application.Run(new MuseicaView());
         }
     }
 }
