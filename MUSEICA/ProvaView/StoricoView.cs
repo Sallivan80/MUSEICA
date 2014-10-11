@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace MUSEICA.ProvaView
 {
-    public partial class EliminaView : Form
+    public partial class StoricoView : Form
     {
-        public EliminaView()
+        public StoricoView()
         {
             InitializeComponent();
         }
+
     }
 }

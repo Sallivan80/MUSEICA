@@ -31,8 +31,6 @@
             this._panelNomeCognTelEmailIdRegistrazione = new System.Windows.Forms.Panel();
             this._textBoxIndirizzoRegistrazione = new System.Windows.Forms.TextBox();
             this._labelIndirizzoRegistrazione = new System.Windows.Forms.Label();
-            this._textBoxEmailRegistrazione = new System.Windows.Forms.TextBox();
-            this._labelEmailRegistrazione = new System.Windows.Forms.Label();
             this._textBoxTelefonoRegistrazione = new System.Windows.Forms.TextBox();
             this._textBoxCognomeRegistrazione = new System.Windows.Forms.TextBox();
             this._textBoxNomeRegistrazione = new System.Windows.Forms.TextBox();
@@ -40,10 +38,10 @@
             this._labelCognomeRegistrazione = new System.Windows.Forms.Label();
             this._labelNomeClienteRegistrazione = new System.Windows.Forms.Label();
             this._panelScadenzaNumeroTesseraRegistrazione = new System.Windows.Forms.Panel();
+            this._textBoxNumeroTesseraRegistrazione = new System.Windows.Forms.TextBox();
             this._dateTimePickerScadenzaTesseraRegistrazione = new System.Windows.Forms.DateTimePicker();
             this._labelNumeroTesseraRegistrazione = new System.Windows.Forms.Label();
             this._labelScadenzaTesseraRegistrazione = new System.Windows.Forms.Label();
-            this._textBoxNumeroTesseraRegistrazione = new System.Windows.Forms.TextBox();
             this._panelOkAnnullaRegistrazione = new System.Windows.Forms.Panel();
             this._okButtonRegistrazione = new System.Windows.Forms.Button();
             this._annullaButtonRegistrazione = new System.Windows.Forms.Button();
@@ -56,8 +54,6 @@
             // 
             this._panelNomeCognTelEmailIdRegistrazione.Controls.Add(this._textBoxIndirizzoRegistrazione);
             this._panelNomeCognTelEmailIdRegistrazione.Controls.Add(this._labelIndirizzoRegistrazione);
-            this._panelNomeCognTelEmailIdRegistrazione.Controls.Add(this._textBoxEmailRegistrazione);
-            this._panelNomeCognTelEmailIdRegistrazione.Controls.Add(this._labelEmailRegistrazione);
             this._panelNomeCognTelEmailIdRegistrazione.Controls.Add(this._textBoxTelefonoRegistrazione);
             this._panelNomeCognTelEmailIdRegistrazione.Controls.Add(this._textBoxCognomeRegistrazione);
             this._panelNomeCognTelEmailIdRegistrazione.Controls.Add(this._textBoxNomeRegistrazione);
@@ -66,7 +62,7 @@
             this._panelNomeCognTelEmailIdRegistrazione.Controls.Add(this._labelNomeClienteRegistrazione);
             this._panelNomeCognTelEmailIdRegistrazione.Location = new System.Drawing.Point(12, 12);
             this._panelNomeCognTelEmailIdRegistrazione.Name = "_panelNomeCognTelEmailIdRegistrazione";
-            this._panelNomeCognTelEmailIdRegistrazione.Size = new System.Drawing.Size(366, 155);
+            this._panelNomeCognTelEmailIdRegistrazione.Size = new System.Drawing.Size(366, 128);
             this._panelNomeCognTelEmailIdRegistrazione.TabIndex = 2;
             // 
             // _textBoxIndirizzoRegistrazione
@@ -84,22 +80,6 @@
             this._labelIndirizzoRegistrazione.Size = new System.Drawing.Size(45, 13);
             this._labelIndirizzoRegistrazione.TabIndex = 11;
             this._labelIndirizzoRegistrazione.Text = "Indirizzo";
-            // 
-            // _textBoxEmailRegistrazione
-            // 
-            this._textBoxEmailRegistrazione.Location = new System.Drawing.Point(133, 118);
-            this._textBoxEmailRegistrazione.Name = "_textBoxEmailRegistrazione";
-            this._textBoxEmailRegistrazione.Size = new System.Drawing.Size(211, 20);
-            this._textBoxEmailRegistrazione.TabIndex = 9;
-            // 
-            // _labelEmailRegistrazione
-            // 
-            this._labelEmailRegistrazione.AutoSize = true;
-            this._labelEmailRegistrazione.Location = new System.Drawing.Point(16, 121);
-            this._labelEmailRegistrazione.Name = "_labelEmailRegistrazione";
-            this._labelEmailRegistrazione.Size = new System.Drawing.Size(32, 13);
-            this._labelEmailRegistrazione.TabIndex = 8;
-            this._labelEmailRegistrazione.Text = "eMail";
             // 
             // _textBoxTelefonoRegistrazione
             // 
@@ -155,10 +135,17 @@
             this._panelScadenzaNumeroTesseraRegistrazione.Controls.Add(this._dateTimePickerScadenzaTesseraRegistrazione);
             this._panelScadenzaNumeroTesseraRegistrazione.Controls.Add(this._labelNumeroTesseraRegistrazione);
             this._panelScadenzaNumeroTesseraRegistrazione.Controls.Add(this._labelScadenzaTesseraRegistrazione);
-            this._panelScadenzaNumeroTesseraRegistrazione.Location = new System.Drawing.Point(12, 173);
+            this._panelScadenzaNumeroTesseraRegistrazione.Location = new System.Drawing.Point(12, 146);
             this._panelScadenzaNumeroTesseraRegistrazione.Name = "_panelScadenzaNumeroTesseraRegistrazione";
             this._panelScadenzaNumeroTesseraRegistrazione.Size = new System.Drawing.Size(366, 78);
             this._panelScadenzaNumeroTesseraRegistrazione.TabIndex = 13;
+            // 
+            // _textBoxNumeroTesseraRegistrazione
+            // 
+            this._textBoxNumeroTesseraRegistrazione.Location = new System.Drawing.Point(133, 43);
+            this._textBoxNumeroTesseraRegistrazione.Name = "_textBoxNumeroTesseraRegistrazione";
+            this._textBoxNumeroTesseraRegistrazione.Size = new System.Drawing.Size(211, 20);
+            this._textBoxNumeroTesseraRegistrazione.TabIndex = 13;
             // 
             // _dateTimePickerScadenzaTesseraRegistrazione
             // 
@@ -185,18 +172,11 @@
             this._labelScadenzaTesseraRegistrazione.TabIndex = 0;
             this._labelScadenzaTesseraRegistrazione.Text = "Scadenza Tessera";
             // 
-            // _textBoxNumeroTesseraRegistrazione
-            // 
-            this._textBoxNumeroTesseraRegistrazione.Location = new System.Drawing.Point(133, 43);
-            this._textBoxNumeroTesseraRegistrazione.Name = "_textBoxNumeroTesseraRegistrazione";
-            this._textBoxNumeroTesseraRegistrazione.Size = new System.Drawing.Size(211, 20);
-            this._textBoxNumeroTesseraRegistrazione.TabIndex = 13;
-            // 
             // _panelOkAnnullaRegistrazione
             // 
             this._panelOkAnnullaRegistrazione.Controls.Add(this._okButtonRegistrazione);
             this._panelOkAnnullaRegistrazione.Controls.Add(this._annullaButtonRegistrazione);
-            this._panelOkAnnullaRegistrazione.Location = new System.Drawing.Point(12, 257);
+            this._panelOkAnnullaRegistrazione.Location = new System.Drawing.Point(12, 230);
             this._panelOkAnnullaRegistrazione.Name = "_panelOkAnnullaRegistrazione";
             this._panelOkAnnullaRegistrazione.Size = new System.Drawing.Size(366, 41);
             this._panelOkAnnullaRegistrazione.TabIndex = 14;
@@ -223,7 +203,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 309);
+            this.ClientSize = new System.Drawing.Size(390, 282);
             this.Controls.Add(this._panelOkAnnullaRegistrazione);
             this.Controls.Add(this._panelScadenzaNumeroTesseraRegistrazione);
             this.Controls.Add(this._panelNomeCognTelEmailIdRegistrazione);
@@ -243,8 +223,6 @@
         private System.Windows.Forms.Panel _panelNomeCognTelEmailIdRegistrazione;
         private System.Windows.Forms.TextBox _textBoxIndirizzoRegistrazione;
         private System.Windows.Forms.Label _labelIndirizzoRegistrazione;
-        private System.Windows.Forms.TextBox _textBoxEmailRegistrazione;
-        private System.Windows.Forms.Label _labelEmailRegistrazione;
         private System.Windows.Forms.TextBox _textBoxTelefonoRegistrazione;
         private System.Windows.Forms.TextBox _textBoxCognomeRegistrazione;
         private System.Windows.Forms.TextBox _textBoxNomeRegistrazione;
