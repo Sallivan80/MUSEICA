@@ -122,7 +122,8 @@ namespace MUSEICA.Persistence
                 string indirizzo = salaNode.SelectSingleNode("Indirizzo").InnerText;
                 string nomeSala = salaNode.SelectSingleNode("NomeSala").InnerText;
                 ITipologiaSala tipologia = TipologiaSalaFactory.GetTipologia(salaNode.SelectSingleNode("Tipologia").InnerText);
-                    result = new Sala(idSala, indirizzo, nomeSala, tipologia);
+                float prezzo = Convert.ToSingle(salaNode.SelectSingleNode("Prezzo").InnerText);
+                    result = new Sala(idSala, indirizzo, nomeSala, tipologia,prezzo);
 
 
                 return result;
@@ -238,7 +239,7 @@ namespace MUSEICA.Persistence
 
                     idPrenotazioneElement.InnerText = prenotazioneSingola.IdPrenotazione;
 
-                    //CLIENTE
+                //CLIENTE
                 CreaNodoCliente(clienteNode, prenotazioneSingola);
                 //SALA
                 CreaNodoSala(salaNode, prenotazioneSingola);
@@ -282,16 +283,20 @@ namespace MUSEICA.Persistence
                 XmlElement indirizzoSalaElement = _xmlDocument.CreateElement("Indirizzo");
                 XmlElement nomeSalaElement = _xmlDocument.CreateElement("NomeSala");
                 XmlElement tipologiaElement = _xmlDocument.CreateElement("Tipologia");
+                XmlElement prezzoElement = _xmlDocument.CreateElement("Prezzo");
 
                         idSalaElement.InnerText = prenotazioneSingola.Sala.IdSala;
-                indirizzoSalaElement.InnerText = prenotazioneSingola.Sala.Indirizzo;
+                        indirizzoSalaElement.InnerText = prenotazioneSingola.Sala.Indirizzo;
                         nomeSalaElement.InnerText = prenotazioneSingola.Sala.NomeSala;
                         tipologiaElement.InnerText = prenotazioneSingola.Sala.Tipo.NomeTipologia;
+                        prezzoElement.InnerText = prenotazioneSingola.Sala.Prezzo.ToString();
+                        
 
                         salaNode.AppendChild(idSalaElement);
                         salaNode.AppendChild(indirizzoSalaElement);
                         salaNode.AppendChild(nomeSalaElement);
                         salaNode.AppendChild(tipologiaElement);
+                        salaNode.AppendChild(prezzoElement);
 
               
             }           

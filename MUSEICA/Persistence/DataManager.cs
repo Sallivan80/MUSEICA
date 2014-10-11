@@ -11,12 +11,12 @@ namespace MUSEICA.Persistence
     {
         private IClientePersister _clientePersister;
         private ISalaPersister _salaPersister;
-        private ITipologiaPersister _tipologiaPeristser;
+        
         private IPrenotazionePersister _prenotazionePersister;
 
         private List<Sala> _sale;
         private List<Cliente> _clienti;
-        private List<ITipologiaSala> _tipologie;
+        
         private List<Prenotazione> _prenotazioni;
 
 
@@ -24,7 +24,7 @@ namespace MUSEICA.Persistence
         {
             _clientePersister = new ClientePersister(@"../../Files/Clienti.xml");
             _salaPersister = new SalaPersister(@"../../Files/Sale.xml");
-            _tipologiaPeristser = new TipologiaPersister(@"../../Files/Tipologie.xml");
+           
             _prenotazionePersister = new PrenotazionePersister(@"../../Files/Prenotazioni.xml");
         }
 
@@ -32,7 +32,7 @@ namespace MUSEICA.Persistence
         public bool ReadAll()
         {
 
-            if (ReadClienti() && ReadPrenotazioni() && ReadTipologie() && ReadSale())
+            if (ReadClienti() && ReadPrenotazioni() &&   ReadSale())
                 return true;
          
             return false;
@@ -67,13 +67,7 @@ namespace MUSEICA.Persistence
             return true;
         }
 
-        private bool ReadTipologie()
-        {
-            _tipologie = _tipologiaPeristser.GetLoader("XML").LoadTipologie();
-            if (_tipologie == null)
-                return false;
-            return true;
-        }
+       
 
         private bool ReadPrenotazioni()
         {
@@ -98,7 +92,7 @@ namespace MUSEICA.Persistence
 
         public bool SaveAll()
         {
-            if (SavePrenotazioni() && SaveSale() && SaveTipologie() && SaveClienti())
+            if (SavePrenotazioni() && SaveSale() &&  SaveClienti())
                 return true;
             return false;
         }
@@ -138,13 +132,7 @@ namespace MUSEICA.Persistence
             return true;
         }
 
-        private bool SaveTipologie()
-        {
-            foreach (ITipologiaSala t in _tipologie)
-                _tipologiaPeristser.GetSaver("XML").SaveUpdateTipologia(t);
-
-            return true;
-        }
+       
         #endregion
 
         #region Property
@@ -165,11 +153,7 @@ namespace MUSEICA.Persistence
             set { _clienti= value; }
         }
 
-        public List<ITipologiaSala> Tipologie
-        {
-            get { return _tipologie; }
-            set { _tipologie= value; }
-        }
+       
         #endregion
 
     }

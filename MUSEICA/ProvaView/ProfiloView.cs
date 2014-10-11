@@ -23,21 +23,41 @@ namespace MUSEICA.ProvaView
         {
             InitializeComponent();
             this._controller = controller;
-            SetValue();
+            SetProfiloValue();
+            SetPoliticaValue();
+            SetSalaValue();
         }
 
-        private void SetValue()
+        private void SetSalaValue()
+        {
+            foreach (Sala s in CentroSaleProve.GetIstance().Sale)
+                _listBoxSaleGestioneSale.Items.Add(s.NomeSala);
+        }
+
+        private void SetPoliticaValue()
+        {
+            _textBoxPreavvisoDisdetta.Text = CentroSaleProve.GetIstance().Politica.PreavvisoDisdetta.ToString();
+            _comboBoxScontoClienteRegistrato.Text = (CentroSaleProve.GetIstance().Politica.ScontoClienteRegistrato)*100+" %";
+            _comboBoxScontoPrenotazionePeriodica.Text = (CentroSaleProve.GetIstance().Politica.ScontoPrenotazionePeriodica)*100+" %";
+
+            _textBoxPreavvisoDisdetta.Enabled = false;
+            _comboBoxScontoPrenotazionePeriodica.Enabled = false;
+            _comboBoxScontoClienteRegistrato.Enabled = false;
+        }
+
+        private void SetProfiloValue()
         {
             _textBoxNomeCentroSaleProva.Text = CentroSaleProve.GetIstance().Profilo.NomeCentro;
             _textBoxIndirizzo.Text = CentroSaleProve.GetIstance().Profilo.Indirizzo;
             _textBoxTelefono.Text = CentroSaleProve.GetIstance().Profilo.Telefono;
             _textBoxEmail.Text = CentroSaleProve.GetIstance().Profilo.Email;
 
-            _textBoxNomeCentroSaleProva.ReadOnly = !_abilitaModificheImpostaProfilo.Checked;
-            _textBoxIndirizzo.ReadOnly = !_abilitaModificheImpostaProfilo.Checked;
-            _textBoxTelefono.ReadOnly = !_abilitaModificheImpostaProfilo.Checked;
-            _textBoxEmail.ReadOnly = !_abilitaModificheImpostaProfilo.Checked;
-            
+            _textBoxNomeCentroSaleProva.Enabled = false;
+            _textBoxIndirizzo.Enabled = false;
+            _textBoxTelefono.Enabled = false;
+            _textBoxEmail.Enabled = false;
+     
+           
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -77,7 +97,14 @@ namespace MUSEICA.ProvaView
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            _listBoxDescrizioneSaleGestioneSale.Items.Clear();
+            string salaSelected = _listBoxSaleGestioneSale.SelectedItem.ToString();
+            foreach(Sala s in CentroSaleProve.GetIstance().Sale)
+            {
+                _listBoxDescrizioneSaleGestioneSale.Items.Add("Id Sala : " + s.IdSala);
+                _listBoxDescrizioneSaleGestioneSale.Items.Add("Tipologia : " + s.Tipo.NomeTipologia);
+                _listBoxDescrizioneSaleGestioneSale.Items.Add("Indirizzo : " + s.Indirizzo);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -85,49 +112,82 @@ namespace MUSEICA.ProvaView
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
+        private void button2_Click(object sender, EventArgs e) { }
+        
 
+        private void button1_Click(object sender, EventArgs e) { }
+        
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e) { }
+        
+
+        private void label6_Click(object sender, EventArgs e) { }
+       
+
+        private void textBox5_TextChanged(object sender, EventArgs e) { }
+       
+
+        private void button12_Click(object sender, EventArgs e) { }
+        
+
+        private void button8_Click(object sender, EventArgs e) { }
+        
+
+        private void label4_Click_1(object sender, EventArgs e) { }
+        
+
+        private void ProfiloView_Load(object sender, EventArgs e) { }
+
+        private void _abilitaModificheImpostaProfilo_CheckedChanged(object sender, EventArgs e)
+        {
+            if(_abilitaModificheImpostaProfilo.Checked)
+            {
+                _textBoxNomeCentroSaleProva.Enabled = true;
+                _textBoxIndirizzo.Enabled = true;
+                _textBoxTelefono.Enabled = true;
+                _textBoxEmail.Enabled = true;
+            }
+            else
+            {
+                _textBoxNomeCentroSaleProva.Enabled = false;
+                _textBoxIndirizzo.Enabled = false;
+                _textBoxTelefono.Enabled = false;
+                _textBoxEmail.Enabled = false;
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void _abilitaModificheGestionePolitica_CheckedChanged(object sender, EventArgs e)
         {
+            if(_abilitaModificheGestionePolitica.Checked)
+            {
+                _textBoxPreavvisoDisdetta.Enabled = true;
+                _comboBoxScontoClienteRegistrato.Enabled = true;
+                _comboBoxScontoPrenotazionePeriodica.Enabled = true;
 
+                _comboBoxScontoClienteRegistrato.Items.AddRange(ScontiRange());
+                _comboBoxScontoPrenotazionePeriodica.Items.AddRange(ScontiRange());
+            }
+            else
+            {
+                _textBoxPreavvisoDisdetta.Enabled = false;
+                _comboBoxScontoClienteRegistrato.Enabled = false;
+                _comboBoxScontoPrenotazionePeriodica.Enabled = false;
+
+            }
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private string[] ScontiRange()
         {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ProfiloView_Load(object sender, EventArgs e)
-        {
-
+            int i = 0;
+            int index = 0;
+            string[] valori = new string[21];
+            while (i <= 100)
+            {
+                valori[index] = i.ToString() + " %";
+                i += 5;
+                index++;
+            }
+            return valori;
         }
 
         
