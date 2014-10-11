@@ -40,7 +40,7 @@ namespace MUSEICA.Model
         public override float getCosto()
         {
 
-            return Sala.Tipo.Prezzo;
+            return Sala.Prezzo;
         }
 
     }//end PrenotazioneSingola

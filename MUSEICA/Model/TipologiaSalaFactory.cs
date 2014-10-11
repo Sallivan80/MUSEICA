@@ -48,11 +48,11 @@ namespace MUSEICA.Model
             switch (nome_tipologia)
             {
                 case "Handrix":
-                    return new TipologiaSala(nome_tipologia, "descrizione sconosciuta", 5.3F);
+                    return new TipologiaSala(nome_tipologia, "descrizione strumentistica");
                 case "Morrison":
-                    return new TipologiaSala(nome_tipologia, "descrizione sconosciuta", 3.3F);
+                    return new TipologiaSala(nome_tipologia, "descrizione strumentistica");
                 case "Caparezza":
-                    return new TipologiaSala(nome_tipologia, "descrizione sconosciuta", 4.0F);
+                    return new TipologiaSala(nome_tipologia, "descrizione strumentistica");
                 default:
                     throw new ArgumentException(nome_tipologia + " non consentita ");
             }
@@ -64,18 +64,18 @@ namespace MUSEICA.Model
         {
             private readonly string _nomeTipo;
             private readonly string _descrizione;
-            private readonly float _prezzo;
+            
 
-            public TipologiaSala(string nomeTipo, string descrizione, float prezzo)
+            public TipologiaSala(string nomeTipo, string descrizione)
             {
                 this._nomeTipo = nomeTipo;
                 this._descrizione = descrizione;
-                this._prezzo = prezzo;
+                
 
             }
             public override string ToString()
             {
-                return String.Format("[NomeTipologia:{0},Descrizione:{1},Prezzo:{2}", _nomeTipo, _descrizione, _prezzo);
+                return String.Format("[NomeTipologia:{0},Descrizione:{1}", _nomeTipo, _descrizione);
             }
 
             #region Property
@@ -91,11 +91,7 @@ namespace MUSEICA.Model
 
             }
 
-            public float Prezzo
-            {
-                get { return _prezzo; }
-
-            }
+          
             #endregion
         }//end TipologiaSala
 

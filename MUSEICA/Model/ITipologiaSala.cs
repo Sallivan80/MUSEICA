@@ -15,6 +15,6 @@ namespace MUSEICA.Model
 
         string Descrizione { get; }
 
-        float Prezzo { get; }
+    
     }//end ITipologiaSala
 }

@@ -68,9 +68,10 @@ namespace MUSEICA.Persistence
                     string idSala= node.SelectSingleNode("IdSala").InnerText;
                     string indirizzo = node.SelectSingleNode("Indirizzo").InnerText;
                     string nomeSala = node.SelectSingleNode("NomeSala").InnerText;
+                    float prezzoSala = Convert.ToSingle(node.SelectSingleNode("Prezzo").InnerText);
                     ITipologiaSala tipologia = TipologiaSalaFactory.GetTipologia(node.SelectSingleNode("Tipologia").InnerText);
                     
-                    Sala sala= new Sala(idSala,indirizzo,nomeSala,tipologia);
+                    Sala sala= new Sala(idSala,indirizzo,nomeSala,tipologia,prezzoSala);
 
                     sale.Add(sala);
                 }
@@ -112,6 +113,7 @@ namespace MUSEICA.Persistence
                     {
                         node.SelectSingleNode("Indirizzo").InnerText = salaToSave.Indirizzo;
                         node.SelectSingleNode("Tipologia").InnerText = salaToSave.Tipo.NomeTipologia;
+                        node.SelectSingleNode("Prezzo").InnerText = salaToSave.Prezzo.ToString();
                        
 
                         _xmlDocument.Save(_fileName);
@@ -128,16 +130,20 @@ namespace MUSEICA.Persistence
                     XmlElement indirizzoElement = _xmlDocument.CreateElement("Indirizzo");
                     XmlElement nomeSalaElement = _xmlDocument.CreateElement("NomeSala");
                     XmlElement tipologiaElement = _xmlDocument.CreateElement("Tipologia");
+                    XmlElement prezzoElement = _xmlDocument.CreateElement("Prezzo");
+
 
                     idSalaElement.InnerText = sala.IdSala;
                     indirizzoElement.InnerText = sala.Indirizzo;
                     nomeSalaElement.InnerText = sala.NomeSala;
                     tipologiaElement.InnerText = sala.Tipo.NomeTipologia;
+                    prezzoElement.InnerText = sala.Prezzo.ToString();
 
                     salaNode.AppendChild(idSalaElement);
                     salaNode.AppendChild(indirizzoElement);
                     salaNode.AppendChild(nomeSalaElement);
                     salaNode.AppendChild(tipologiaElement);
+                    salaNode.AppendChild(prezzoElement);
 
 
                     _xmlDocument.DocumentElement.InsertAfter(salaNode, _xmlDocument.DocumentElement.LastChild);

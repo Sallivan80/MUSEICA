@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MUSEICA.ProvaView;
+using MUSEICA.Controllers;
 
 namespace MUSEICA
 {
@@ -17,7 +18,9 @@ namespace MUSEICA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Controller c = new ControllerProfilo();
+            c.LoadCompenents();
+            Application.Run(new ProfiloView(c));
         }
     }
 }

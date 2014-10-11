@@ -1,0 +1,14 @@
+﻿<Sale>
+  <Sala>
+    <IdSala>0001</IdSala>
+    <NomeSala>Sala 1</NomeSala>
+    <Indirizzo>via mura di porta galliera 9</Indirizzo>
+    <Tipologia>Morrison</Tipologia>
+  </Sala>
+  <Sala>
+    <IdSala>0002</IdSala>
+    <NomeSala>Sala 2</NomeSala>
+    <Indirizzo>via borgo di san pietro 99</Indirizzo>
+    <Tipologia>Caparezza</Tipologia>
+  </Sala>
+</Sale>

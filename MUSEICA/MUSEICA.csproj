@@ -91,10 +91,8 @@
     <Compile Include="Persistence\IClientePersister.cs" />
     <Compile Include="Persistence\IPrenotazionePersister.cs" />
     <Compile Include="Persistence\ISalaPersister.cs" />
-    <Compile Include="Persistence\ITipologiaPersister.cs" />
     <Compile Include="Persistence\PrenotazionePersister.cs" />
     <Compile Include="Persistence\SalaPersister.cs" />
-    <Compile Include="Persistence\TipologiaPersister.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProvaView\PrenotazioneSingolaView.cs">
@@ -164,7 +162,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Files\Clienti.xml" />
     <Content Include="Files\Prenotazioni.xml" />
+    <Content Include="Files\Sale.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
