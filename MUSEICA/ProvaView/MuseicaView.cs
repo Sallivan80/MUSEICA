@@ -25,6 +25,11 @@ namespace MUSEICA.ProvaView
 
         private void gestioneToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void gestioneToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
             _controller.ChangeView("Profilo");
         }
     }

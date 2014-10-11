@@ -13,4 +13,12 @@
     <Telefono>33312398034</Telefono>
     <Indirizzo>via mura porta galliera</Indirizzo>
   </ClienteRegistrato>
+  <ClienteRegistrato>
+    <IdTessera>00002</IdTessera>
+    <ScadenzaTessera>16/12/2014</ScadenzaTessera>
+    <Nome>Francesco</Nome>
+    <Cognome>Lattanzi</Cognome>
+    <Telefono>3331676789</Telefono>
+    <Indirizzo>via senza una gioia</Indirizzo>
+  </ClienteRegistrato>
 </Clienti>

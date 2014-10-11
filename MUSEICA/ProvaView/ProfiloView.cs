@@ -143,20 +143,7 @@ namespace MUSEICA.ProvaView
 
         private void _abilitaModificheImpostaProfilo_CheckedChanged(object sender, EventArgs e)
         {
-            if(_abilitaModificheImpostaProfilo.Checked)
-            {
-                _textBoxNomeCentroSaleProva.Enabled = true;
-                _textBoxIndirizzo.Enabled = true;
-                _textBoxTelefono.Enabled = true;
-                _textBoxEmail.Enabled = true;
-            }
-            else
-            {
-                _textBoxNomeCentroSaleProva.Enabled = false;
-                _textBoxIndirizzo.Enabled = false;
-                _textBoxTelefono.Enabled = false;
-                _textBoxEmail.Enabled = false;
-            }
+           
         }
 
         private void _abilitaModificheGestionePolitica_CheckedChanged(object sender, EventArgs e)
@@ -195,13 +182,36 @@ namespace MUSEICA.ProvaView
 
         private void _listBoxClientiRegistratiGestioneClientiRegistrati_SelectedIndexChanged(object sender, EventArgs e)
         {
+           
+        }
+
+        private void _abilitaModificheImpostaProfilo_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (_abilitaModificheImpostaProfilo.Checked)
+            {
+                _textBoxNomeCentroSaleProva.Enabled = true;
+                _textBoxIndirizzo.Enabled = true;
+                _textBoxTelefono.Enabled = true;
+                _textBoxEmail.Enabled = true;
+            }
+            else
+            {
+                _textBoxNomeCentroSaleProva.Enabled = false;
+                _textBoxIndirizzo.Enabled = false;
+                _textBoxTelefono.Enabled = false;
+                _textBoxEmail.Enabled = false;
+            }
+        }
+
+        private void _listBoxClientiRegistratiGestioneClientiRegistrati_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
             _listBoxDettagliGestioneClientiRegistrati.Items.Clear();
             string clienteSelected = _listBoxClientiRegistratiGestioneClientiRegistrati.SelectedItem.ToString();
-            foreach(Cliente c in CentroSaleProve.GetIstance().Clienti)
+            foreach (Cliente c in CentroSaleProve.GetIstance().Clienti)
             {
-                if (c.Cognome + " " + c.Nome == clienteSelected && c.GetType()==typeof(ClienteRegistrato))
+                if (c.Cognome + " " + c.Nome == clienteSelected && c.GetType() == typeof(ClienteRegistrato))
                 {
-                    ClienteRegistrato temp=(ClienteRegistrato)c;
+                    ClienteRegistrato temp = (ClienteRegistrato)c;
                     _listBoxDettagliGestioneClientiRegistrati.Items.Add("N° Tessera : " + temp.IdTessera);
                     _listBoxDettagliGestioneClientiRegistrati.Items.Add("Scadenza Tessera : " + temp.ScadenzaTessera.ToShortDateString());
                     _listBoxDettagliGestioneClientiRegistrati.Items.Add("Indirizzo : " + temp.Indirizzo);
