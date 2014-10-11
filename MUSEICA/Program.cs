@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MUSEICA.ProvaView;
 using MUSEICA.Controllers;
+using MUSEICA.Model;
+using MUSEICA.Persistence;
+using MUSEICA.Properties;
+using MUSEICA.ProvaView;
 
 namespace MUSEICA
 {
@@ -16,11 +19,11 @@ namespace MUSEICA
         [STAThread]
         static void Main()
         {
+            
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Controller c = new ControllerProfilo();
-            c.LoadCompenents();
-            Application.Run(new ProfiloView(c));
+            Application.Run(new ProfiloView(new Controllers.ControllerProfilo()));
         }
     }
 }
