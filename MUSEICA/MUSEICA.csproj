@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\Controller.cs" />
+    <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\ControllerProfilo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -107,11 +108,11 @@
     <Compile Include="ProvaView\MixaggioView.Designer.cs">
       <DependentUpon>MixaggioView.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProvaView\Modifica.cs">
+    <Compile Include="ProvaView\ModificaSala.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProvaView\Modifica.Designer.cs">
-      <DependentUpon>Modifica.cs</DependentUpon>
+    <Compile Include="ProvaView\ModificaSala.Designer.cs">
+      <DependentUpon>ModificaSala.cs</DependentUpon>
     </Compile>
     <Compile Include="ProvaView\MuseicaView.cs">
       <SubType>Form</SubType>
@@ -176,8 +177,8 @@
     <EmbeddedResource Include="ProvaView\MixaggioView.resx">
       <DependentUpon>MixaggioView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProvaView\Modifica.resx">
-      <DependentUpon>Modifica.cs</DependentUpon>
+    <EmbeddedResource Include="ProvaView\ModificaSala.resx">
+      <DependentUpon>ModificaSala.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProvaView\MuseicaView.resx">
       <DependentUpon>MuseicaView.cs</DependentUpon>

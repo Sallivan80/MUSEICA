@@ -10,21 +10,18 @@ namespace MUSEICA.Persistence
     public class DataManager
     {
         private IClientePersister _clientePersister;
-        private ISalaPersister _salaPersister;
-        
+        private ISalaPersister _salaPersister;        
         private IPrenotazionePersister _prenotazionePersister;
 
         private List<Sala> _sale;
-        private List<Cliente> _clienti;
-        
+        private List<Cliente> _clienti;        
         private List<Prenotazione> _prenotazioni;
 
 
         public DataManager()
         {
             _clientePersister = new ClientePersister(@"../../Files/Clienti.xml");
-            _salaPersister = new SalaPersister(@"../../Files/Sale.xml");
-           
+            _salaPersister = new SalaPersister(@"../../Files/Sale.xml");           
             _prenotazionePersister = new PrenotazionePersister(@"../../Files/Prenotazioni.xml");
         }
 
