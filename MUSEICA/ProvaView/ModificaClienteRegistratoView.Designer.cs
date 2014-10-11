@@ -94,6 +94,7 @@
             this._textBoxNumeroTesseraRegistrazione.Enabled = false;
             this._textBoxNumeroTesseraRegistrazione.Location = new System.Drawing.Point(133, 43);
             this._textBoxNumeroTesseraRegistrazione.Name = "_textBoxNumeroTesseraRegistrazione";
+            this._textBoxNumeroTesseraRegistrazione.ReadOnly = true;
             this._textBoxNumeroTesseraRegistrazione.Size = new System.Drawing.Size(211, 20);
             this._textBoxNumeroTesseraRegistrazione.TabIndex = 13;
             // 
@@ -109,18 +110,18 @@
             this._labelNumeroTesseraRegistrazione.AutoSize = true;
             this._labelNumeroTesseraRegistrazione.Location = new System.Drawing.Point(16, 46);
             this._labelNumeroTesseraRegistrazione.Name = "_labelNumeroTesseraRegistrazione";
-            this._labelNumeroTesseraRegistrazione.Size = new System.Drawing.Size(58, 13);
+            this._labelNumeroTesseraRegistrazione.Size = new System.Drawing.Size(61, 13);
             this._labelNumeroTesseraRegistrazione.TabIndex = 1;
-            this._labelNumeroTesseraRegistrazione.Text = "Tessera n°";
+            this._labelNumeroTesseraRegistrazione.Text = "Tessera n°:";
             // 
             // _labelScadenzaTesseraRegistrazione
             // 
             this._labelScadenzaTesseraRegistrazione.AutoSize = true;
             this._labelScadenzaTesseraRegistrazione.Location = new System.Drawing.Point(16, 21);
             this._labelScadenzaTesseraRegistrazione.Name = "_labelScadenzaTesseraRegistrazione";
-            this._labelScadenzaTesseraRegistrazione.Size = new System.Drawing.Size(96, 13);
+            this._labelScadenzaTesseraRegistrazione.Size = new System.Drawing.Size(99, 13);
             this._labelScadenzaTesseraRegistrazione.TabIndex = 0;
-            this._labelScadenzaTesseraRegistrazione.Text = "Scadenza Tessera";
+            this._labelScadenzaTesseraRegistrazione.Text = "Scadenza Tessera:";
             // 
             // _panelNomeCognTelEmailIdRegistrazione
             // 
@@ -150,9 +151,9 @@
             this._labelIndirizzoRegistrazione.AutoSize = true;
             this._labelIndirizzoRegistrazione.Location = new System.Drawing.Point(16, 96);
             this._labelIndirizzoRegistrazione.Name = "_labelIndirizzoRegistrazione";
-            this._labelIndirizzoRegistrazione.Size = new System.Drawing.Size(45, 13);
+            this._labelIndirizzoRegistrazione.Size = new System.Drawing.Size(48, 13);
             this._labelIndirizzoRegistrazione.TabIndex = 11;
-            this._labelIndirizzoRegistrazione.Text = "Indirizzo";
+            this._labelIndirizzoRegistrazione.Text = "Indirizzo:";
             // 
             // _labelEmailRegistrazione
             // 
@@ -174,6 +175,7 @@
             this._textBoxCognomeRegistrazione.Enabled = false;
             this._textBoxCognomeRegistrazione.Location = new System.Drawing.Point(133, 43);
             this._textBoxCognomeRegistrazione.Name = "_textBoxCognomeRegistrazione";
+            this._textBoxCognomeRegistrazione.ReadOnly = true;
             this._textBoxCognomeRegistrazione.Size = new System.Drawing.Size(211, 20);
             this._textBoxCognomeRegistrazione.TabIndex = 5;
             // 
@@ -182,6 +184,7 @@
             this._textBoxNomeRegistrazione.Enabled = false;
             this._textBoxNomeRegistrazione.Location = new System.Drawing.Point(133, 18);
             this._textBoxNomeRegistrazione.Name = "_textBoxNomeRegistrazione";
+            this._textBoxNomeRegistrazione.ReadOnly = true;
             this._textBoxNomeRegistrazione.Size = new System.Drawing.Size(211, 20);
             this._textBoxNomeRegistrazione.TabIndex = 4;
             // 
@@ -190,27 +193,27 @@
             this._labelTelefonoRegistrazione.AutoSize = true;
             this._labelTelefonoRegistrazione.Location = new System.Drawing.Point(16, 71);
             this._labelTelefonoRegistrazione.Name = "_labelTelefonoRegistrazione";
-            this._labelTelefonoRegistrazione.Size = new System.Drawing.Size(49, 13);
+            this._labelTelefonoRegistrazione.Size = new System.Drawing.Size(52, 13);
             this._labelTelefonoRegistrazione.TabIndex = 2;
-            this._labelTelefonoRegistrazione.Text = "Telefono";
+            this._labelTelefonoRegistrazione.Text = "Telefono:";
             // 
             // _labelCognomeRegistrazione
             // 
             this._labelCognomeRegistrazione.AutoSize = true;
             this._labelCognomeRegistrazione.Location = new System.Drawing.Point(16, 46);
             this._labelCognomeRegistrazione.Name = "_labelCognomeRegistrazione";
-            this._labelCognomeRegistrazione.Size = new System.Drawing.Size(52, 13);
+            this._labelCognomeRegistrazione.Size = new System.Drawing.Size(55, 13);
             this._labelCognomeRegistrazione.TabIndex = 1;
-            this._labelCognomeRegistrazione.Text = "Cognome";
+            this._labelCognomeRegistrazione.Text = "Cognome:";
             // 
             // _labelNomeClienteRegistrazione
             // 
             this._labelNomeClienteRegistrazione.AutoSize = true;
             this._labelNomeClienteRegistrazione.Location = new System.Drawing.Point(16, 21);
             this._labelNomeClienteRegistrazione.Name = "_labelNomeClienteRegistrazione";
-            this._labelNomeClienteRegistrazione.Size = new System.Drawing.Size(35, 13);
+            this._labelNomeClienteRegistrazione.Size = new System.Drawing.Size(38, 13);
             this._labelNomeClienteRegistrazione.TabIndex = 0;
-            this._labelNomeClienteRegistrazione.Text = "Nome";
+            this._labelNomeClienteRegistrazione.Text = "Nome:";
             // 
             // ModificaClienteRegistratoView
             // 

@@ -101,6 +101,24 @@
     <Compile Include="ProvaView\AggiungiSalaView.Designer.cs">
       <DependentUpon>AggiungiSalaView.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProvaView\ControlAggiuntaStrumento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProvaView\ControlAggiuntaStrumento.Designer.cs">
+      <DependentUpon>ControlAggiuntaStrumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProvaView\EliminaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProvaView\EliminaView.Designer.cs">
+      <DependentUpon>EliminaView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProvaView\ModificaPrenotazioneView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProvaView\ModificaPrenotazioneView.Designer.cs">
+      <DependentUpon>ModificaPrenotazioneView.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProvaView\SalaMixaggioView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +185,12 @@
     <Compile Include="ProvaView\SalvaModificheView.Designer.cs">
       <DependentUpon>SalvaModificheView.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProvaView\StoricoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProvaView\StoricoView.Designer.cs">
+      <DependentUpon>StoricoView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -178,6 +202,15 @@
     </Compile>
     <EmbeddedResource Include="ProvaView\AggiungiSalaView.resx">
       <DependentUpon>AggiungiSalaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProvaView\ControlAggiuntaStrumento.resx">
+      <DependentUpon>ControlAggiuntaStrumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProvaView\EliminaView.resx">
+      <DependentUpon>EliminaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProvaView\ModificaPrenotazioneView.resx">
+      <DependentUpon>ModificaPrenotazioneView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProvaView\SalaMixaggioView.resx">
       <DependentUpon>SalaMixaggioView.cs</DependentUpon>
@@ -211,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProvaView\SalvaModificheView.resx">
       <DependentUpon>SalvaModificheView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProvaView\StoricoView.resx">
+      <DependentUpon>StoricoView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
