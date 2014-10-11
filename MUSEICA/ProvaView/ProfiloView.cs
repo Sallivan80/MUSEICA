@@ -26,7 +26,6 @@ namespace MUSEICA.ProvaView
             SetProfiloValue();
             SetPoliticaValue();
             SetSalaValue();
-            SetTipologiaValue();
             SetClientiRegistratiValue();
         }
 
@@ -39,12 +38,6 @@ namespace MUSEICA.ProvaView
            }
         }
 
-        private void SetTipologiaValue()
-        {
-            foreach (ITipologiaSala tipo in TipologiaSalaFactory.GetTipologie())
-                _listBoxTipologieSaleGestioneTipoSale.Items.Add(tipo.NomeTipologia);
-        }
-
         private void SetSalaValue()
         {
             foreach (Sala s in CentroSaleProve.GetIstance().Sale)
@@ -55,9 +48,7 @@ namespace MUSEICA.ProvaView
         {
             _textBoxPreavvisoDisdetta.Text = CentroSaleProve.GetIstance().Politica.PreavvisoDisdetta.ToString();
             _comboBoxScontoClienteRegistrato.Text = (CentroSaleProve.GetIstance().Politica.ScontoClienteRegistrato)*100+" %";
-            _comboBoxScontoPrenotazionePeriodica.Text = (CentroSaleProve.GetIstance().Politica.ScontoPrenotazionePeriodica)*100+" %";
-
-            
+            _comboBoxScontoPrenotazionePeriodica.Text = (CentroSaleProve.GetIstance().Politica.ScontoPrenotazionePeriodica)*100+" %";           
         }
 
         private void SetProfiloValue()
@@ -66,10 +57,6 @@ namespace MUSEICA.ProvaView
             _textBoxIndirizzo.Text = CentroSaleProve.GetIstance().Profilo.Indirizzo;
             _textBoxTelefono.Text = CentroSaleProve.GetIstance().Profilo.Telefono;
             _textBoxEmail.Text = CentroSaleProve.GetIstance().Profilo.Email;
-
-          
-     
-           
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -204,20 +191,6 @@ namespace MUSEICA.ProvaView
                 index++;
             }
             return valori;
-        }
-
-        private void _listBoxTipologieSaleGestioneTipoSale_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            _listBoxDescrizioneGestioneTipoSale.Items.Clear();
-            string tipologiaSelected = _listBoxTipologieSaleGestioneTipoSale.SelectedItem.ToString();
-            foreach (ITipologiaSala t in TipologiaSalaFactory.GetTipologie())
-            {
-                if (t.NomeTipologia == tipologiaSelected)
-                {
-                    _listBoxDescrizioneGestioneTipoSale.Items.Add(t.Descrizione);
-                   
-                }
-            }
         }
 
         private void _listBoxClientiRegistratiGestioneClientiRegistrati_SelectedIndexChanged(object sender, EventArgs e)

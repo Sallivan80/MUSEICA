@@ -182,7 +182,7 @@
             this.Controls.Add(this._panelOkAnnullaPrenotazione);
             this.Controls.Add(this.panel1);
             this.Name = "ModificaSalaView";
-            this.Text = "Modifica";
+            this.Text = "Modifica Sala";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this._panelOkAnnullaPrenotazione.ResumeLayout(false);
