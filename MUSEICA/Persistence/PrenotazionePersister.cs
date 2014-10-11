@@ -122,7 +122,8 @@ namespace MUSEICA.Persistence
                 string indirizzo = salaNode.SelectSingleNode("Indirizzo").InnerText;
                 string nomeSala = salaNode.SelectSingleNode("NomeSala").InnerText;
                 ITipologiaSala tipologia = TipologiaSalaFactory.GetTipologia(salaNode.SelectSingleNode("Tipologia").InnerText);
-                float prezzo = Convert.ToSingle(salaNode.SelectSingleNode("Prezzo").InnerText);
+                XmlNode prezzoNode = salaNode.SelectSingleNode("Prezzo");
+                float prezzo = Convert.ToSingle(prezzoNode.InnerText);
                     result = new Sala(idSala, indirizzo, nomeSala, tipologia,prezzo);
 
 

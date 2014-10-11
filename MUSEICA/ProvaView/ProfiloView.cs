@@ -26,6 +26,23 @@ namespace MUSEICA.ProvaView
             SetProfiloValue();
             SetPoliticaValue();
             SetSalaValue();
+            SetTipologiaValue();
+            SetClientiRegistratiValue();
+        }
+
+        private void SetClientiRegistratiValue()
+        {
+           foreach(Cliente cliente in CentroSaleProve.GetIstance().Clienti)
+           {
+               if (cliente.GetType() == typeof(ClienteRegistrato))
+                   _listBoxClientiRegistratiGestioneClientiRegistrati.Items.Add(cliente.Cognome + " " + cliente.Nome);
+           }
+        }
+
+        private void SetTipologiaValue()
+        {
+            foreach (ITipologiaSala tipo in TipologiaSalaFactory.GetTipologie())
+                _listBoxTipologieSaleGestioneTipoSale.Items.Add(tipo.NomeTipologia);
         }
 
         private void SetSalaValue()
@@ -40,9 +57,7 @@ namespace MUSEICA.ProvaView
             _comboBoxScontoClienteRegistrato.Text = (CentroSaleProve.GetIstance().Politica.ScontoClienteRegistrato)*100+" %";
             _comboBoxScontoPrenotazionePeriodica.Text = (CentroSaleProve.GetIstance().Politica.ScontoPrenotazionePeriodica)*100+" %";
 
-            _textBoxPreavvisoDisdetta.Enabled = false;
-            _comboBoxScontoPrenotazionePeriodica.Enabled = false;
-            _comboBoxScontoClienteRegistrato.Enabled = false;
+            
         }
 
         private void SetProfiloValue()
@@ -52,10 +67,7 @@ namespace MUSEICA.ProvaView
             _textBoxTelefono.Text = CentroSaleProve.GetIstance().Profilo.Telefono;
             _textBoxEmail.Text = CentroSaleProve.GetIstance().Profilo.Email;
 
-            _textBoxNomeCentroSaleProva.Enabled = false;
-            _textBoxIndirizzo.Enabled = false;
-            _textBoxTelefono.Enabled = false;
-            _textBoxEmail.Enabled = false;
+          
      
            
         }
@@ -101,9 +113,13 @@ namespace MUSEICA.ProvaView
             string salaSelected = _listBoxSaleGestioneSale.SelectedItem.ToString();
             foreach(Sala s in CentroSaleProve.GetIstance().Sale)
             {
-                _listBoxDescrizioneSaleGestioneSale.Items.Add("Id Sala : " + s.IdSala);
-                _listBoxDescrizioneSaleGestioneSale.Items.Add("Tipologia : " + s.Tipo.NomeTipologia);
-                _listBoxDescrizioneSaleGestioneSale.Items.Add("Indirizzo : " + s.Indirizzo);
+                if (s.NomeSala == salaSelected)
+                {
+                    _listBoxDescrizioneSaleGestioneSale.Items.Add("Id Sala : " + s.IdSala);
+                    _listBoxDescrizioneSaleGestioneSale.Items.Add("Tipologia : " + s.Tipo.NomeTipologia);
+                    _listBoxDescrizioneSaleGestioneSale.Items.Add("Indirizzo : " + s.Indirizzo);
+                    _listBoxDescrizioneSaleGestioneSale.Items.Add("Prezzo :" + s.Prezzo+" €/h" );
+                }
             }
         }
 
@@ -188,6 +204,39 @@ namespace MUSEICA.ProvaView
                 index++;
             }
             return valori;
+        }
+
+        private void _listBoxTipologieSaleGestioneTipoSale_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _listBoxDescrizioneGestioneTipoSale.Items.Clear();
+            string tipologiaSelected = _listBoxTipologieSaleGestioneTipoSale.SelectedItem.ToString();
+            foreach (ITipologiaSala t in TipologiaSalaFactory.GetTipologie())
+            {
+                if (t.NomeTipologia == tipologiaSelected)
+                {
+                    _listBoxDescrizioneGestioneTipoSale.Items.Add(t.Descrizione);
+                   
+                }
+            }
+        }
+
+        private void _listBoxClientiRegistratiGestioneClientiRegistrati_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _listBoxDettagliGestioneClientiRegistrati.Items.Clear();
+            string clienteSelected = _listBoxClientiRegistratiGestioneClientiRegistrati.SelectedItem.ToString();
+            foreach(Cliente c in CentroSaleProve.GetIstance().Clienti)
+            {
+                if (c.Cognome + " " + c.Nome == clienteSelected && c.GetType()==typeof(ClienteRegistrato))
+                {
+                    ClienteRegistrato temp=(ClienteRegistrato)c;
+                    _listBoxDettagliGestioneClientiRegistrati.Items.Add("N° Tessera : " + temp.IdTessera);
+                    _listBoxDettagliGestioneClientiRegistrati.Items.Add("Scadenza Tessera : " + temp.ScadenzaTessera.ToShortDateString());
+                    _listBoxDettagliGestioneClientiRegistrati.Items.Add("Indirizzo : " + temp.Indirizzo);
+                    _listBoxDettagliGestioneClientiRegistrati.Items.Add("Telefono : " + temp.Telefono);
+
+                }
+
+            }
         }
 
         

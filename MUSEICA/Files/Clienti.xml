@@ -5,4 +5,12 @@
     <Telefono>3334012070</Telefono>
     <Indirizzo>via borgo di san pietro 99</Indirizzo>
   </Cliente>
+  <ClienteRegistrato>
+    <IdTessera>00001</IdTessera>
+    <ScadenzaTessera>16/12/2014</ScadenzaTessera>
+    <Nome>Francesco</Nome>
+    <Cognome>Zobel</Cognome>
+    <Telefono>33312398034</Telefono>
+    <Indirizzo>via mura porta galliera</Indirizzo>
+  </ClienteRegistrato>
 </Clienti>
