@@ -1,6 +1,6 @@
 ﻿namespace MUSEICA.ProvaView
 {
-    partial class MixaggioView
+    partial class SalaRegistrazioneView
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this._labelDescrizione = new System.Windows.Forms.Label();
-            this._descrizioneMixaggio = new System.Windows.Forms.ListBox();
+            this._descrizioneRegistrazione = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // _labelDescrizione
@@ -37,32 +37,32 @@
             this._labelDescrizione.AutoSize = true;
             this._labelDescrizione.Enabled = false;
             this._labelDescrizione.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._labelDescrizione.Location = new System.Drawing.Point(11, 10);
+            this._labelDescrizione.Location = new System.Drawing.Point(9, 7);
             this._labelDescrizione.Name = "_labelDescrizione";
             this._labelDescrizione.Size = new System.Drawing.Size(77, 13);
-            this._labelDescrizione.TabIndex = 17;
+            this._labelDescrizione.TabIndex = 15;
             this._labelDescrizione.Text = "Descrizione:";
             this._labelDescrizione.Visible = false;
             // 
-            // _descrizioneMixaggio
+            // _descrizioneRegistrazione
             // 
-            this._descrizioneMixaggio.BackColor = System.Drawing.SystemColors.Menu;
-            this._descrizioneMixaggio.Enabled = false;
-            this._descrizioneMixaggio.FormattingEnabled = true;
-            this._descrizioneMixaggio.Location = new System.Drawing.Point(14, 26);
-            this._descrizioneMixaggio.Name = "_descrizioneMixaggio";
-            this._descrizioneMixaggio.Size = new System.Drawing.Size(260, 225);
-            this._descrizioneMixaggio.TabIndex = 16;
+            this._descrizioneRegistrazione.BackColor = System.Drawing.SystemColors.Menu;
+            this._descrizioneRegistrazione.Enabled = false;
+            this._descrizioneRegistrazione.FormattingEnabled = true;
+            this._descrizioneRegistrazione.Location = new System.Drawing.Point(12, 23);
+            this._descrizioneRegistrazione.Name = "_descrizioneRegistrazione";
+            this._descrizioneRegistrazione.Size = new System.Drawing.Size(260, 225);
+            this._descrizioneRegistrazione.TabIndex = 14;
             // 
-            // MixaggioView
+            // SalaRegistrazioneView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this._labelDescrizione);
-            this.Controls.Add(this._descrizioneMixaggio);
-            this.Name = "MixaggioView";
-            this.Text = "Mixaggio";
+            this.Controls.Add(this._descrizioneRegistrazione);
+            this.Name = "SalaRegistrazioneView";
+            this.Text = "Sala Registrazione";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -71,6 +71,6 @@
         #endregion
 
         private System.Windows.Forms.Label _labelDescrizione;
-        private System.Windows.Forms.ListBox _descrizioneMixaggio;
+        private System.Windows.Forms.ListBox _descrizioneRegistrazione;
     }
 }

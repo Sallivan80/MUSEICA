@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MUSEICA.ProvaView
 {
-    public partial class Modifica : Form
+    public partial class ModificaSalaView : Form
     {
-        public Modifica()
+        public ModificaSalaView()
         {
             InitializeComponent();
         }
