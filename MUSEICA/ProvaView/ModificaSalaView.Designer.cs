@@ -1,6 +1,6 @@
 ﻿namespace MUSEICA.ProvaView
 {
-    partial class ModificaSala
+    partial class Modifica
     {
         /// <summary>
         /// Required designer variable.
@@ -64,33 +64,6 @@
             this.panel1.Size = new System.Drawing.Size(464, 198);
             this.panel1.TabIndex = 0;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(207, 143);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(191, 22);
-            this.textBox1.TabIndex = 31;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 146);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 17);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Prezzo:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(207, 81);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(191, 24);
-            this.comboBox1.TabIndex = 29;
-            // 
             // _textBoxIndirizzoPrenotazione
             // 
             this._textBoxIndirizzoPrenotazione.Location = new System.Drawing.Point(207, 112);
@@ -115,7 +88,7 @@
             this._textBoxCognomePrenotazione.Location = new System.Drawing.Point(207, 50);
             this._textBoxCognomePrenotazione.Margin = new System.Windows.Forms.Padding(4);
             this._textBoxCognomePrenotazione.Name = "_textBoxCognomePrenotazione";
-            this._textBoxCognomePrenotazione.Size = new System.Drawing.Size(191, 22);
+            this._textBoxCognomePrenotazione.Size = new System.Drawing.Size(144, 20);
             this._textBoxCognomePrenotazione.TabIndex = 25;
             // 
             // _textBoxNomePrenotazione
@@ -123,7 +96,7 @@
             this._textBoxNomePrenotazione.Location = new System.Drawing.Point(207, 20);
             this._textBoxNomePrenotazione.Margin = new System.Windows.Forms.Padding(4);
             this._textBoxNomePrenotazione.Name = "_textBoxNomePrenotazione";
-            this._textBoxNomePrenotazione.Size = new System.Drawing.Size(191, 22);
+            this._textBoxNomePrenotazione.Size = new System.Drawing.Size(144, 20);
             this._textBoxNomePrenotazione.TabIndex = 24;
             // 
             // _labelTelefonoPrenotazione
@@ -186,16 +159,15 @@
             this._annullaButton.Text = "Annulla";
             this._annullaButton.UseVisualStyleBackColor = true;
             // 
-            // ModificaSala
+            // Modifica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(497, 287);
             this.Controls.Add(this._panelOkAnnullaPrenotazione);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "ModificaSala";
-            this.Text = "Modifica Sala";
+            this.Name = "Modifica";
+            this.Text = "Modifica";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this._panelOkAnnullaPrenotazione.ResumeLayout(false);
