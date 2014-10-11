@@ -11,7 +11,7 @@ namespace MUSEICA.Model
 
         private List<Cliente> _clienti;
         private List<Sala> _sale;
-        private CentroSaleProve _istance;
+        private static CentroSaleProve _istance;
         private Profilo _profilo;
         private PoliticaCentro _politica;
         private Agenda _agenda;
@@ -26,7 +26,7 @@ namespace MUSEICA.Model
             Agenda = agenda;
         }
 
-        public CentroSaleProve GetIstance()
+        public static CentroSaleProve GetIstance()
         {
 
             if (_istance == null)
