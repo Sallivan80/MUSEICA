@@ -115,10 +115,7 @@ namespace MUSEICA.ProvaView
 
         }
 
-        private void button2_Click(object sender, EventArgs e) 
-        {
-            this.Controls.Add(new ModificaSala());
-        }
+       
         
 
         private void button1_Click(object sender, EventArgs e) { }
