@@ -85,7 +85,7 @@ namespace MUSEICA.Persistence
 
                 foreach (XmlNode node in nodes)
                 {
-                    string idTessera = node.SelectSingleNode("IDTessera").InnerText;
+                    string idTessera = node.SelectSingleNode("IdTessera").InnerText;
                     DateTime scadenzaTessera = DateTime.Parse(node.SelectSingleNode("ScadenzaTessera").InnerText);
                     string nome = node.SelectSingleNode("Nome").InnerText;
                     string cognome = node.SelectSingleNode("Cognome").InnerText;

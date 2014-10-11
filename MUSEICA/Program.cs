@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MUSEICA.Controllers;
 using MUSEICA.Model;
 using MUSEICA.Persistence;
-using MUSEICA.Properties;
+using MUSEICA.Controllers;
 using MUSEICA.ProvaView;
 
 namespace MUSEICA
@@ -23,7 +22,9 @@ namespace MUSEICA
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ProfiloView(new Controllers.ControllerProfilo()));
+            Controller c = new ControllerProfilo();
+            c.LoadCompenents();
+            Application.Run(new ProfiloView(c));
         }
     }
 }

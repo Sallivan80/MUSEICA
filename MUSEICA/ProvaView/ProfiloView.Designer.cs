@@ -92,7 +92,7 @@
             this._tabGestioneProfilo.Controls.Add(this._tabPageGestioneTipoSale);
             this._tabGestioneProfilo.Controls.Add(this._tabPageGestioneClientiRegistrati);
             this._tabGestioneProfilo.Location = new System.Drawing.Point(1, 2);
-            this._tabGestioneProfilo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._tabGestioneProfilo.Margin = new System.Windows.Forms.Padding(4);
             this._tabGestioneProfilo.Name = "_tabGestioneProfilo";
             this._tabGestioneProfilo.SelectedIndex = 0;
             this._tabGestioneProfilo.Size = new System.Drawing.Size(868, 327);
@@ -110,9 +110,9 @@
             this._tabPageImpostaProfilo.Controls.Add(this._labelIndirizzo);
             this._tabPageImpostaProfilo.Controls.Add(this._labelNomeCentroSaleProva);
             this._tabPageImpostaProfilo.Location = new System.Drawing.Point(4, 25);
-            this._tabPageImpostaProfilo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._tabPageImpostaProfilo.Margin = new System.Windows.Forms.Padding(4);
             this._tabPageImpostaProfilo.Name = "_tabPageImpostaProfilo";
-            this._tabPageImpostaProfilo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._tabPageImpostaProfilo.Padding = new System.Windows.Forms.Padding(4);
             this._tabPageImpostaProfilo.Size = new System.Drawing.Size(860, 298);
             this._tabPageImpostaProfilo.TabIndex = 0;
             this._tabPageImpostaProfilo.Text = "Imposta Profilo";
@@ -123,7 +123,7 @@
             // 
             this._abilitaModificheImpostaProfilo.AutoSize = true;
             this._abilitaModificheImpostaProfilo.Location = new System.Drawing.Point(29, 255);
-            this._abilitaModificheImpostaProfilo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._abilitaModificheImpostaProfilo.Margin = new System.Windows.Forms.Padding(4);
             this._abilitaModificheImpostaProfilo.Name = "_abilitaModificheImpostaProfilo";
             this._abilitaModificheImpostaProfilo.Size = new System.Drawing.Size(132, 21);
             this._abilitaModificheImpostaProfilo.TabIndex = 18;
@@ -133,8 +133,9 @@
             // 
             // _textBoxEmail
             // 
+            this._textBoxEmail.Enabled = false;
             this._textBoxEmail.Location = new System.Drawing.Point(261, 114);
-            this._textBoxEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._textBoxEmail.Margin = new System.Windows.Forms.Padding(4);
             this._textBoxEmail.Name = "_textBoxEmail";
             this._textBoxEmail.Size = new System.Drawing.Size(132, 22);
             this._textBoxEmail.TabIndex = 17;
@@ -152,24 +153,27 @@
             // 
             // _textBoxTelefono
             // 
+            this._textBoxTelefono.Enabled = false;
             this._textBoxTelefono.Location = new System.Drawing.Point(261, 82);
-            this._textBoxTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._textBoxTelefono.Margin = new System.Windows.Forms.Padding(4);
             this._textBoxTelefono.Name = "_textBoxTelefono";
             this._textBoxTelefono.Size = new System.Drawing.Size(132, 22);
             this._textBoxTelefono.TabIndex = 15;
             // 
             // _textBoxIndirizzo
             // 
+            this._textBoxIndirizzo.Enabled = false;
             this._textBoxIndirizzo.Location = new System.Drawing.Point(261, 50);
-            this._textBoxIndirizzo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._textBoxIndirizzo.Margin = new System.Windows.Forms.Padding(4);
             this._textBoxIndirizzo.Name = "_textBoxIndirizzo";
             this._textBoxIndirizzo.Size = new System.Drawing.Size(132, 22);
             this._textBoxIndirizzo.TabIndex = 14;
             // 
             // _textBoxNomeCentroSaleProva
             // 
+            this._textBoxNomeCentroSaleProva.Enabled = false;
             this._textBoxNomeCentroSaleProva.Location = new System.Drawing.Point(261, 18);
-            this._textBoxNomeCentroSaleProva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._textBoxNomeCentroSaleProva.Margin = new System.Windows.Forms.Padding(4);
             this._textBoxNomeCentroSaleProva.Name = "_textBoxNomeCentroSaleProva";
             this._textBoxNomeCentroSaleProva.Size = new System.Drawing.Size(132, 22);
             this._textBoxNomeCentroSaleProva.TabIndex = 13;
@@ -214,9 +218,9 @@
             this._tabPageGestionePolitica.Controls.Add(this._labelScontoClienteRegistrato);
             this._tabPageGestionePolitica.Controls.Add(this._labelPreavvisoDisdetta);
             this._tabPageGestionePolitica.Location = new System.Drawing.Point(4, 25);
-            this._tabPageGestionePolitica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._tabPageGestionePolitica.Margin = new System.Windows.Forms.Padding(4);
             this._tabPageGestionePolitica.Name = "_tabPageGestionePolitica";
-            this._tabPageGestionePolitica.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._tabPageGestionePolitica.Padding = new System.Windows.Forms.Padding(4);
             this._tabPageGestionePolitica.Size = new System.Drawing.Size(860, 298);
             this._tabPageGestionePolitica.TabIndex = 1;
             this._tabPageGestionePolitica.Text = "Gestione Politica";
@@ -226,7 +230,7 @@
             // 
             this._abilitaModificheGestionePolitica.AutoSize = true;
             this._abilitaModificheGestionePolitica.Location = new System.Drawing.Point(29, 255);
-            this._abilitaModificheGestionePolitica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._abilitaModificheGestionePolitica.Margin = new System.Windows.Forms.Padding(4);
             this._abilitaModificheGestionePolitica.Name = "_abilitaModificheGestionePolitica";
             this._abilitaModificheGestionePolitica.Size = new System.Drawing.Size(132, 21);
             this._abilitaModificheGestionePolitica.TabIndex = 10;
@@ -236,8 +240,9 @@
             // 
             // _textBoxPreavvisoDisdetta
             // 
+            this._textBoxPreavvisoDisdetta.Enabled = false;
             this._textBoxPreavvisoDisdetta.Location = new System.Drawing.Point(261, 18);
-            this._textBoxPreavvisoDisdetta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._textBoxPreavvisoDisdetta.Margin = new System.Windows.Forms.Padding(4);
             this._textBoxPreavvisoDisdetta.Name = "_textBoxPreavvisoDisdetta";
             this._textBoxPreavvisoDisdetta.Size = new System.Drawing.Size(160, 22);
             this._textBoxPreavvisoDisdetta.TabIndex = 6;
@@ -245,9 +250,10 @@
             // 
             // _comboBoxScontoClienteRegistrato
             // 
+            this._comboBoxScontoClienteRegistrato.Enabled = false;
             this._comboBoxScontoClienteRegistrato.FormattingEnabled = true;
             this._comboBoxScontoClienteRegistrato.Location = new System.Drawing.Point(261, 62);
-            this._comboBoxScontoClienteRegistrato.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._comboBoxScontoClienteRegistrato.Margin = new System.Windows.Forms.Padding(4);
             this._comboBoxScontoClienteRegistrato.Name = "_comboBoxScontoClienteRegistrato";
             this._comboBoxScontoClienteRegistrato.Size = new System.Drawing.Size(160, 24);
             this._comboBoxScontoClienteRegistrato.TabIndex = 5;
@@ -255,9 +261,10 @@
             // 
             // _comboBoxScontoPrenotazionePeriodica
             // 
+            this._comboBoxScontoPrenotazionePeriodica.Enabled = false;
             this._comboBoxScontoPrenotazionePeriodica.FormattingEnabled = true;
             this._comboBoxScontoPrenotazionePeriodica.Location = new System.Drawing.Point(261, 105);
-            this._comboBoxScontoPrenotazionePeriodica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._comboBoxScontoPrenotazionePeriodica.Margin = new System.Windows.Forms.Padding(4);
             this._comboBoxScontoPrenotazionePeriodica.Name = "_comboBoxScontoPrenotazionePeriodica";
             this._comboBoxScontoPrenotazionePeriodica.Size = new System.Drawing.Size(160, 24);
             this._comboBoxScontoPrenotazionePeriodica.TabIndex = 4;
@@ -303,9 +310,9 @@
             this._tabPageGestioneSale.Controls.Add(this._modificaSalaButton);
             this._tabPageGestioneSale.Controls.Add(this._aggiungiSalaButton);
             this._tabPageGestioneSale.Location = new System.Drawing.Point(4, 25);
-            this._tabPageGestioneSale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._tabPageGestioneSale.Margin = new System.Windows.Forms.Padding(4);
             this._tabPageGestioneSale.Name = "_tabPageGestioneSale";
-            this._tabPageGestioneSale.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._tabPageGestioneSale.Padding = new System.Windows.Forms.Padding(4);
             this._tabPageGestioneSale.Size = new System.Drawing.Size(860, 298);
             this._tabPageGestioneSale.TabIndex = 2;
             this._tabPageGestioneSale.Text = "Gestione Sale";
@@ -318,9 +325,9 @@
             this._labelDescrizioneSaleGestioneSale.Location = new System.Drawing.Point(543, 17);
             this._labelDescrizioneSaleGestioneSale.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this._labelDescrizioneSaleGestioneSale.Name = "_labelDescrizioneSaleGestioneSale";
-            this._labelDescrizioneSaleGestioneSale.Size = new System.Drawing.Size(98, 17);
+            this._labelDescrizioneSaleGestioneSale.Size = new System.Drawing.Size(69, 17);
             this._labelDescrizioneSaleGestioneSale.TabIndex = 6;
-            this._labelDescrizioneSaleGestioneSale.Text = "Descrizione:";
+            this._labelDescrizioneSaleGestioneSale.Text = "Dettagli:";
             this._labelDescrizioneSaleGestioneSale.Click += new System.EventHandler(this.label9_Click);
             // 
             // _listBoxDescrizioneSaleGestioneSale
@@ -328,7 +335,7 @@
             this._listBoxDescrizioneSaleGestioneSale.FormattingEnabled = true;
             this._listBoxDescrizioneSaleGestioneSale.ItemHeight = 16;
             this._listBoxDescrizioneSaleGestioneSale.Location = new System.Drawing.Point(547, 37);
-            this._listBoxDescrizioneSaleGestioneSale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._listBoxDescrizioneSaleGestioneSale.Margin = new System.Windows.Forms.Padding(4);
             this._listBoxDescrizioneSaleGestioneSale.Name = "_listBoxDescrizioneSaleGestioneSale";
             this._listBoxDescrizioneSaleGestioneSale.Size = new System.Drawing.Size(273, 244);
             this._listBoxDescrizioneSaleGestioneSale.TabIndex = 5;
@@ -351,7 +358,7 @@
             this._listBoxSaleGestioneSale.FormattingEnabled = true;
             this._listBoxSaleGestioneSale.ItemHeight = 16;
             this._listBoxSaleGestioneSale.Location = new System.Drawing.Point(207, 37);
-            this._listBoxSaleGestioneSale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._listBoxSaleGestioneSale.Margin = new System.Windows.Forms.Padding(4);
             this._listBoxSaleGestioneSale.Name = "_listBoxSaleGestioneSale";
             this._listBoxSaleGestioneSale.Size = new System.Drawing.Size(273, 244);
             this._listBoxSaleGestioneSale.TabIndex = 3;
@@ -360,7 +367,7 @@
             // _eliminaSalaButton
             // 
             this._eliminaSalaButton.Location = new System.Drawing.Point(35, 242);
-            this._eliminaSalaButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._eliminaSalaButton.Margin = new System.Windows.Forms.Padding(4);
             this._eliminaSalaButton.Name = "_eliminaSalaButton";
             this._eliminaSalaButton.Size = new System.Drawing.Size(100, 28);
             this._eliminaSalaButton.TabIndex = 2;
@@ -371,7 +378,7 @@
             // _modificaSalaButton
             // 
             this._modificaSalaButton.Location = new System.Drawing.Point(35, 87);
-            this._modificaSalaButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._modificaSalaButton.Margin = new System.Windows.Forms.Padding(4);
             this._modificaSalaButton.Name = "_modificaSalaButton";
             this._modificaSalaButton.Size = new System.Drawing.Size(100, 28);
             this._modificaSalaButton.TabIndex = 1;
@@ -382,7 +389,7 @@
             // _aggiungiSalaButton
             // 
             this._aggiungiSalaButton.Location = new System.Drawing.Point(35, 52);
-            this._aggiungiSalaButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._aggiungiSalaButton.Margin = new System.Windows.Forms.Padding(4);
             this._aggiungiSalaButton.Name = "_aggiungiSalaButton";
             this._aggiungiSalaButton.Size = new System.Drawing.Size(100, 28);
             this._aggiungiSalaButton.TabIndex = 0;
@@ -400,7 +407,7 @@
             this._tabPageGestioneTipoSale.Controls.Add(this._modificaTipoSalaButton);
             this._tabPageGestioneTipoSale.Controls.Add(this._aggiungiTipoSalaButton);
             this._tabPageGestioneTipoSale.Location = new System.Drawing.Point(4, 25);
-            this._tabPageGestioneTipoSale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._tabPageGestioneTipoSale.Margin = new System.Windows.Forms.Padding(4);
             this._tabPageGestioneTipoSale.Name = "_tabPageGestioneTipoSale";
             this._tabPageGestioneTipoSale.Size = new System.Drawing.Size(860, 298);
             this._tabPageGestioneTipoSale.TabIndex = 4;
@@ -423,7 +430,7 @@
             this._listBoxDescrizioneGestioneTipoSale.FormattingEnabled = true;
             this._listBoxDescrizioneGestioneTipoSale.ItemHeight = 16;
             this._listBoxDescrizioneGestioneTipoSale.Location = new System.Drawing.Point(547, 37);
-            this._listBoxDescrizioneGestioneTipoSale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._listBoxDescrizioneGestioneTipoSale.Margin = new System.Windows.Forms.Padding(4);
             this._listBoxDescrizioneGestioneTipoSale.Name = "_listBoxDescrizioneGestioneTipoSale";
             this._listBoxDescrizioneGestioneTipoSale.Size = new System.Drawing.Size(273, 244);
             this._listBoxDescrizioneGestioneTipoSale.TabIndex = 12;
@@ -444,15 +451,16 @@
             this._listBoxTipologieSaleGestioneTipoSale.FormattingEnabled = true;
             this._listBoxTipologieSaleGestioneTipoSale.ItemHeight = 16;
             this._listBoxTipologieSaleGestioneTipoSale.Location = new System.Drawing.Point(207, 37);
-            this._listBoxTipologieSaleGestioneTipoSale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._listBoxTipologieSaleGestioneTipoSale.Margin = new System.Windows.Forms.Padding(4);
             this._listBoxTipologieSaleGestioneTipoSale.Name = "_listBoxTipologieSaleGestioneTipoSale";
             this._listBoxTipologieSaleGestioneTipoSale.Size = new System.Drawing.Size(273, 244);
             this._listBoxTipologieSaleGestioneTipoSale.TabIndex = 10;
+            this._listBoxTipologieSaleGestioneTipoSale.SelectedIndexChanged += new System.EventHandler(this._listBoxTipologieSaleGestioneTipoSale_SelectedIndexChanged);
             // 
             // _eliminaTipoSalaButton
             // 
             this._eliminaTipoSalaButton.Location = new System.Drawing.Point(35, 242);
-            this._eliminaTipoSalaButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._eliminaTipoSalaButton.Margin = new System.Windows.Forms.Padding(4);
             this._eliminaTipoSalaButton.Name = "_eliminaTipoSalaButton";
             this._eliminaTipoSalaButton.Size = new System.Drawing.Size(100, 28);
             this._eliminaTipoSalaButton.TabIndex = 9;
@@ -462,7 +470,7 @@
             // _modificaTipoSalaButton
             // 
             this._modificaTipoSalaButton.Location = new System.Drawing.Point(35, 87);
-            this._modificaTipoSalaButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._modificaTipoSalaButton.Margin = new System.Windows.Forms.Padding(4);
             this._modificaTipoSalaButton.Name = "_modificaTipoSalaButton";
             this._modificaTipoSalaButton.Size = new System.Drawing.Size(100, 28);
             this._modificaTipoSalaButton.TabIndex = 8;
@@ -472,7 +480,7 @@
             // _aggiungiTipoSalaButton
             // 
             this._aggiungiTipoSalaButton.Location = new System.Drawing.Point(35, 52);
-            this._aggiungiTipoSalaButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._aggiungiTipoSalaButton.Margin = new System.Windows.Forms.Padding(4);
             this._aggiungiTipoSalaButton.Name = "_aggiungiTipoSalaButton";
             this._aggiungiTipoSalaButton.Size = new System.Drawing.Size(100, 28);
             this._aggiungiTipoSalaButton.TabIndex = 7;
@@ -490,9 +498,9 @@
             this._tabPageGestioneClientiRegistrati.Controls.Add(this._modificaClienteRegistratoButton);
             this._tabPageGestioneClientiRegistrati.Controls.Add(this._aggiungiClienteRegistratoButton);
             this._tabPageGestioneClientiRegistrati.Location = new System.Drawing.Point(4, 25);
-            this._tabPageGestioneClientiRegistrati.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._tabPageGestioneClientiRegistrati.Margin = new System.Windows.Forms.Padding(4);
             this._tabPageGestioneClientiRegistrati.Name = "_tabPageGestioneClientiRegistrati";
-            this._tabPageGestioneClientiRegistrati.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._tabPageGestioneClientiRegistrati.Padding = new System.Windows.Forms.Padding(4);
             this._tabPageGestioneClientiRegistrati.Size = new System.Drawing.Size(860, 298);
             this._tabPageGestioneClientiRegistrati.TabIndex = 3;
             this._tabPageGestioneClientiRegistrati.Text = "Gestione Clienti Registrati";
@@ -501,7 +509,7 @@
             // _storicoPrenotazioniButton
             // 
             this._storicoPrenotazioniButton.Location = new System.Drawing.Point(35, 123);
-            this._storicoPrenotazioniButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._storicoPrenotazioniButton.Margin = new System.Windows.Forms.Padding(4);
             this._storicoPrenotazioniButton.Name = "_storicoPrenotazioniButton";
             this._storicoPrenotazioniButton.Size = new System.Drawing.Size(100, 28);
             this._storicoPrenotazioniButton.TabIndex = 21;
@@ -524,7 +532,7 @@
             this._listBoxDettagliGestioneClientiRegistrati.FormattingEnabled = true;
             this._listBoxDettagliGestioneClientiRegistrati.ItemHeight = 16;
             this._listBoxDettagliGestioneClientiRegistrati.Location = new System.Drawing.Point(547, 37);
-            this._listBoxDettagliGestioneClientiRegistrati.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._listBoxDettagliGestioneClientiRegistrati.Margin = new System.Windows.Forms.Padding(4);
             this._listBoxDettagliGestioneClientiRegistrati.Name = "_listBoxDettagliGestioneClientiRegistrati";
             this._listBoxDettagliGestioneClientiRegistrati.Size = new System.Drawing.Size(273, 244);
             this._listBoxDettagliGestioneClientiRegistrati.TabIndex = 19;
@@ -545,15 +553,16 @@
             this._listBoxClientiRegistratiGestioneClientiRegistrati.FormattingEnabled = true;
             this._listBoxClientiRegistratiGestioneClientiRegistrati.ItemHeight = 16;
             this._listBoxClientiRegistratiGestioneClientiRegistrati.Location = new System.Drawing.Point(207, 37);
-            this._listBoxClientiRegistratiGestioneClientiRegistrati.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._listBoxClientiRegistratiGestioneClientiRegistrati.Margin = new System.Windows.Forms.Padding(4);
             this._listBoxClientiRegistratiGestioneClientiRegistrati.Name = "_listBoxClientiRegistratiGestioneClientiRegistrati";
             this._listBoxClientiRegistratiGestioneClientiRegistrati.Size = new System.Drawing.Size(273, 244);
             this._listBoxClientiRegistratiGestioneClientiRegistrati.TabIndex = 17;
+            this._listBoxClientiRegistratiGestioneClientiRegistrati.SelectedIndexChanged += new System.EventHandler(this._listBoxClientiRegistratiGestioneClientiRegistrati_SelectedIndexChanged);
             // 
             // _eliminaClienteRegistratoButton
             // 
             this._eliminaClienteRegistratoButton.Location = new System.Drawing.Point(35, 242);
-            this._eliminaClienteRegistratoButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._eliminaClienteRegistratoButton.Margin = new System.Windows.Forms.Padding(4);
             this._eliminaClienteRegistratoButton.Name = "_eliminaClienteRegistratoButton";
             this._eliminaClienteRegistratoButton.Size = new System.Drawing.Size(100, 28);
             this._eliminaClienteRegistratoButton.TabIndex = 16;
@@ -563,7 +572,7 @@
             // _modificaClienteRegistratoButton
             // 
             this._modificaClienteRegistratoButton.Location = new System.Drawing.Point(35, 87);
-            this._modificaClienteRegistratoButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._modificaClienteRegistratoButton.Margin = new System.Windows.Forms.Padding(4);
             this._modificaClienteRegistratoButton.Name = "_modificaClienteRegistratoButton";
             this._modificaClienteRegistratoButton.Size = new System.Drawing.Size(100, 28);
             this._modificaClienteRegistratoButton.TabIndex = 15;
@@ -574,7 +583,7 @@
             // _aggiungiClienteRegistratoButton
             // 
             this._aggiungiClienteRegistratoButton.Location = new System.Drawing.Point(35, 52);
-            this._aggiungiClienteRegistratoButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._aggiungiClienteRegistratoButton.Margin = new System.Windows.Forms.Padding(4);
             this._aggiungiClienteRegistratoButton.Name = "_aggiungiClienteRegistratoButton";
             this._aggiungiClienteRegistratoButton.Size = new System.Drawing.Size(100, 28);
             this._aggiungiClienteRegistratoButton.TabIndex = 14;
@@ -586,7 +595,7 @@
             this._panelOkAnnullaGestioneProfilo.Controls.Add(this._annullaButton);
             this._panelOkAnnullaGestioneProfilo.Controls.Add(this._okButton);
             this._panelOkAnnullaGestioneProfilo.Location = new System.Drawing.Point(7, 334);
-            this._panelOkAnnullaGestioneProfilo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._panelOkAnnullaGestioneProfilo.Margin = new System.Windows.Forms.Padding(4);
             this._panelOkAnnullaGestioneProfilo.Name = "_panelOkAnnullaGestioneProfilo";
             this._panelOkAnnullaGestioneProfilo.Size = new System.Drawing.Size(863, 52);
             this._panelOkAnnullaGestioneProfilo.TabIndex = 1;
@@ -594,7 +603,7 @@
             // _annullaButton
             // 
             this._annullaButton.Location = new System.Drawing.Point(748, 15);
-            this._annullaButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._annullaButton.Margin = new System.Windows.Forms.Padding(4);
             this._annullaButton.Name = "_annullaButton";
             this._annullaButton.Size = new System.Drawing.Size(100, 28);
             this._annullaButton.TabIndex = 1;
@@ -605,7 +614,7 @@
             // _okButton
             // 
             this._okButton.Location = new System.Drawing.Point(640, 15);
-            this._okButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._okButton.Margin = new System.Windows.Forms.Padding(4);
             this._okButton.Name = "_okButton";
             this._okButton.Size = new System.Drawing.Size(100, 28);
             this._okButton.TabIndex = 0;
@@ -619,7 +628,7 @@
             this.ClientSize = new System.Drawing.Size(871, 389);
             this.Controls.Add(this._panelOkAnnullaGestioneProfilo);
             this.Controls.Add(this._tabGestioneProfilo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProfiloView";
             this.Text = "Profilo";
             this._tabGestioneProfilo.ResumeLayout(false);
