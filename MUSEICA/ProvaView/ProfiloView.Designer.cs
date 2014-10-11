@@ -243,7 +243,7 @@
             this._modificaSalaButton.TabIndex = 1;
             this._modificaSalaButton.Text = "Modifica";
             this._modificaSalaButton.UseVisualStyleBackColor = true;
-            this._modificaSalaButton.Click += new System.EventHandler(this.button2_Click);
+           
             // 
             // _aggiungiSalaButton
             // 
