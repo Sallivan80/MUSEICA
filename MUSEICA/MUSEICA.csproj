@@ -97,6 +97,36 @@
     <Compile Include="Persistence\TipologiaPersister.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProvaView\AggiungiView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProvaView\AggiungiView.Designer.cs">
+      <DependentUpon>AggiungiView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProvaView\MixaggioView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProvaView\MixaggioView.Designer.cs">
+      <DependentUpon>MixaggioView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProvaView\Modifica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProvaView\Modifica.Designer.cs">
+      <DependentUpon>Modifica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProvaView\MuseicaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProvaView\MuseicaView.Designer.cs">
+      <DependentUpon>MuseicaView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProvaView\PrenotazionePeriodicaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProvaView\PrenotazionePeriodicaView.Designer.cs">
+      <DependentUpon>PrenotazionePeriodicaView.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProvaView\PrenotazioneSingolaView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +145,18 @@
     <Compile Include="ProvaView\RegistrazioneNuovoClienteView.Designer.cs">
       <DependentUpon>RegistrazioneNuovoClienteView.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProvaView\RegistrazioneView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProvaView\RegistrazioneView.Designer.cs">
+      <DependentUpon>RegistrazioneView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProvaView\SalaProveView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProvaView\SalaProveView.Designer.cs">
+      <DependentUpon>SalaProveView.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProvaView\SalvaModificheView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +172,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ProvaView\AggiungiView.resx">
+      <DependentUpon>AggiungiView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProvaView\MixaggioView.resx">
+      <DependentUpon>MixaggioView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProvaView\Modifica.resx">
+      <DependentUpon>Modifica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProvaView\MuseicaView.resx">
+      <DependentUpon>MuseicaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProvaView\PrenotazionePeriodicaView.resx">
+      <DependentUpon>PrenotazionePeriodicaView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProvaView\PrenotazioneSingolaView.resx">
       <DependentUpon>PrenotazioneSingolaView.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +195,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProvaView\RegistrazioneNuovoClienteView.resx">
       <DependentUpon>RegistrazioneNuovoClienteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProvaView\RegistrazioneView.resx">
+      <DependentUpon>RegistrazioneView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProvaView\SalaProveView.resx">
+      <DependentUpon>SalaProveView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProvaView\SalvaModificheView.resx">
       <DependentUpon>SalvaModificheView.cs</DependentUpon>

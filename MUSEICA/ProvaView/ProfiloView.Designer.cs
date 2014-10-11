@@ -30,6 +30,15 @@
         {
             this._tabGestioneProfilo = new System.Windows.Forms.TabControl();
             this._tabPageImpostaProfilo = new System.Windows.Forms.TabPage();
+            this._abilitaModificheImpostaProfilo = new System.Windows.Forms.CheckBox();
+            this._textBoxEmail = new System.Windows.Forms.TextBox();
+            this._labelEmail = new System.Windows.Forms.Label();
+            this._textBoxTelefono = new System.Windows.Forms.TextBox();
+            this._textBoxIndirizzo = new System.Windows.Forms.TextBox();
+            this._textBoxNomeCentroSaleProva = new System.Windows.Forms.TextBox();
+            this._labelTelefono = new System.Windows.Forms.Label();
+            this._labelIndirizzo = new System.Windows.Forms.Label();
+            this._labelNomeCentroSaleProva = new System.Windows.Forms.Label();
             this._tabPageGestionePolitica = new System.Windows.Forms.TabPage();
             this._abilitaModificheGestionePolitica = new System.Windows.Forms.CheckBox();
             this._textBoxPreavvisoDisdetta = new System.Windows.Forms.TextBox();
@@ -46,14 +55,6 @@
             this._eliminaSalaButton = new System.Windows.Forms.Button();
             this._modificaSalaButton = new System.Windows.Forms.Button();
             this._aggiungiSalaButton = new System.Windows.Forms.Button();
-            this._tabPageGestioneTipoSale = new System.Windows.Forms.TabPage();
-            this._labelDescrizioneGestioneTipoSale = new System.Windows.Forms.Label();
-            this._listBoxDescrizioneGestioneTipoSale = new System.Windows.Forms.ListBox();
-            this._labelTipologieSale = new System.Windows.Forms.Label();
-            this._listBoxTipologieSaleGestioneTipoSale = new System.Windows.Forms.ListBox();
-            this._eliminaTipoSalaButton = new System.Windows.Forms.Button();
-            this._modificaTipoSalaButton = new System.Windows.Forms.Button();
-            this._aggiungiTipoSalaButton = new System.Windows.Forms.Button();
             this._tabPageGestioneClientiRegistrati = new System.Windows.Forms.TabPage();
             this._storicoPrenotazioniButton = new System.Windows.Forms.Button();
             this._labelDettagliClientiRegistrati = new System.Windows.Forms.Label();
@@ -66,20 +67,10 @@
             this._panelOkAnnullaGestioneProfilo = new System.Windows.Forms.Panel();
             this._annullaButton = new System.Windows.Forms.Button();
             this._okButton = new System.Windows.Forms.Button();
-            this._abilitaModificheImpostaProfilo = new System.Windows.Forms.CheckBox();
-            this._textBoxEmail = new System.Windows.Forms.TextBox();
-            this._labelEmail = new System.Windows.Forms.Label();
-            this._textBoxTelefono = new System.Windows.Forms.TextBox();
-            this._textBoxIndirizzo = new System.Windows.Forms.TextBox();
-            this._textBoxNomeCentroSaleProva = new System.Windows.Forms.TextBox();
-            this._labelTelefono = new System.Windows.Forms.Label();
-            this._labelIndirizzo = new System.Windows.Forms.Label();
-            this._labelNomeCentroSaleProva = new System.Windows.Forms.Label();
             this._tabGestioneProfilo.SuspendLayout();
             this._tabPageImpostaProfilo.SuspendLayout();
             this._tabPageGestionePolitica.SuspendLayout();
             this._tabPageGestioneSale.SuspendLayout();
-            this._tabPageGestioneTipoSale.SuspendLayout();
             this._tabPageGestioneClientiRegistrati.SuspendLayout();
             this._panelOkAnnullaGestioneProfilo.SuspendLayout();
             this.SuspendLayout();
@@ -89,7 +80,6 @@
             this._tabGestioneProfilo.Controls.Add(this._tabPageImpostaProfilo);
             this._tabGestioneProfilo.Controls.Add(this._tabPageGestionePolitica);
             this._tabGestioneProfilo.Controls.Add(this._tabPageGestioneSale);
-            this._tabGestioneProfilo.Controls.Add(this._tabPageGestioneTipoSale);
             this._tabGestioneProfilo.Controls.Add(this._tabPageGestioneClientiRegistrati);
             this._tabGestioneProfilo.Location = new System.Drawing.Point(1, 2);
             this._tabGestioneProfilo.Name = "_tabGestioneProfilo";
@@ -116,6 +106,81 @@
             this._tabPageImpostaProfilo.Text = "Imposta Profilo";
             this._tabPageImpostaProfilo.UseVisualStyleBackColor = true;
             this._tabPageImpostaProfilo.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // _abilitaModificheImpostaProfilo
+            // 
+            this._abilitaModificheImpostaProfilo.AutoSize = true;
+            this._abilitaModificheImpostaProfilo.Location = new System.Drawing.Point(22, 207);
+            this._abilitaModificheImpostaProfilo.Name = "_abilitaModificheImpostaProfilo";
+            this._abilitaModificheImpostaProfilo.Size = new System.Drawing.Size(103, 17);
+            this._abilitaModificheImpostaProfilo.TabIndex = 18;
+            this._abilitaModificheImpostaProfilo.Text = "Abilita Modifiche";
+            this._abilitaModificheImpostaProfilo.UseVisualStyleBackColor = true;
+            // 
+            // _textBoxEmail
+            // 
+            this._textBoxEmail.Location = new System.Drawing.Point(196, 93);
+            this._textBoxEmail.Name = "_textBoxEmail";
+            this._textBoxEmail.Size = new System.Drawing.Size(100, 20);
+            this._textBoxEmail.TabIndex = 17;
+            // 
+            // _labelEmail
+            // 
+            this._labelEmail.AutoSize = true;
+            this._labelEmail.Location = new System.Drawing.Point(19, 100);
+            this._labelEmail.Name = "_labelEmail";
+            this._labelEmail.Size = new System.Drawing.Size(32, 13);
+            this._labelEmail.TabIndex = 16;
+            this._labelEmail.Text = "eMail";
+            this._labelEmail.Click += new System.EventHandler(this.label4_Click_1);
+            // 
+            // _textBoxTelefono
+            // 
+            this._textBoxTelefono.Location = new System.Drawing.Point(196, 67);
+            this._textBoxTelefono.Name = "_textBoxTelefono";
+            this._textBoxTelefono.Size = new System.Drawing.Size(100, 20);
+            this._textBoxTelefono.TabIndex = 15;
+            // 
+            // _textBoxIndirizzo
+            // 
+            this._textBoxIndirizzo.Location = new System.Drawing.Point(196, 41);
+            this._textBoxIndirizzo.Name = "_textBoxIndirizzo";
+            this._textBoxIndirizzo.Size = new System.Drawing.Size(100, 20);
+            this._textBoxIndirizzo.TabIndex = 14;
+            // 
+            // _textBoxNomeCentroSaleProva
+            // 
+            this._textBoxNomeCentroSaleProva.Location = new System.Drawing.Point(196, 15);
+            this._textBoxNomeCentroSaleProva.Name = "_textBoxNomeCentroSaleProva";
+            this._textBoxNomeCentroSaleProva.Size = new System.Drawing.Size(100, 20);
+            this._textBoxNomeCentroSaleProva.TabIndex = 13;
+            // 
+            // _labelTelefono
+            // 
+            this._labelTelefono.AutoSize = true;
+            this._labelTelefono.Location = new System.Drawing.Point(19, 74);
+            this._labelTelefono.Name = "_labelTelefono";
+            this._labelTelefono.Size = new System.Drawing.Size(49, 13);
+            this._labelTelefono.TabIndex = 12;
+            this._labelTelefono.Text = "Telefono";
+            // 
+            // _labelIndirizzo
+            // 
+            this._labelIndirizzo.AutoSize = true;
+            this._labelIndirizzo.Location = new System.Drawing.Point(19, 48);
+            this._labelIndirizzo.Name = "_labelIndirizzo";
+            this._labelIndirizzo.Size = new System.Drawing.Size(45, 13);
+            this._labelIndirizzo.TabIndex = 11;
+            this._labelIndirizzo.Text = "Indirizzo";
+            // 
+            // _labelNomeCentroSaleProva
+            // 
+            this._labelNomeCentroSaleProva.AutoSize = true;
+            this._labelNomeCentroSaleProva.Location = new System.Drawing.Point(19, 22);
+            this._labelNomeCentroSaleProva.Name = "_labelNomeCentroSaleProva";
+            this._labelNomeCentroSaleProva.Size = new System.Drawing.Size(124, 13);
+            this._labelNomeCentroSaleProva.TabIndex = 10;
+            this._labelNomeCentroSaleProva.Text = "Nome Centro Sale Prova";
             // 
             // _tabPageGestionePolitica
             // 
@@ -284,85 +349,6 @@
             this._aggiungiSalaButton.UseVisualStyleBackColor = true;
             this._aggiungiSalaButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // _tabPageGestioneTipoSale
-            // 
-            this._tabPageGestioneTipoSale.Controls.Add(this._labelDescrizioneGestioneTipoSale);
-            this._tabPageGestioneTipoSale.Controls.Add(this._listBoxDescrizioneGestioneTipoSale);
-            this._tabPageGestioneTipoSale.Controls.Add(this._labelTipologieSale);
-            this._tabPageGestioneTipoSale.Controls.Add(this._listBoxTipologieSaleGestioneTipoSale);
-            this._tabPageGestioneTipoSale.Controls.Add(this._eliminaTipoSalaButton);
-            this._tabPageGestioneTipoSale.Controls.Add(this._modificaTipoSalaButton);
-            this._tabPageGestioneTipoSale.Controls.Add(this._aggiungiTipoSalaButton);
-            this._tabPageGestioneTipoSale.Location = new System.Drawing.Point(4, 22);
-            this._tabPageGestioneTipoSale.Name = "_tabPageGestioneTipoSale";
-            this._tabPageGestioneTipoSale.Size = new System.Drawing.Size(643, 240);
-            this._tabPageGestioneTipoSale.TabIndex = 4;
-            this._tabPageGestioneTipoSale.Text = "Gestione Tipo Sale";
-            this._tabPageGestioneTipoSale.UseVisualStyleBackColor = true;
-            // 
-            // _labelDescrizioneGestioneTipoSale
-            // 
-            this._labelDescrizioneGestioneTipoSale.AutoSize = true;
-            this._labelDescrizioneGestioneTipoSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._labelDescrizioneGestioneTipoSale.Location = new System.Drawing.Point(407, 14);
-            this._labelDescrizioneGestioneTipoSale.Name = "_labelDescrizioneGestioneTipoSale";
-            this._labelDescrizioneGestioneTipoSale.Size = new System.Drawing.Size(77, 13);
-            this._labelDescrizioneGestioneTipoSale.TabIndex = 13;
-            this._labelDescrizioneGestioneTipoSale.Text = "Descrizione:";
-            // 
-            // _listBoxDescrizioneGestioneTipoSale
-            // 
-            this._listBoxDescrizioneGestioneTipoSale.FormattingEnabled = true;
-            this._listBoxDescrizioneGestioneTipoSale.Location = new System.Drawing.Point(410, 30);
-            this._listBoxDescrizioneGestioneTipoSale.Name = "_listBoxDescrizioneGestioneTipoSale";
-            this._listBoxDescrizioneGestioneTipoSale.Size = new System.Drawing.Size(206, 199);
-            this._listBoxDescrizioneGestioneTipoSale.TabIndex = 12;
-            // 
-            // _labelTipologieSale
-            // 
-            this._labelTipologieSale.AutoSize = true;
-            this._labelTipologieSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._labelTipologieSale.Location = new System.Drawing.Point(155, 11);
-            this._labelTipologieSale.Name = "_labelTipologieSale";
-            this._labelTipologieSale.Size = new System.Drawing.Size(92, 13);
-            this._labelTipologieSale.TabIndex = 11;
-            this._labelTipologieSale.Text = "Tipologie Sale:";
-            // 
-            // _listBoxTipologieSaleGestioneTipoSale
-            // 
-            this._listBoxTipologieSaleGestioneTipoSale.FormattingEnabled = true;
-            this._listBoxTipologieSaleGestioneTipoSale.Location = new System.Drawing.Point(155, 30);
-            this._listBoxTipologieSaleGestioneTipoSale.Name = "_listBoxTipologieSaleGestioneTipoSale";
-            this._listBoxTipologieSaleGestioneTipoSale.Size = new System.Drawing.Size(206, 199);
-            this._listBoxTipologieSaleGestioneTipoSale.TabIndex = 10;
-            // 
-            // _eliminaTipoSalaButton
-            // 
-            this._eliminaTipoSalaButton.Location = new System.Drawing.Point(26, 197);
-            this._eliminaTipoSalaButton.Name = "_eliminaTipoSalaButton";
-            this._eliminaTipoSalaButton.Size = new System.Drawing.Size(75, 23);
-            this._eliminaTipoSalaButton.TabIndex = 9;
-            this._eliminaTipoSalaButton.Text = "Elimina";
-            this._eliminaTipoSalaButton.UseVisualStyleBackColor = true;
-            // 
-            // _modificaTipoSalaButton
-            // 
-            this._modificaTipoSalaButton.Location = new System.Drawing.Point(26, 71);
-            this._modificaTipoSalaButton.Name = "_modificaTipoSalaButton";
-            this._modificaTipoSalaButton.Size = new System.Drawing.Size(75, 23);
-            this._modificaTipoSalaButton.TabIndex = 8;
-            this._modificaTipoSalaButton.Text = "Modifica";
-            this._modificaTipoSalaButton.UseVisualStyleBackColor = true;
-            // 
-            // _aggiungiTipoSalaButton
-            // 
-            this._aggiungiTipoSalaButton.Location = new System.Drawing.Point(26, 42);
-            this._aggiungiTipoSalaButton.Name = "_aggiungiTipoSalaButton";
-            this._aggiungiTipoSalaButton.Size = new System.Drawing.Size(75, 23);
-            this._aggiungiTipoSalaButton.TabIndex = 7;
-            this._aggiungiTipoSalaButton.Text = "Aggiungi";
-            this._aggiungiTipoSalaButton.UseVisualStyleBackColor = true;
-            // 
             // _tabPageGestioneClientiRegistrati
             // 
             this._tabPageGestioneClientiRegistrati.Controls.Add(this._storicoPrenotazioniButton);
@@ -482,81 +468,6 @@
             this._okButton.Text = "Ok";
             this._okButton.UseVisualStyleBackColor = true;
             // 
-            // _abilitaModificheImpostaProfilo
-            // 
-            this._abilitaModificheImpostaProfilo.AutoSize = true;
-            this._abilitaModificheImpostaProfilo.Location = new System.Drawing.Point(22, 207);
-            this._abilitaModificheImpostaProfilo.Name = "_abilitaModificheImpostaProfilo";
-            this._abilitaModificheImpostaProfilo.Size = new System.Drawing.Size(103, 17);
-            this._abilitaModificheImpostaProfilo.TabIndex = 18;
-            this._abilitaModificheImpostaProfilo.Text = "Abilita Modifiche";
-            this._abilitaModificheImpostaProfilo.UseVisualStyleBackColor = true;
-            // 
-            // _textBoxEmail
-            // 
-            this._textBoxEmail.Location = new System.Drawing.Point(196, 93);
-            this._textBoxEmail.Name = "_textBoxEmail";
-            this._textBoxEmail.Size = new System.Drawing.Size(100, 20);
-            this._textBoxEmail.TabIndex = 17;
-            // 
-            // _labelEmail
-            // 
-            this._labelEmail.AutoSize = true;
-            this._labelEmail.Location = new System.Drawing.Point(19, 100);
-            this._labelEmail.Name = "_labelEmail";
-            this._labelEmail.Size = new System.Drawing.Size(32, 13);
-            this._labelEmail.TabIndex = 16;
-            this._labelEmail.Text = "eMail";
-            this._labelEmail.Click += new System.EventHandler(this.label4_Click_1);
-            // 
-            // _textBoxTelefono
-            // 
-            this._textBoxTelefono.Location = new System.Drawing.Point(196, 67);
-            this._textBoxTelefono.Name = "_textBoxTelefono";
-            this._textBoxTelefono.Size = new System.Drawing.Size(100, 20);
-            this._textBoxTelefono.TabIndex = 15;
-            // 
-            // _textBoxIndirizzo
-            // 
-            this._textBoxIndirizzo.Location = new System.Drawing.Point(196, 41);
-            this._textBoxIndirizzo.Name = "_textBoxIndirizzo";
-            this._textBoxIndirizzo.Size = new System.Drawing.Size(100, 20);
-            this._textBoxIndirizzo.TabIndex = 14;
-            // 
-            // _textBoxNomeCentroSaleProva
-            // 
-            this._textBoxNomeCentroSaleProva.Location = new System.Drawing.Point(196, 15);
-            this._textBoxNomeCentroSaleProva.Name = "_textBoxNomeCentroSaleProva";
-            this._textBoxNomeCentroSaleProva.Size = new System.Drawing.Size(100, 20);
-            this._textBoxNomeCentroSaleProva.TabIndex = 13;
-            // 
-            // _labelTelefono
-            // 
-            this._labelTelefono.AutoSize = true;
-            this._labelTelefono.Location = new System.Drawing.Point(19, 74);
-            this._labelTelefono.Name = "_labelTelefono";
-            this._labelTelefono.Size = new System.Drawing.Size(49, 13);
-            this._labelTelefono.TabIndex = 12;
-            this._labelTelefono.Text = "Telefono";
-            // 
-            // _labelIndirizzo
-            // 
-            this._labelIndirizzo.AutoSize = true;
-            this._labelIndirizzo.Location = new System.Drawing.Point(19, 48);
-            this._labelIndirizzo.Name = "_labelIndirizzo";
-            this._labelIndirizzo.Size = new System.Drawing.Size(45, 13);
-            this._labelIndirizzo.TabIndex = 11;
-            this._labelIndirizzo.Text = "Indirizzo";
-            // 
-            // _labelNomeCentroSaleProva
-            // 
-            this._labelNomeCentroSaleProva.AutoSize = true;
-            this._labelNomeCentroSaleProva.Location = new System.Drawing.Point(19, 22);
-            this._labelNomeCentroSaleProva.Name = "_labelNomeCentroSaleProva";
-            this._labelNomeCentroSaleProva.Size = new System.Drawing.Size(124, 13);
-            this._labelNomeCentroSaleProva.TabIndex = 10;
-            this._labelNomeCentroSaleProva.Text = "Nome Centro Sale Prova";
-            // 
             // ProfiloView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -573,8 +484,6 @@
             this._tabPageGestionePolitica.PerformLayout();
             this._tabPageGestioneSale.ResumeLayout(false);
             this._tabPageGestioneSale.PerformLayout();
-            this._tabPageGestioneTipoSale.ResumeLayout(false);
-            this._tabPageGestioneTipoSale.PerformLayout();
             this._tabPageGestioneClientiRegistrati.ResumeLayout(false);
             this._tabPageGestioneClientiRegistrati.PerformLayout();
             this._panelOkAnnullaGestioneProfilo.ResumeLayout(false);
@@ -589,7 +498,6 @@
         private System.Windows.Forms.TabPage _tabPageGestionePolitica;
         private System.Windows.Forms.TabPage _tabPageGestioneSale;
         private System.Windows.Forms.TabPage _tabPageGestioneClientiRegistrati;
-        private System.Windows.Forms.TabPage _tabPageGestioneTipoSale;
         private System.Windows.Forms.TextBox _textBoxPreavvisoDisdetta;
         private System.Windows.Forms.ComboBox _comboBoxScontoClienteRegistrato;
         private System.Windows.Forms.ComboBox _comboBoxScontoPrenotazionePeriodica;
@@ -603,13 +511,6 @@
         private System.Windows.Forms.Button _eliminaSalaButton;
         private System.Windows.Forms.Button _modificaSalaButton;
         private System.Windows.Forms.Button _aggiungiSalaButton;
-        private System.Windows.Forms.Label _labelDescrizioneGestioneTipoSale;
-        private System.Windows.Forms.ListBox _listBoxDescrizioneGestioneTipoSale;
-        private System.Windows.Forms.Label _labelTipologieSale;
-        private System.Windows.Forms.ListBox _listBoxTipologieSaleGestioneTipoSale;
-        private System.Windows.Forms.Button _eliminaTipoSalaButton;
-        private System.Windows.Forms.Button _modificaTipoSalaButton;
-        private System.Windows.Forms.Button _aggiungiTipoSalaButton;
         private System.Windows.Forms.Button _storicoPrenotazioniButton;
         private System.Windows.Forms.Label _labelDettagliClientiRegistrati;
         private System.Windows.Forms.ListBox _listBoxDettagliGestioneClientiRegistrati;
