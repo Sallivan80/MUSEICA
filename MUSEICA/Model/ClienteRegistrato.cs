@@ -19,8 +19,6 @@ namespace MUSEICA.Model
 
         }
 
-      
-
         public string IdTessera
         {
             get { return _idTessera; }

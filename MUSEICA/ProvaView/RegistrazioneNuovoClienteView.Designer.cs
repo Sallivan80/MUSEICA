@@ -189,6 +189,7 @@
             this._okButtonRegistrazione.TabIndex = 1;
             this._okButtonRegistrazione.Text = "Ok";
             this._okButtonRegistrazione.UseVisualStyleBackColor = true;
+            this._okButtonRegistrazione.Click += new System.EventHandler(this._okButtonRegistrazione_Click);
             // 
             // _annullaButtonRegistrazione
             // 
@@ -198,6 +199,7 @@
             this._annullaButtonRegistrazione.TabIndex = 0;
             this._annullaButtonRegistrazione.Text = "Annulla";
             this._annullaButtonRegistrazione.UseVisualStyleBackColor = true;
+            this._annullaButtonRegistrazione.Click += new System.EventHandler(this._annullaButtonRegistrazione_Click);
             // 
             // RegistrazioneNuovoClienteView
             // 
