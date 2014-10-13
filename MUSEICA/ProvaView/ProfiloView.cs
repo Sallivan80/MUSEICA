@@ -16,7 +16,7 @@ namespace MUSEICA.ProvaView
     public partial class ProfiloView : Form
     {
 
-        private Controller _controller;
+        private ControllerProfilo _controller;
         
 
         public ProfiloView()
@@ -118,7 +118,10 @@ namespace MUSEICA.ProvaView
        
         
 
-        private void button1_Click(object sender, EventArgs e) { }
+        private void button1_Click(object sender, EventArgs e) 
+        {
+            _controller.ChangeView("AggiungiSala");
+        }
         
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e) { }

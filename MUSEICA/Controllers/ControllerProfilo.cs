@@ -19,7 +19,29 @@ namespace MUSEICA.Controllers
            
         }
 
-        
+        public void ChangeView(string nomeView)
+        {
+            switch (nomeView)
+            {
+                case "AggiungiSala":
+                    SetView(new AggiungiSalaView());
+                    break;
+                /* case "Cliente":
+                     SetView(new ViewCliente(this));
+                     break;
+                 case "Commesso":
+                     SetView(new ViewCommesso(this));
+                     break;
+                 case "Catalogo":
+                     SetView(new ViewCatalogo(this));
+                     break;
+                 case "Login":
+                     SetView(new ViewLogin(this));
+                     break;*/
+                default:
+                    throw new ArgumentException();
+            }
+        }
 
       
     }
