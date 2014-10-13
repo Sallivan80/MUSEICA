@@ -23,26 +23,23 @@ namespace MUSEICA.ProvaView
         {
             InitializeComponent();
             this._controller = new ControllerProfilo(this);
-
             this.Activated += new EventHandler(ProfiloView_Activated);
         }
-
-        void ProfiloView_Activated(object sender, EventArgs e) 
+        void ProfiloView_Activated(object sender, EventArgs e)
         {
             SetProfiloValue();
             SetPoliticaValue();
             SetSalaValue();
             SetClientiRegistratiValue();
         }
-
         private void SetClientiRegistratiValue()
         {
             _listBoxClientiRegistratiGestioneClientiRegistrati.Items.Clear();
-            foreach(Cliente cliente in CentroSaleProve.GetIstance().Clienti)
-            {
-                if (cliente.GetType() == typeof(ClienteRegistrato))
-                    _listBoxClientiRegistratiGestioneClientiRegistrati.Items.Add(cliente.Cognome + " " + cliente.Nome);
-            }
+           foreach(Cliente cliente in CentroSaleProve.GetIstance().Clienti)
+           {
+               if (cliente.GetType() == typeof(ClienteRegistrato))
+                   _listBoxClientiRegistratiGestioneClientiRegistrati.Items.Add(cliente.Cognome + " " + cliente.Nome);
+           }
         }
 
         private void SetSalaValue()
@@ -117,6 +114,10 @@ namespace MUSEICA.ProvaView
                 }
             }
         }
+
+    
+
+
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -233,9 +234,9 @@ namespace MUSEICA.ProvaView
             }
         }
 
-        private void _aggiungiClienteRegistratoButton_Click(object sender, EventArgs e)
+        private void ProfiloView_Load_1(object sender, EventArgs e)
         {
-            _controller.ChangeView("AggiungiCliente");
+
         }
 
         
