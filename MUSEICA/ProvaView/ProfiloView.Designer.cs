@@ -487,6 +487,7 @@
             this._aggiungiClienteRegistratoButton.TabIndex = 14;
             this._aggiungiClienteRegistratoButton.Text = "Aggiungi";
             this._aggiungiClienteRegistratoButton.UseVisualStyleBackColor = true;
+            this._aggiungiClienteRegistratoButton.Click += new System.EventHandler(this._aggiungiClienteRegistratoButton_Click);
             // 
             // _panelOkAnnullaGestioneProfilo
             // 

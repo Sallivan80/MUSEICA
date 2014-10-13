@@ -35,14 +35,30 @@ namespace MUSEICA.ProvaView
         {
             string idSala = _textBoxIdSala.Text;
             string nomeSala = _textBoxNomeSala.Text;
-            string indirizzo = _textBoxPrezzoSala.Text;
-            float prezzo = Convert.ToSingle(_textBoxPrezzoSala.Text);
-
-            ITipologiaSala tipologia = TipologiaSalaFactory.GetTipologia(_comboBoxTipologia.SelectedItem.ToString());
-
-            CentroSaleProve.GetIstance().Sale.Add(new Sala(idSala, indirizzo, nomeSala, tipologia, prezzo));
+            string indirizzo = _textBoxIndirizzoSala.Text;
+            string prezzoString = _textBoxPrezzoSala.Text;
+            string tipologiaString = _comboBoxTipologia.Items.IndexOf(0).ToString();
             
-            this.Close();
+
+            if (idSala == "" || nomeSala== "" || indirizzo== "" || prezzoString == "" || tipologiaString=="")
+                MessageBox.Show("Tutti i campi sono obbligatori", "ATTENZIONE");
+            else
+            {
+                tipologiaString = _comboBoxTipologia.SelectedItem.ToString();
+                float prezzo = 0; 
+                try
+                {
+                    prezzo = Convert.ToSingle(prezzoString);
+                    ITipologiaSala tipologia = TipologiaSalaFactory.GetTipologia(_comboBoxTipologia.SelectedItem.ToString());
+                    CentroSaleProve.GetIstance().Sale.Add(new Sala(idSala, indirizzo, nomeSala, tipologia, prezzo));
+                    this.Close();
+                }
+                catch { MessageBox.Show("Formato prezzo numero,decimali !"); }
+
+                
+            }           
+            
+           
 
 
         }

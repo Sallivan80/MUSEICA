@@ -239,6 +239,11 @@ namespace MUSEICA.ProvaView
 
         }
 
+        private void _aggiungiClienteRegistratoButton_Click(object sender, EventArgs e)
+        {
+            _controller.ChangeView("AggiungiCliente");
+        }
+
         
     }
 }

@@ -29,10 +29,10 @@ namespace MUSEICA.Controllers
                 case "SalvaModifiche":
                      SetView(new SalvaModificheView());
                      break;
-               /*  case "Commesso":
-                     SetView(new ViewCommesso(this));
+                 case "AggiungiCliente":
+                     SetView(new RegistrazioneNuovoClienteView());
                      break;
-                 case "Catalogo":
+                /* case "Catalogo":
                      SetView(new ViewCatalogo(this));
                      break;
                  case "Login":
