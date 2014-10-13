@@ -29,6 +29,11 @@ namespace MUSEICA.Controllers
            CentroSaleProve.GetIstance().Agenda.Prenotazioni = _dataManager.Prenotazioni;
        }
 
+        public void SaveAll()
+       {
+           _dataManager.SaveAll();
+       }
+
        protected void SetView(Form view)
        {
            view.Activate();
