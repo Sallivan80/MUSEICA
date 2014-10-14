@@ -27,6 +27,10 @@ namespace MUSEICA.Model
 
         }
 
+        public override string ToString()
+        {
+            return _nomeSala;
+        }
         #region Property
         public string IdSala
         {

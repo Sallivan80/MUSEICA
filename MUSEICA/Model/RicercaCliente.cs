@@ -22,8 +22,9 @@ namespace MUSEICA.Model
             List<Prenotazione> result = new List<Prenotazione>();
             foreach (Prenotazione p in prenotazioni)
             {
-                if (_clienteToFind.Cognome.ToLower().Equals( p.Cliente.Cognome.ToLower() ) && 
-                    _clienteToFind.Nome.ToLower().Equals( p.Cliente.Nome.ToLower() ) )
+                
+                if (_clienteToFind.Cognome.ToLower()==p.Cliente.Cognome.ToLower()  && 
+                    _clienteToFind.Nome.ToLower()== p.Cliente.Nome.ToLower()  )
                     result.Add(p);
             }
 

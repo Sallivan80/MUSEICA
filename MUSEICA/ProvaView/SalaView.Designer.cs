@@ -1,6 +1,6 @@
 ﻿namespace MUSEICA.ProvaView
 {
-    partial class AggiungiSalaView
+    partial class SalaView
     {
         /// <summary>
         /// Required designer variable.

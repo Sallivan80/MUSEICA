@@ -23,10 +23,7 @@ namespace MUSEICA.Controllers
 
        public void LoadCompenents()
        {
-           _dataManager.ReadAll();
-           CentroSaleProve.GetIstance().Clienti=_dataManager.Clienti;
-           CentroSaleProve.GetIstance().Sale = _dataManager.Sale;
-           CentroSaleProve.GetIstance().Agenda.Prenotazioni = _dataManager.Prenotazioni;
+           _dataManager.ReadAll();          
        }
 
         public void SaveAll()
@@ -34,11 +31,34 @@ namespace MUSEICA.Controllers
            _dataManager.SaveAll();
        }
 
+        protected void SaveClienti()
+        {
+            _dataManager.SaveClienti();
+        }
+
+        protected void SaveSale()
+        {
+            _dataManager.SaveSale();
+        }
+
+        protected void SavePrenotazioni()
+        {
+            _dataManager.SavePrenotazioni();
+        }
+
        protected void SetView(Form view)
        {
            view.Activate();
            view.Show();        
 
+       }
+
+       public List<Prenotazione> RicercaPrenotazioneCliente(Cliente cliente)
+       {
+           List<Prenotazione> result=new List<Prenotazione>();
+           CentroSaleProve.GetIstance().Agenda.IRicercaProvider = new RicercaCliente(cliente);
+           result = CentroSaleProve.GetIstance().Agenda.RicercaPrenotazioni();
+           return result;
        }
     }
 }

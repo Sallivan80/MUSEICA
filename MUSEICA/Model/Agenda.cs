@@ -35,9 +35,9 @@ namespace MUSEICA.Model
             return false;
         }
 
-        public List<Prenotazione> RicercaPrenotazioni(List<Prenotazione> prenotazioni)
+        public List<Prenotazione> RicercaPrenotazioni()
         {
-            return _iRicercaProvider.Ricerca(prenotazioni);
+            return _iRicercaProvider.Ricerca(_prenotazioni);
         }
     
         /*public bool ModificaPrenotazione(Prenotazione prenotazione)

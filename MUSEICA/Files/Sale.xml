@@ -1,23 +1,37 @@
-﻿<Sale>
+<Sale>
   <Sala>
     <IdSala>0001</IdSala>
     <NomeSala>Sala 1</NomeSala>
-    <Indirizzo>via mura di porta galliera 9</Indirizzo>
+    <Indirizzo>via mura di porta galliera 10</Indirizzo>
     <Tipologia>Morrison</Tipologia>
-    <Prezzo>3,000</Prezzo>
+    <Prezzo>4</Prezzo>
   </Sala>
   <Sala>
     <IdSala>0002</IdSala>
     <NomeSala>Sala 2</NomeSala>
     <Indirizzo>via borgo di san pietro 99</Indirizzo>
     <Tipologia>Caparezza</Tipologia>
-    <Prezzo>5,000</Prezzo>
+    <Prezzo>5</Prezzo>
   </Sala>
   <Sala>
     <IdSala>0003</IdSala>
     <NomeSala>Sala 3</NomeSala>
     <Indirizzo>via irnerio 5</Indirizzo>
     <Tipologia>Handrix</Tipologia>
-    <Prezzo>10,000</Prezzo>
+    <Prezzo>10</Prezzo>
+  </Sala>
+  <Sala>
+    <IdSala>00004</IdSala>
+    <Indirizzo>via sala 4</Indirizzo>
+    <NomeSala>Sala 4</NomeSala>
+    <Tipologia>Morrison</Tipologia>
+    <Prezzo>2,69</Prezzo>
+  </Sala>
+  <Sala>
+    <IdSala>00005</IdSala>
+    <Indirizzo>via sala 5</Indirizzo>
+    <NomeSala>Sala 5</NomeSala>
+    <Tipologia>Handrix</Tipologia>
+    <Prezzo>2,56</Prezzo>
   </Sala>
 </Sale>

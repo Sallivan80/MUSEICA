@@ -9,7 +9,7 @@ namespace MUSEICA.Model
     public class ClienteRegistrato : Cliente
     {
         private readonly string _idTessera;
-        private readonly DateTime _scadenzaTessera;
+        private  DateTime _scadenzaTessera;
 
         public ClienteRegistrato(string nome,string cognome,string telefono,string indirizzo,string idTessera,DateTime scadenzaTessera)
             : base(nome,cognome,telefono,indirizzo)
@@ -28,7 +28,7 @@ namespace MUSEICA.Model
         public DateTime ScadenzaTessera
         {
             get { return _scadenzaTessera; }
-            
+            set { _scadenzaTessera = value; }
         }
 
         public override string ToString()

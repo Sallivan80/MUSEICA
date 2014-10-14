@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MUSEICA.Model;
+using MUSEICA.Persistence;
 
 namespace MUSEICA.Persistence
 {
@@ -13,9 +14,9 @@ namespace MUSEICA.Persistence
         private ISalaPersister _salaPersister;        
         private IPrenotazionePersister _prenotazionePersister;
 
-        private List<Sala> _sale;
-        private List<Cliente> _clienti;        
-        private List<Prenotazione> _prenotazioni;
+    
+           
+       
 
 
         public DataManager()
@@ -44,13 +45,13 @@ namespace MUSEICA.Persistence
             if (_clientiNormali == null || _clientiRegistrati == null)
                 return false;
 
-            _clienti = new List<Cliente>();
+           
             foreach (ClienteRegistrato cr in _clientiRegistrati)
-                _clienti.Add(cr);
+                CentroSaleProve.GetIstance().Clienti.Add(cr);
             foreach (Cliente c in _clientiNormali)
-                _clienti.Add(c);
+                CentroSaleProve.GetIstance().Clienti.Add(c);
 
-            if (_clienti == null)
+            if (CentroSaleProve.GetIstance().Clienti == null)
                 return false;
 
             return true;
@@ -58,8 +59,8 @@ namespace MUSEICA.Persistence
 
         private bool ReadSale()
         {
-            _sale = _salaPersister.GetLoader("XML").LoadSale();
-            if (_sale == null)
+            CentroSaleProve.GetIstance().Sale = _salaPersister.GetLoader("XML").LoadSale();
+            if (CentroSaleProve.GetIstance().Sale == null)
                 return false;
             return true;
         }
@@ -73,13 +74,13 @@ namespace MUSEICA.Persistence
             if (_prenotazioniSingole == null || _prenotazioniPeriodiche == null)
                 return false;
 
-            _prenotazioni = new List<Prenotazione>();
+           
             foreach (PrenotazioneSingola p in _prenotazioniSingole)
-                _prenotazioni.Add(p);
+                CentroSaleProve.GetIstance().Agenda.AggiungiPrenotazione(p);
             foreach (PrenotazionePeriodica pp in _prenotazioniPeriodiche)
-                _prenotazioni.Add(pp);
+                CentroSaleProve.GetIstance().Agenda.AggiungiPrenotazione(pp);
 
-            if (_prenotazioni == null)
+            if (CentroSaleProve.GetIstance().Agenda.Prenotazioni == null)
                 return false;
 
             return true;
@@ -95,9 +96,9 @@ namespace MUSEICA.Persistence
         }
 
         #region SaveMethod
-        private bool SavePrenotazioni()
+        public bool SavePrenotazioni()
         {
-            foreach (Prenotazione p in _prenotazioni)
+            foreach (Prenotazione p in CentroSaleProve.GetIstance().Agenda.Prenotazioni)
             {
                 if (p.GetType() == typeof(PrenotazioneSingola))
                     _prenotazionePersister.GetSaver("XML").SaveUpdatePrenotazioneSingola((PrenotazioneSingola)p);
@@ -109,16 +110,16 @@ namespace MUSEICA.Persistence
             return true;
         }
 
-        private bool SaveSale()
+        public bool SaveSale()
         {
-            foreach (Sala s in _sale)
+            foreach (Sala s in CentroSaleProve.GetIstance().Sale)
                 _salaPersister.GetSaver("XML").SaveUpdateSala(s);
             return true;
         }
 
-        private bool SaveClienti()
+        public bool SaveClienti()
         {
-            foreach (Cliente p in _clienti)
+            foreach (Cliente p in CentroSaleProve.GetIstance().Clienti)
             {
                 if (p.GetType() == typeof(ClienteRegistrato))
                     _clientePersister.GetSaver("XML").SaveUpdateClienteRegistrato((ClienteRegistrato)p);
@@ -133,22 +134,7 @@ namespace MUSEICA.Persistence
         #endregion
 
         #region Property
-        public List<Sala> Sale
-        {
-            get { return _sale; }
-            set { _sale= value; }
-        }
-        public List<Prenotazione> Prenotazioni
-        {
-            get { return _prenotazioni; }
-            set { _prenotazioni= value; }
-        }
-
-        public List<Cliente> Clienti
-        {
-            get { return _clienti; }
-            set { _clienti= value; }
-        }
+        
 
        
         #endregion

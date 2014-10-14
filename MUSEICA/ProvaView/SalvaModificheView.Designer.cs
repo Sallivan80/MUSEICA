@@ -45,7 +45,7 @@
             this.panel1.Controls.Add(this._nonSalvareButton);
             this.panel1.Controls.Add(this._annullaButton);
             this.panel1.Location = new System.Drawing.Point(16, 71);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(509, 65);
             this.panel1.TabIndex = 0;
@@ -53,7 +53,7 @@
             // _salvaButton
             // 
             this._salvaButton.Location = new System.Drawing.Point(189, 18);
-            this._salvaButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._salvaButton.Margin = new System.Windows.Forms.Padding(4);
             this._salvaButton.Name = "_salvaButton";
             this._salvaButton.Size = new System.Drawing.Size(100, 28);
             this._salvaButton.TabIndex = 2;
@@ -64,22 +64,24 @@
             // _nonSalvareButton
             // 
             this._nonSalvareButton.Location = new System.Drawing.Point(297, 18);
-            this._nonSalvareButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._nonSalvareButton.Margin = new System.Windows.Forms.Padding(4);
             this._nonSalvareButton.Name = "_nonSalvareButton";
             this._nonSalvareButton.Size = new System.Drawing.Size(100, 28);
             this._nonSalvareButton.TabIndex = 1;
             this._nonSalvareButton.Text = "Non salvare";
             this._nonSalvareButton.UseVisualStyleBackColor = true;
+            this._nonSalvareButton.Click += new System.EventHandler(this._nonSalvareButton_Click);
             // 
             // _annullaButton
             // 
             this._annullaButton.Location = new System.Drawing.Point(405, 18);
-            this._annullaButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._annullaButton.Margin = new System.Windows.Forms.Padding(4);
             this._annullaButton.Name = "_annullaButton";
             this._annullaButton.Size = new System.Drawing.Size(100, 28);
             this._annullaButton.TabIndex = 0;
             this._annullaButton.Text = "Annulla";
             this._annullaButton.UseVisualStyleBackColor = true;
+            this._annullaButton.Click += new System.EventHandler(this._annullaButton_Click);
             // 
             // label1
             // 
@@ -99,7 +101,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(33, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 49);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -114,7 +116,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SalvaModificheView";
             this.Text = "Salva Modifiche";
             this.panel1.ResumeLayout(false);

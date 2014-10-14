@@ -1,6 +1,6 @@
 ﻿namespace MUSEICA.ProvaView
 {
-    partial class RegistrazioneNuovoClienteView
+    partial class ClienteView
     {
         /// <summary>
         /// Required designer variable.

@@ -373,6 +373,7 @@
             this._modificaSalaButton.TabIndex = 1;
             this._modificaSalaButton.Text = "Modifica";
             this._modificaSalaButton.UseVisualStyleBackColor = true;
+            this._modificaSalaButton.Click += new System.EventHandler(this._modificaSalaButton_Click);
             // 
             // _aggiungiSalaButton
             // 
@@ -413,6 +414,7 @@
             this._storicoPrenotazioniButton.TabIndex = 21;
             this._storicoPrenotazioniButton.Text = "Storico";
             this._storicoPrenotazioniButton.UseVisualStyleBackColor = true;
+            this._storicoPrenotazioniButton.Click += new System.EventHandler(this._storicoPrenotazioniButton_Click);
             // 
             // _labelDettagliClientiRegistrati
             // 

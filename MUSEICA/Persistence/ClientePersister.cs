@@ -176,7 +176,7 @@ namespace MUSEICA.Persistence
 
                 foreach (XmlNode node in nodes)
                 {
-                    string idTessera = node.SelectSingleNode("IDTessera").InnerText;
+                    string idTessera = node.SelectSingleNode("IdTessera").InnerText;
                     
 
 
@@ -197,7 +197,7 @@ namespace MUSEICA.Persistence
                 {
                     XmlElement clienteNode = _xmlDocument.CreateElement("ClienteRegistrato");
 
-                    XmlElement tesseraElement = _xmlDocument.CreateElement("IDTessera");
+                    XmlElement tesseraElement = _xmlDocument.CreateElement("IdTessera");
                     XmlElement scadenzaElement = _xmlDocument.CreateElement("ScadenzaTessera");
                     XmlElement nomeElement = _xmlDocument.CreateElement("Nome");
                     XmlElement cognomeElement = _xmlDocument.CreateElement("Cognome");

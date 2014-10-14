@@ -17,7 +17,8 @@ namespace MUSEICA.ProvaView
     {
 
         private ControllerProfilo _controller;
-        
+        private ClienteRegistrato _clienteSelected;
+        private Sala _salaSelected;
 
         public ProfiloView()
         {
@@ -102,11 +103,14 @@ namespace MUSEICA.ProvaView
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             _listBoxDescrizioneSaleGestioneSale.Items.Clear();
-            string salaSelected = _listBoxSaleGestioneSale.SelectedItem.ToString();
+            string salaSelectedText=null;
+            if(_listBoxSaleGestioneSale.SelectedItem!=null)
+               salaSelectedText = _listBoxSaleGestioneSale.SelectedItem.ToString();
             foreach(Sala s in CentroSaleProve.GetIstance().Sale)
             {
-                if (s.NomeSala == salaSelected)
+                if (s.NomeSala == salaSelectedText)
                 {
+                    _salaSelected = s;
                     _listBoxDescrizioneSaleGestioneSale.Items.Add("Id Sala : " + s.IdSala);
                     _listBoxDescrizioneSaleGestioneSale.Items.Add("Tipologia : " + s.Tipo.NomeTipologia);
                     _listBoxDescrizioneSaleGestioneSale.Items.Add("Indirizzo : " + s.Indirizzo);
@@ -129,7 +133,7 @@ namespace MUSEICA.ProvaView
 
         private void button1_Click(object sender, EventArgs e) 
         {
-            _controller.ChangeView("AggiungiSala");
+            _controller.ChangeView("SalaView",null,"Aggiungi");
         }
         
 
@@ -145,7 +149,13 @@ namespace MUSEICA.ProvaView
         private void button12_Click(object sender, EventArgs e) { }
         
 
-        private void button8_Click(object sender, EventArgs e) { }
+        private void button8_Click(object sender, EventArgs e) 
+        {
+            if (_listBoxClientiRegistratiGestioneClientiRegistrati.SelectedItem == null)
+                MessageBox.Show("Selezionare un cliente prima di poterlo modificare");
+            else
+                _controller.ChangeView("Cliente", _clienteSelected,"Modifica");
+        }
         
 
         private void label4_Click_1(object sender, EventArgs e) { }
@@ -218,16 +228,18 @@ namespace MUSEICA.ProvaView
         private void _listBoxClientiRegistratiGestioneClientiRegistrati_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             _listBoxDettagliGestioneClientiRegistrati.Items.Clear();
-            string clienteSelected = _listBoxClientiRegistratiGestioneClientiRegistrati.SelectedItem.ToString();
+             string clienteSelected =null;
+            if(_listBoxClientiRegistratiGestioneClientiRegistrati.SelectedItem!=null)
+                 clienteSelected = _listBoxClientiRegistratiGestioneClientiRegistrati.SelectedItem.ToString();
             foreach (Cliente c in CentroSaleProve.GetIstance().Clienti)
             {
                 if (c.Cognome + " " + c.Nome == clienteSelected && c.GetType() == typeof(ClienteRegistrato))
                 {
-                    ClienteRegistrato temp = (ClienteRegistrato)c;
-                    _listBoxDettagliGestioneClientiRegistrati.Items.Add("N° Tessera : " + temp.IdTessera);
-                    _listBoxDettagliGestioneClientiRegistrati.Items.Add("Scadenza Tessera : " + temp.ScadenzaTessera.ToShortDateString());
-                    _listBoxDettagliGestioneClientiRegistrati.Items.Add("Indirizzo : " + temp.Indirizzo);
-                    _listBoxDettagliGestioneClientiRegistrati.Items.Add("Telefono : " + temp.Telefono);
+                    _clienteSelected = (ClienteRegistrato)c;
+                    _listBoxDettagliGestioneClientiRegistrati.Items.Add("N° Tessera : " + _clienteSelected.IdTessera);
+                    _listBoxDettagliGestioneClientiRegistrati.Items.Add("Scadenza Tessera : " + _clienteSelected.ScadenzaTessera.ToShortDateString());
+                    _listBoxDettagliGestioneClientiRegistrati.Items.Add("Indirizzo : " + _clienteSelected.Indirizzo);
+                    _listBoxDettagliGestioneClientiRegistrati.Items.Add("Telefono : " + _clienteSelected.Telefono);
 
                 }
 
@@ -241,7 +253,23 @@ namespace MUSEICA.ProvaView
 
         private void _aggiungiClienteRegistratoButton_Click(object sender, EventArgs e)
         {
-            _controller.ChangeView("AggiungiCliente");
+             _controller.ChangeView("ClienteView",null,"Aggiungi");
+        }
+
+        private void _modificaSalaButton_Click(object sender, EventArgs e)
+        {
+            if (_listBoxSaleGestioneSale.SelectedItem == null)
+                MessageBox.Show("Selezionare una Sala prima di poterla modificare");
+            else
+                 _controller.ChangeView("SalaView", _salaSelected,"Modifica");
+        }
+
+        private void _storicoPrenotazioniButton_Click(object sender, EventArgs e)
+        {
+            if(_listBoxClientiRegistratiGestioneClientiRegistrati.SelectedItem==null)
+                MessageBox.Show("Selezionare una cliente prima di poterne vedere lo storico");
+            else
+                _controller.ChangeView("StoricoCliente", _clienteSelected,null);
         }
 
         
