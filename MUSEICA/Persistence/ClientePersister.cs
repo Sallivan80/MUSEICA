@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Linq;
 using MUSEICA.Model;
 
 namespace MUSEICA.Persistence
@@ -39,7 +40,45 @@ namespace MUSEICA.Persistence
             }
         }
 
+        public IClienteRemover GetRemover(string type)
+        {
+            switch (type)
+            {
+                case "XML":
+                    return new ClienteXmlRemover(_fileNameClienti);
+                default:
+                    throw new ArgumentException("Tipo saver non disponibile");
+            }
+        }
 
+        private class ClienteXmlRemover:IClienteRemover
+        {
+             private readonly XDocument _xmlDocument;
+             private string _fileName;
+
+            #region Costruttore
+
+            public ClienteXmlRemover(string fileName)
+            {
+                this._fileName = fileName;
+            }
+            #endregion
+
+            public void RemoveClienteRegistrato(ClienteRegistrato c)
+            {
+               
+                var doc = XDocument.Load(_fileName);
+               //qui faccio una query LINQ che mi estrae i nodi interessati
+                var nodiDaRimuovere = from nodo in doc.Descendants("IdTessera") //seleziono i nodi chiamati "IdTessera"
+                      where nodo.Value == c.IdTessera       //ecco la clausola where in cui controllo il valore del nodo
+                      select nodo.Parent;                  //seleziono il genitore, cioè il cliente
+                //rimuovo tutti i nodi trovati
+                nodiDaRimuovere.Remove();
+                doc.Save(_fileName); 
+               
+            }
+
+        }
         #region ClienteXmlLoader
 
         private class ClienteXmlLoader : IClienteLoader

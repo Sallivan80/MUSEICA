@@ -81,12 +81,11 @@ namespace MUSEICA.ProvaView
                     float prezzo = Convert.ToSingle(prezzoString);
                     ITipologiaSala tipologia = TipologiaSalaFactory.GetTipologia(_comboBoxTipologia.SelectedItem.ToString());
                     Sala s = new Sala(idSala, indirizzo, nomeSala, tipologia, prezzo);
-
                     if (!_controller.CheckSala(s) && _operazione == "Aggiungi")
                         MessageBox.Show("Sala con stesso Nome o Id già presente!");
                     else
                     {
-                        _controller.ChangeView("SalvaModifiche", s, _operazione);
+                        _controller.ChangeView("ConfermaView", s, _operazione);
                         this.Close();
                     }
                      

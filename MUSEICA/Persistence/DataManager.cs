@@ -26,7 +26,15 @@ namespace MUSEICA.Persistence
             _prenotazionePersister = new PrenotazionePersister(@"../../Files/Prenotazioni.xml");
         }
 
+        public void DeleteCliente(ClienteRegistrato c)
+        {
+            _clientePersister.GetRemover("XML").RemoveClienteRegistrato(c);           
+        }
 
+        internal void DeleteSala(Sala s)
+        {
+            _salaPersister.GetRemover("XML").RemoveSala(s);
+        }
         public bool ReadAll()
         {
 
@@ -139,5 +147,7 @@ namespace MUSEICA.Persistence
        
         #endregion
 
+
+       
     }
 }

@@ -77,8 +77,6 @@ namespace MUSEICA.Model
        
         public bool RimuoviSala(Sala sala)
         {
-
-
             if (_sale.Contains(sala))
             {
                 _sale.Remove(sala);
@@ -87,12 +85,17 @@ namespace MUSEICA.Model
             return false;
         }
 
-        public Cliente RicercaClienteRegistrato(string daCercare)
+        public Cliente RimuoviClienteRegistrato(ClienteRegistrato clienteRegistrato)
         {
 
             foreach (Cliente c in _clienti)
-                if (c.Nome.Equals(daCercare))
-                    return c;
+                if (c.Nome == clienteRegistrato.Nome
+                    && c.Cognome == clienteRegistrato.Cognome
+                    && c.GetType() == typeof(ClienteRegistrato))
+                {
+                    _clienti.Remove(c);
+                    break;
+                }
             return null;
         }
         #region Property

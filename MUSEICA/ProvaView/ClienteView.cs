@@ -17,9 +17,9 @@ namespace MUSEICA.ProvaView
     public partial class ClienteView : Form
     {
         ControllerProfilo _controller;
-        private string _operazione;
+        
         private ClienteRegistrato _selectedCliente;
-        private string operazione;
+        private string _operazione;
         public ClienteView(string operazione,Object selectedCliente)
         {
             InitializeComponent();
@@ -84,7 +84,7 @@ namespace MUSEICA.ProvaView
                     MessageBox.Show("Cliente con Nome e Cognome inseriti già presente!");
                 else
                 {
-                    _controller.ChangeView("SalvaModifiche", clienteRegistrato, _operazione);
+                    _controller.ChangeView("ConfermaView", clienteRegistrato, _operazione);
                     this.Close();
                 }
                 

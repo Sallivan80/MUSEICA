@@ -125,7 +125,10 @@ namespace MUSEICA.ProvaView
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            if (_salaSelected == null)
+                MessageBox.Show("Selezionare una sala prima di poterla eliminare!");
+            else
+                _controller.ChangeView("ConfermaView", _salaSelected, "EliminaSala");
         }
 
        
@@ -154,7 +157,7 @@ namespace MUSEICA.ProvaView
             if (_listBoxClientiRegistratiGestioneClientiRegistrati.SelectedItem == null)
                 MessageBox.Show("Selezionare un cliente prima di poterlo modificare");
             else
-                _controller.ChangeView("Cliente", _clienteSelected,"Modifica");
+                _controller.ChangeView("ClienteView", _clienteSelected,"Modifica");
         }
         
 
@@ -270,6 +273,14 @@ namespace MUSEICA.ProvaView
                 MessageBox.Show("Selezionare una cliente prima di poterne vedere lo storico");
             else
                 _controller.ChangeView("StoricoCliente", _clienteSelected,null);
+        }
+
+        private void _eliminaClienteRegistratoButton_Click(object sender, EventArgs e)
+        {
+            if (_clienteSelected == null)
+                MessageBox.Show("Selezionare un cliente prima di poterlo eliminare");
+            else
+                _controller.ChangeView("ConfermaView", _clienteSelected, "EliminaCliente");
         }
 
         

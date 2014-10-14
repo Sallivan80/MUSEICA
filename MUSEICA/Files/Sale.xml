@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Sale>
   <Sala>
     <IdSala>0001</IdSala>
@@ -25,13 +26,6 @@
     <Indirizzo>via sala 4</Indirizzo>
     <NomeSala>Sala 4</NomeSala>
     <Tipologia>Morrison</Tipologia>
-    <Prezzo>2,69</Prezzo>
-  </Sala>
-  <Sala>
-    <IdSala>00005</IdSala>
-    <Indirizzo>via sala 5</Indirizzo>
-    <NomeSala>Sala 5</NomeSala>
-    <Tipologia>Handrix</Tipologia>
-    <Prezzo>2,56</Prezzo>
+    <Prezzo>2,7</Prezzo>
   </Sala>
 </Sale>

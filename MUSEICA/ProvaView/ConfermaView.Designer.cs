@@ -1,6 +1,6 @@
 ﻿namespace MUSEICA.ProvaView
 {
-    partial class SalvaModificheView
+    partial class ConfermaView
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalvaModificheView));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfermaView));
             this.panel1 = new System.Windows.Forms.Panel();
             this._salvaButton = new System.Windows.Forms.Button();
             this._nonSalvareButton = new System.Windows.Forms.Button();
             this._annullaButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this._labelText = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -83,19 +83,19 @@
             this._annullaButton.UseVisualStyleBackColor = true;
             this._annullaButton.Click += new System.EventHandler(this._annullaButton_Click);
             // 
-            // label1
+            // _labelText
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label1.Location = new System.Drawing.Point(105, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Vuoi salvare le modifiche?";
+            this._labelText.AutoSize = true;
+            this._labelText.BackColor = System.Drawing.SystemColors.Control;
+            this._labelText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this._labelText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._labelText.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this._labelText.Location = new System.Drawing.Point(105, 26);
+            this._labelText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this._labelText.Name = "_labelText";
+            this._labelText.Size = new System.Drawing.Size(205, 20);
+            this._labelText.TabIndex = 3;
+            this._labelText.Text = "Vuoi salvare le modifiche?";
             // 
             // pictureBox1
             // 
@@ -108,16 +108,16 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // SalvaModificheView
+            // ConfermaView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(541, 151);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this._labelText);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "SalvaModificheView";
+            this.Name = "ConfermaView";
             this.Text = "Salva Modifiche";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -132,7 +132,7 @@
         private System.Windows.Forms.Button _salvaButton;
         private System.Windows.Forms.Button _nonSalvareButton;
         private System.Windows.Forms.Button _annullaButton;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label _labelText;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

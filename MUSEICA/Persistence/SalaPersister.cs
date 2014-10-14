@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Linq;
 using MUSEICA.Model;
 
 namespace MUSEICA.Persistence
@@ -39,8 +40,41 @@ namespace MUSEICA.Persistence
                     throw new ArgumentException("Tipo saver non disponibile");
             }
         }
+
+        public ISalaRemover GetRemover(string type)
+        {
+            switch (type)
+            {
+                case "XML":
+                    return new SalaXmlRemover(_fileNameSale);
+                default:
+                    throw new ArgumentException("Tipo saver non disponibile");
+            }
+        }
         #endregion
 
+        private class SalaXmlRemover:ISalaRemover
+        {
+            private string _fileName;
+
+            public SalaXmlRemover(string fileName)
+            {
+                this._fileName = fileName;
+            }
+
+            public void RemoveSala(Sala s)
+            {
+                var doc = XDocument.Load(_fileName);
+                //qui faccio una query LINQ che mi estrae i nodi interessati
+                var nodiDaRimuovere = from nodo in doc.Descendants("IdSala") //seleziono i nodi chiamati "IdTessera"
+                                      where nodo.Value == s.IdSala//ecco la clausola where in cui controllo il valore del nodo
+                                      select nodo.Parent;                  //seleziono il genitore, cioè il cliente
+                //rimuovo tutti i nodi trovati
+                nodiDaRimuovere.Remove();
+                doc.Save(_fileName); 
+            }
+
+        }
         #region SalaXmlLoader
 
         private class SalaXmlLoader : ISalaLoader

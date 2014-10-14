@@ -12,8 +12,14 @@ namespace MUSEICA.Persistence
         IClienteLoader GetLoader(string typeFileLoader);
 
         IClienteSaver GetSaver(string typeFileLoader);
+
+        IClienteRemover GetRemover(string typeFileLoader);
     }
 
+    public interface IClienteRemover
+    {
+        void RemoveClienteRegistrato(ClienteRegistrato cliente);
+    }
     public interface IClienteLoader
     {
             List<Cliente> LoadClienti();

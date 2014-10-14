@@ -58,8 +58,8 @@ namespace MUSEICA.Controllers
                  case "StoricoCliente":
                      SetView(new StoricoView(selectItem));
                      break;
-                 case "SalvaModifiche":
-                     SetView(new SalvaModificheView(operazione,selectItem));
+                 case "ConfermaView":
+                     SetView(new ConfermaView(operazione,selectItem));
                      break;
                 default:
                     throw new ArgumentException();
@@ -103,14 +103,35 @@ namespace MUSEICA.Controllers
                     if (c.GetType() == typeof(ClienteRegistrato))
                     {
                         ClienteRegistrato temp = (ClienteRegistrato)c;
-                        temp.Indirizzo = clienteRegistrato.Indirizzo;
-                        temp.Telefono = clienteRegistrato.Telefono;
-                        temp.ScadenzaTessera = clienteRegistrato.ScadenzaTessera;                       
-                        break;
+                        if(temp.IdTessera==clienteRegistrato.IdTessera)
+                        {
+                            temp.Indirizzo = clienteRegistrato.Indirizzo;
+                            temp.Telefono = clienteRegistrato.Telefono;
+                            temp.ScadenzaTessera = clienteRegistrato.ScadenzaTessera;
+                            break;
+                        }
+                        
                     }
             }            
 
             SaveClienti();
         }
+
+
+
+        internal void EliminaClienteRegistrato(ClienteRegistrato _clienteSelected)
+        {
+            
+            CentroSaleProve.GetIstance().RimuoviClienteRegistrato(_clienteSelected);
+            DeleteClienteRegistrato(_clienteSelected);
+        }
+
+        internal void EliminaSala(Sala sala)
+        {
+            CentroSaleProve.GetIstance().RimuoviSala(sala);
+            DeleteSala(sala); 
+        }
+
+       
     }
 }

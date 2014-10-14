@@ -468,6 +468,7 @@
             this._eliminaClienteRegistratoButton.TabIndex = 16;
             this._eliminaClienteRegistratoButton.Text = "Elimina";
             this._eliminaClienteRegistratoButton.UseVisualStyleBackColor = true;
+            this._eliminaClienteRegistratoButton.Click += new System.EventHandler(this._eliminaClienteRegistratoButton_Click);
             // 
             // _modificaClienteRegistratoButton
             // 

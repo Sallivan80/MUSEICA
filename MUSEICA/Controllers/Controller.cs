@@ -45,6 +45,15 @@ namespace MUSEICA.Controllers
         {
             _dataManager.SavePrenotazioni();
         }
+        protected void DeleteClienteRegistrato(ClienteRegistrato cliente)
+        {
+            _dataManager.DeleteCliente(cliente);
+        }
+
+        protected void DeleteSala(Sala s)
+        {
+            _dataManager.DeleteSala(s);
+        }
 
        protected void SetView(Form view)
        {

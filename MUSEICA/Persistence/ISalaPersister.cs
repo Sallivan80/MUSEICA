@@ -12,8 +12,13 @@ namespace MUSEICA.Persistence
         ISalaLoader GetLoader(string typeFileLoader);
 
         ISalaSaver GetSaver(string typeFileLoader);
+        ISalaRemover GetRemover(string typeFileLoader);
     }
-
+    
+    public interface ISalaRemover
+    {
+       void RemoveSala(Sala s);
+    }
     public interface ISalaLoader
     {
         List<Sala> LoadSale();

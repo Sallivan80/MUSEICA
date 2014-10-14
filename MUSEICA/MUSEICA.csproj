@@ -114,12 +114,6 @@
     <Compile Include="ProvaView\ControlAggiuntaStrumento.Designer.cs">
       <DependentUpon>ControlAggiuntaStrumento.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProvaView\ModificaPrenotazioneView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProvaView\ModificaPrenotazioneView.Designer.cs">
-      <DependentUpon>ModificaPrenotazioneView.cs</DependentUpon>
-    </Compile>
     <Compile Include="ProvaView\MuseicaView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,11 +150,11 @@
     <Compile Include="ProvaView\DescrizioneView.Designer.cs">
       <DependentUpon>DescrizioneView.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProvaView\SalvaModificheView.cs">
+    <Compile Include="ProvaView\ConfermaView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProvaView\SalvaModificheView.Designer.cs">
-      <DependentUpon>SalvaModificheView.cs</DependentUpon>
+    <Compile Include="ProvaView\ConfermaView.Designer.cs">
+      <DependentUpon>ConfermaView.cs</DependentUpon>
     </Compile>
     <Compile Include="ProvaView\StoricoView.cs">
       <SubType>Form</SubType>
@@ -186,9 +180,6 @@
     <EmbeddedResource Include="ProvaView\ControlAggiuntaStrumento.resx">
       <DependentUpon>ControlAggiuntaStrumento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProvaView\ModificaPrenotazioneView.resx">
-      <DependentUpon>ModificaPrenotazioneView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ProvaView\MuseicaView.resx">
       <DependentUpon>MuseicaView.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,8 +198,8 @@
     <EmbeddedResource Include="ProvaView\DescrizioneView.resx">
       <DependentUpon>DescrizioneView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProvaView\SalvaModificheView.resx">
-      <DependentUpon>SalvaModificheView.cs</DependentUpon>
+    <EmbeddedResource Include="ProvaView\ConfermaView.resx">
+      <DependentUpon>ConfermaView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProvaView\StoricoView.resx">
       <DependentUpon>StoricoView.cs</DependentUpon>
