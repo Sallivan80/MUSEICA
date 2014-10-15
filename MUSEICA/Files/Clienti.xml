@@ -2,7 +2,7 @@
 <Clienti>
   <ClienteRegistrato>
     <IdTessera>00001</IdTessera>
-    <ScadenzaTessera>14/10/2014 00:00:00</ScadenzaTessera>
+    <ScadenzaTessera>14/10/2014 00.00.00</ScadenzaTessera>
     <Nome>Francesco</Nome>
     <Cognome>Zobel</Cognome>
     <Telefono>3331676789</Telefono>
@@ -10,7 +10,7 @@
   </ClienteRegistrato>
   <ClienteRegistrato>
     <IdTessera>00002</IdTessera>
-    <ScadenzaTessera>16/12/2014 00:00:00</ScadenzaTessera>
+    <ScadenzaTessera>16/12/2014 00.00.00</ScadenzaTessera>
     <Nome>Francesco</Nome>
     <Cognome>Lattanzi</Cognome>
     <Telefono>3331676789</Telefono>

@@ -7,14 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MUSEICA.Model;
+using MUSEICA.Controllers;
+using MUSEICA.Persistence;
+using MUSEICA.Properties;
 
 namespace MUSEICA.ProvaView
 {
     public partial class DescrizioneView : Form
     {
-        public DescrizioneView()
+        private string nomeTipologia;
+
+        public DescrizioneView(Object selectedItem)
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            this.nomeTipologia = (string) selectedItem;
+            SetValue();
+        }
+
+        private void SetValue()
+        {
+            this.Text = "Sala " + nomeTipologia;
+            
+            this._descrizioneTipologia.Text = TipologiaSalaFactory.GetTipologia(nomeTipologia).Descrizione;
         }
     }
 }

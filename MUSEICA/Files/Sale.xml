@@ -4,28 +4,28 @@
     <IdSala>0001</IdSala>
     <NomeSala>Sala 1</NomeSala>
     <Indirizzo>via mura di porta galliera 10</Indirizzo>
-    <Tipologia>Morrison</Tipologia>
+    <Tipologia>Prova</Tipologia>
     <Prezzo>4</Prezzo>
   </Sala>
   <Sala>
     <IdSala>0002</IdSala>
     <NomeSala>Sala 2</NomeSala>
     <Indirizzo>via borgo di san pietro 99</Indirizzo>
-    <Tipologia>Caparezza</Tipologia>
+    <Tipologia>Registrazione</Tipologia>
     <Prezzo>5</Prezzo>
   </Sala>
   <Sala>
     <IdSala>0003</IdSala>
     <NomeSala>Sala 3</NomeSala>
     <Indirizzo>via irnerio 5</Indirizzo>
-    <Tipologia>Handrix</Tipologia>
+    <Tipologia>Registrazione</Tipologia>
     <Prezzo>10</Prezzo>
   </Sala>
   <Sala>
     <IdSala>00004</IdSala>
     <Indirizzo>via sala 4</Indirizzo>
     <NomeSala>Sala 4</NomeSala>
-    <Tipologia>Morrison</Tipologia>
+    <Tipologia>Mixaggio</Tipologia>
     <Prezzo>2,7</Prezzo>
   </Sala>
 </Sale>

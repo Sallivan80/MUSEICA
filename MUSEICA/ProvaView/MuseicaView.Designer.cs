@@ -47,21 +47,18 @@
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this._parametroLabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this._dateTimePickerRicerca = new System.Windows.Forms.DateTimePicker();
+            this._textBoxParametroRicerca = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this._comboBoxCriterioRicerca = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
@@ -125,6 +122,7 @@
             this.registraNuovoClienteToolStripMenuItem.Name = "registraNuovoClienteToolStripMenuItem";
             this.registraNuovoClienteToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.registraNuovoClienteToolStripMenuItem.Text = "Registra Nuovo Cliente";
+            this.registraNuovoClienteToolStripMenuItem.Click += new System.EventHandler(this.registraNuovoClienteToolStripMenuItem_Click);
             // 
             // prenotazioneToolStripMenuItem
             // 
@@ -148,6 +146,7 @@
             this.prenotazioneSingolaToolStripMenuItem.Name = "prenotazioneSingolaToolStripMenuItem";
             this.prenotazioneSingolaToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.prenotazioneSingolaToolStripMenuItem.Text = "Prenotazione Singola";
+            this.prenotazioneSingolaToolStripMenuItem.Click += new System.EventHandler(this.prenotazioneSingolaToolStripMenuItem_Click);
             // 
             // prenotazionePeriodicaToolStripMenuItem
             // 
@@ -170,18 +169,21 @@
             this.registrazioneToolStripMenuItem.Name = "registrazioneToolStripMenuItem";
             this.registrazioneToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.registrazioneToolStripMenuItem.Text = "Registrazione";
+            this.registrazioneToolStripMenuItem.Click += new System.EventHandler(this.registrazioneToolStripMenuItem_Click);
             // 
             // mixaggioToolStripMenuItem
             // 
             this.mixaggioToolStripMenuItem.Name = "mixaggioToolStripMenuItem";
             this.mixaggioToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.mixaggioToolStripMenuItem.Text = "Mixaggio";
+            this.mixaggioToolStripMenuItem.Click += new System.EventHandler(this.mixaggioToolStripMenuItem_Click);
             // 
             // provaToolStripMenuItem
             // 
             this.provaToolStripMenuItem.Name = "provaToolStripMenuItem";
             this.provaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.provaToolStripMenuItem.Text = "Prova";
+            this.provaToolStripMenuItem.Click += new System.EventHandler(this.provaToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -199,21 +201,18 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this._parametroLabel);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this._dateTimePickerRicerca);
+            this.panel1.Controls.Add(this._textBoxParametroRicerca);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this._comboBoxCriterioRicerca);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(258, 33);
             this.panel1.Name = "panel1";
@@ -222,30 +221,21 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(203, 159);
+            this.button3.Location = new System.Drawing.Point(203, 143);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 17;
             this.button3.Text = "Cerca";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // label9
+            // _parametroLabel
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(13, 123);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(33, 13);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Data:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(13, 93);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 13);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Parametro:";
+            this._parametroLabel.AutoSize = true;
+            this._parametroLabel.Location = new System.Drawing.Point(13, 74);
+            this._parametroLabel.Name = "_parametroLabel";
+            this._parametroLabel.Size = new System.Drawing.Size(58, 13);
+            this._parametroLabel.TabIndex = 15;
+            this._parametroLabel.Text = "Parametro:";
             // 
             // label7
             // 
@@ -274,35 +264,26 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 63);
+            this.label4.Location = new System.Drawing.Point(13, 44);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 13);
             this.label4.TabIndex = 11;
             this.label4.Text = "Criterio ricerca:";
             // 
-            // label3
+            // _dateTimePickerRicerca
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 33);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 13);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Prenotazione/Cliente:";
+            this._dateTimePickerRicerca.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this._dateTimePickerRicerca.Location = new System.Drawing.Point(147, 71);
+            this._dateTimePickerRicerca.Name = "_dateTimePickerRicerca";
+            this._dateTimePickerRicerca.Size = new System.Drawing.Size(131, 20);
+            this._dateTimePickerRicerca.TabIndex = 2;
             // 
-            // dateTimePicker1
+            // _textBoxParametroRicerca
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(147, 121);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(131, 20);
-            this.dateTimePicker1.TabIndex = 2;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(147, 90);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(131, 20);
-            this.textBox1.TabIndex = 9;
+            this._textBoxParametroRicerca.Location = new System.Drawing.Point(147, 71);
+            this._textBoxParametroRicerca.Name = "_textBoxParametroRicerca";
+            this._textBoxParametroRicerca.Size = new System.Drawing.Size(131, 20);
+            this._textBoxParametroRicerca.TabIndex = 9;
             // 
             // button2
             // 
@@ -342,21 +323,14 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Risultati:";
             // 
-            // comboBox2
+            // _comboBoxCriterioRicerca
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(147, 60);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(131, 21);
-            this.comboBox2.TabIndex = 4;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(147, 30);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(131, 21);
-            this.comboBox1.TabIndex = 3;
+            this._comboBoxCriterioRicerca.FormattingEnabled = true;
+            this._comboBoxCriterioRicerca.Location = new System.Drawing.Point(147, 41);
+            this._comboBoxCriterioRicerca.Name = "_comboBoxCriterioRicerca";
+            this._comboBoxCriterioRicerca.Size = new System.Drawing.Size(131, 21);
+            this._comboBoxCriterioRicerca.TabIndex = 4;
+            this._comboBoxCriterioRicerca.SelectedIndexChanged += new System.EventHandler(this._comboBoxCriterioRicerca_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -364,9 +338,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(4, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 18);
+            this.label1.Size = new System.Drawing.Size(171, 18);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Ricerca:";
+            this.label1.Text = "Ricerca Prenotazioni:";
             // 
             // panel2
             // 
@@ -412,25 +386,22 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox _comboBoxCriterioRicerca;
+        private System.Windows.Forms.DateTimePicker _dateTimePickerRicerca;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox _textBoxParametroRicerca;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem tipologieSalaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrazioneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mixaggioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem provaToolStripMenuItem;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label _parametroLabel;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ToolStripMenuItem registraNuovoClienteToolStripMenuItem;
     }

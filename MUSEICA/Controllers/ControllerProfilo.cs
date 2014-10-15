@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace MUSEICA.Controllers
 {
-    public class ControllerProfilo:Controller
+    public class ControllerProfilo:AbstractController
     {
         private Form _view;
         

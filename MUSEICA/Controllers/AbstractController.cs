@@ -9,12 +9,12 @@ using MUSEICA.Model;
 
 namespace MUSEICA.Controllers
 {
-    public abstract class  Controller
+    public abstract class  AbstractController
     {
        private DataManager _dataManager;
        private Form _view;
        
-       public Controller(Form view)
+       public AbstractController(Form view)
        {
            _view = view;
            if (_dataManager == null)
@@ -69,5 +69,6 @@ namespace MUSEICA.Controllers
            result = CentroSaleProve.GetIstance().Agenda.RicercaPrenotazioni();
            return result;
        }
+
     }
 }

@@ -47,11 +47,11 @@ namespace MUSEICA.Model
 
             switch (nome_tipologia)
             {
-                case "Handrix":
+                case "Registrazione":
                     return new TipologiaSala(nome_tipologia, "descrizione strumentistica");
-                case "Morrison":
+                case "Mixaggio":
                     return new TipologiaSala(nome_tipologia, "descrizione strumentistica");
-                case "Caparezza":
+                case "Prova":
                     return new TipologiaSala(nome_tipologia, "descrizione strumentistica");
                 default:
                     throw new ArgumentException(nome_tipologia + " non consentita ");

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace MUSEICA.Controllers
 {
-   public  class MainController : Controller
+   public  class MainController : AbstractController
     {
 
        
@@ -21,23 +21,23 @@ namespace MUSEICA.Controllers
            
        }
 
-       public void ChangeView(string nomeView)
+       public void ChangeView(string nomeView, Object selectedItem, string operazione)
        {
            switch (nomeView)
            {
                case "Profilo":
                    SetView(new ProfiloView());
                    break;
-              /* case "Cliente":
-                   SetView(new ViewCliente(this));
+              case "ClienteView":
+                   SetView(new ClienteView(operazione));
                    break;
-               case "Commesso":
-                   SetView(new ViewCommesso(this));
+              case "DescrizioneView":
+                   SetView(new DescrizioneView(selectedItem));
                    break;
-               case "Catalogo":
-                   SetView(new ViewCatalogo(this));
+               case "PrenotazioneSingolaView":
+                   SetView(new PrenotazioneSingolaView(operazione, selectedItem));
                    break;
-               case "Login":
+               /* case "Login":
                    SetView(new ViewLogin(this));
                    break;*/
                default:
@@ -45,7 +45,30 @@ namespace MUSEICA.Controllers
            }
        }
 
-       
+       public ClienteRegistrato RicercaClienteRegistrato(string idTessera)
+       {
+           foreach (ClienteRegistrato c in CentroSaleProve.GetIstance().Clienti)
+           {
+               if (c.IdTessera == idTessera)
+               {
+                   return c;
+               }
+           }
+
+           return null;
+       }
+
+       public Sala RicercaSala(string nomeSala)
+       {
+           foreach (Sala s in CentroSaleProve.GetIstance().Sale)
+           {
+               if (s.NomeSala == nomeSala)
+               {
+                   return s;
+               }
+           }
+           return null;
+       }
 
       
     }
