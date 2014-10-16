@@ -62,13 +62,35 @@ namespace MUSEICA.Controllers
 
        }
 
-       public List<Prenotazione> RicercaPrenotazioneCliente(Cliente cliente)
+       public List<Prenotazione> RicercaPrenotazione(Object objectToFind)
        {
            List<Prenotazione> result=new List<Prenotazione>();
-           CentroSaleProve.GetIstance().Agenda.IRicercaProvider = new RicercaCliente(cliente);
+           
+           switch (objectToFind.GetType().ToString())
+           {
+               case "MUSEICA.Model.ClienteRegistrato":
+                   CentroSaleProve.GetIstance().Agenda.IRicercaProvider = new RicercaCliente((Cliente)objectToFind);
+                   break;
+               case "MUSEICA.Model.Cliente":
+                   CentroSaleProve.GetIstance().Agenda.IRicercaProvider = new RicercaCliente((Cliente)objectToFind);
+                   break;
+               case "System.DateTime":
+                   CentroSaleProve.GetIstance().Agenda.IRicercaProvider = new RicercaData((DateTime)objectToFind);
+                   break;
+               case "MUSEICA.Model.Sala":
+                   CentroSaleProve.GetIstance().Agenda.IRicercaProvider = new RicercaSala((Sala)objectToFind);
+                   break;
+               case "MUSEICA.Model.TipologiaSalaFactory+TipologiaSala":
+                   CentroSaleProve.GetIstance().Agenda.IRicercaProvider = new RicercaTipo((ITipologiaSala)objectToFind);
+                   break;             
+               default:
+                   throw new ArgumentException();
+           }           
            result = CentroSaleProve.GetIstance().Agenda.RicercaPrenotazioni();
            return result;
        }
+
+
 
     }
 }

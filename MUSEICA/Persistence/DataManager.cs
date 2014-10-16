@@ -86,7 +86,8 @@ namespace MUSEICA.Persistence
             foreach (PrenotazioneSingola p in _prenotazioniSingole)
                 CentroSaleProve.GetIstance().Agenda.AggiungiPrenotazione(p);
             foreach (PrenotazionePeriodica pp in _prenotazioniPeriodiche)
-                CentroSaleProve.GetIstance().Agenda.AggiungiPrenotazione(pp);
+                foreach(PrenotazioneSingola ps in pp.Prenotazioni)
+                    CentroSaleProve.GetIstance().Agenda.AggiungiPrenotazione(ps);
 
             if (CentroSaleProve.GetIstance().Agenda.Prenotazioni == null)
                 return false;

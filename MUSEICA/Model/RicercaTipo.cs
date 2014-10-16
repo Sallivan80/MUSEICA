@@ -21,7 +21,7 @@ namespace MUSEICA.Model
             List<Prenotazione> result = new List<Prenotazione>();
             foreach (Prenotazione p in prenotazioni)
             {
-                if (_iTipologiaSalaToFind.NomeTipologia.ToLower().Equals( p.Sala.Tipo.NomeTipologia.ToLower() ) )
+                if (_iTipologiaSalaToFind.NomeTipologia == p.Sala.Tipo.NomeTipologia )
                     result.Add(p);
             }
 

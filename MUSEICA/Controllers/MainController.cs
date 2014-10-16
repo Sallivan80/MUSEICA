@@ -32,7 +32,7 @@ namespace MUSEICA.Controllers
                    SetView(new ClienteView(operazione));
                    break;
               case "DescrizioneView":
-                   SetView(new DescrizioneView(selectedItem));
+                   SetView(new DescrizioneView(selectedItem,operazione));
                    break;
                case "PrenotazioneSingolaView":
                    SetView(new PrenotazioneSingolaView(operazione, selectedItem));
@@ -45,9 +45,9 @@ namespace MUSEICA.Controllers
            }
        }
 
-       public ClienteRegistrato RicercaClienteRegistrato(string idTessera)
+       public ClienteRegistrato RicercaClienteRegistratoById(string idTessera)
        {
-           foreach (ClienteRegistrato c in CentroSaleProve.GetIstance().Clienti)
+         foreach (ClienteRegistrato c in CentroSaleProve.GetIstance().Clienti)
            {
                if (c.IdTessera == idTessera)
                {
@@ -58,7 +58,7 @@ namespace MUSEICA.Controllers
            return null;
        }
 
-       public Sala RicercaSala(string nomeSala)
+       public Sala RicercaSalaByName(string nomeSala)
        {
            foreach (Sala s in CentroSaleProve.GetIstance().Sale)
            {
@@ -70,6 +70,63 @@ namespace MUSEICA.Controllers
            return null;
        }
 
+
+
+
+
+       internal Cliente RicercaClienteNormaleByName(string nome, string cognome)
+       {
+           foreach (Cliente c in CentroSaleProve.GetIstance().Clienti)
+           {
+               if (c.Nome.ToLower() == nome.ToLower() && c.Cognome.ToLower()==cognome.ToLower() && c.GetType()!=typeof(ClienteRegistrato))
+               {
+                   return c;
+               }
+           }
+
+           return null;
+       }
+
+       public bool AggiungiPrenotazione(Prenotazione prenotazione)
+       {
+           if(prenotazione.GetType()==typeof(PrenotazioneSingola))
+           {
+               
+               if (CheckPrenotazioneSingola((PrenotazioneSingola)prenotazione))
+               {
+                   CentroSaleProve.GetIstance().Agenda.Prenotazioni.Add(prenotazione);
+                   return true;
+               }
+                   
+           }
+
+           if (prenotazione.GetType() == typeof(PrenotazionePeriodica))
+           {               
+                   CentroSaleProve.GetIstance().Agenda.Prenotazioni.Add(prenotazione);
+                   return true;              
+                   
+           }
+
+           return false;
+       }
+
       
+
+       private bool CheckPrenotazioneSingola(PrenotazioneSingola prenotazione)
+       {
+           foreach(PrenotazioneSingola ps in CentroSaleProve.GetIstance().Agenda.Prenotazioni)
+           {
+               if (ps.Data == prenotazione.Data)
+               {
+                   if (ps.OraInizio == prenotazione.OraInizio)
+                       return false;
+                   else if (ps.OraFine < prenotazione.OraInizio)
+                       return false;
+               }
+           }
+
+           return true;
+               
+       }
     }
 }

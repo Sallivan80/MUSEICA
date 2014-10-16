@@ -11,10 +11,10 @@
       <IdSala>0001</IdSala>
       <Indirizzo>via della sala</Indirizzo>
       <NomeSala>Sala 1</NomeSala>
-      <Tipologia>Caparezza</Tipologia>
+      <Tipologia>Mixaggio</Tipologia>
       <Prezzo>3,000</Prezzo>
     </Sala>
-    <Data>26/08/2014 00:00:00</Data>
+    <Data>28/08/2014 00:00:00</Data>
     <OraInizio>16</OraInizio>
     <OraFine>19</OraFine>
   </PrenotazioneSingola>
@@ -30,7 +30,7 @@
       <IdSala>0002</IdSala>
       <Indirizzo>via della sala</Indirizzo>
       <NomeSala>Sala 2</NomeSala>
-      <Tipologia>Caparezza</Tipologia>
+      <Tipologia>Prova</Tipologia>
       <Prezzo>3,000</Prezzo>
     </Sala>
     <Data>26/08/2014 00:00:00</Data>

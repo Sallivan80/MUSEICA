@@ -29,7 +29,7 @@ namespace MUSEICA.ProvaView
 
         private void StoricoView_Activated(object sender, EventArgs e)
         {
-            List<Prenotazione> prenotazioneCliente = _controller.RicercaPrenotazioneCliente(_selectedCliente);
+            List<Prenotazione> prenotazioneCliente = _controller.RicercaPrenotazione(_selectedCliente);
             List<PrenotazioneSingola> prenotazioniSingole=new List<PrenotazioneSingola>();
             List<PrenotazionePeriodica> prenotazioniPeriodiche = new List<PrenotazionePeriodica>();
             foreach(Prenotazione p in prenotazioneCliente)

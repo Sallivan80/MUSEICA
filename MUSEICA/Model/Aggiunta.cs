@@ -28,30 +28,31 @@ namespace MUSEICA.Model
             return _costoAggiunta + this._prenotazione.getCosto();
         }
 
-        #region Tipi Aggiunte
-        public class AggiungiChitarra : Aggiunta
-        {           
-
-            public AggiungiChitarra(Prenotazione prenotazione) :base(prenotazione)
-            {
-                this._costoAggiunta = 5.0F;
-            }
-
-        }
-
-        public class AggiungiBasso : Aggiunta
-        {
-
-
-            public AggiungiBasso(Prenotazione prenotazione)
-                : base(prenotazione)
-            {
-                this._costoAggiunta = 6.0F;
-            }
-
-        }
-        #endregion
+       
 
 
     }//end Aggiunta
+
+    public class Chitarra : Aggiunta
+    {
+
+        public Chitarra(Prenotazione prenotazione)
+            : base(prenotazione)
+        {
+            this._costoAggiunta = 5.0F;
+        }
+
+    }
+
+    public class Basso : Aggiunta
+    {
+
+
+        public Basso(Prenotazione prenotazione)
+            : base(prenotazione)
+        {
+            this._costoAggiunta = 6.0F;
+        }
+
+    }
 }

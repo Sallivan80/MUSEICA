@@ -60,8 +60,22 @@ namespace MUSEICA.Model
                 {
                     DateTime dataTemp = p.Data.AddDays(7 * i);
                     if (dataTemp.CompareTo(dataFine) < 0)
-                        _prenotazioni.Add(new PrenotazioneSingola(p.IdPrenotazione, p.Cliente, p.Sala, dataTemp, p.OraInizio, p.OraFine));
+                    {
+                        PrenotazioneSingola newPrenotazioneSingola = new PrenotazioneSingola(p.IdPrenotazione, p.Cliente, p.Sala, dataTemp, p.OraInizio, p.OraFine);
+                        foreach (PrenotazioneSingola ps in CentroSaleProve.GetIstance().Agenda.Prenotazioni)
+                        {
+                            if (ps.Data == newPrenotazioneSingola.Data)
+                            {
+                                if (ps.OraInizio == newPrenotazioneSingola.OraInizio)
+                                    throw new ArgumentException("ps.OraInizio == newPrenotazioneSingola.OraInizio");
+                                else if (ps.OraFine < newPrenotazioneSingola.OraInizio)
+                                    throw new ArgumentException("ps.OraFine < newPrenotazioneSingola.OraInizio");
+                            }
+                        }
+                        _prenotazioni.Add(newPrenotazioneSingola);
 
+
+                    }
                 }
             }
         }

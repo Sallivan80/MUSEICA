@@ -27,6 +27,11 @@ namespace MUSEICA.Model
 
         }
 
+        public Sala(string idSala)
+        {
+            this._idSala = idSala;
+        }
+
         public override string ToString()
         {
             return _nomeSala;
