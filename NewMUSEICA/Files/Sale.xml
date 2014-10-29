@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Sale>
+  <Sala>
+    <IdSala>0001</IdSala>
+    <NomeSala>Sala 1</NomeSala>
+    <Indirizzo>via mura di porta galliera 10</Indirizzo>
+    <Tipologia>Prova</Tipologia>
+    <Prezzo>4</Prezzo>
+  </Sala>
+  <Sala>
+    <IdSala>0002</IdSala>
+    <NomeSala>Sala 2</NomeSala>
+    <Indirizzo>via borgo di san pietro 99</Indirizzo>
+    <Tipologia>Registrazione</Tipologia>
+    <Prezzo>5</Prezzo>
+  </Sala>
+  <Sala>
+    <IdSala>0003</IdSala>
+    <NomeSala>Sala 3</NomeSala>
+    <Indirizzo>via irnerio 11</Indirizzo>
+    <Tipologia>Mixaggio</Tipologia>
+    <Prezzo>125</Prezzo>
+  </Sala>
+  <Sala>
+    <IdSala>00004</IdSala>
+    <Indirizzo>via sala 5</Indirizzo>
+    <NomeSala>Sala 4</NomeSala>
+    <Tipologia>Mixaggio</Tipologia>
+    <Prezzo>2,7</Prezzo>
+  </Sala>
+</Sale>
