@@ -9,12 +9,12 @@ namespace MUSEICA.Model
 {
     public class Cliente
     {
-        private  string _nome;
-        private  string _cognome;
-        private  string _telefono;
-        private  string _indirizzo;
+        private string _nome;
+        private string _cognome;
+        private string _telefono;
+        private string _indirizzo;
 
-        public Cliente(string nome,string cognome,string telefono,string indirizzo)
+        public Cliente(string nome, string cognome, string telefono, string indirizzo)
         {
             this._nome = nome;
             this._cognome = cognome;
@@ -27,7 +27,7 @@ namespace MUSEICA.Model
         {
             get { return _nome; }
             set { _nome = value; }
-            
+
         }
 
         public string Cognome
@@ -40,14 +40,14 @@ namespace MUSEICA.Model
         {
             get { return _telefono; }
             set { _telefono = value; }
-           
+
         }
 
         public string Indirizzo
         {
             get { return _indirizzo; }
             set { _indirizzo = value; }
-            
+
         }
         #endregion
 

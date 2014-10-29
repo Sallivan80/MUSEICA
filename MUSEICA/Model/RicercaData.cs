@@ -17,11 +17,18 @@ namespace MUSEICA.Model {
 
         public List<Prenotazione> Ricerca(List<Prenotazione> prenotazioni)
         {
-            List<Prenotazione> result = new List<Prenotazione>();
+            List<Prenotazione> result = new List<Prenotazione>();            
             foreach (Prenotazione p in prenotazioni)
             {
-                if (_dataToFind.DayOfYear == p.Data.DayOfYear)
-                    result.Add(p);
+                if (p.GetType() == typeof(PrenotazioneSingola))
+                    if (_dataToFind.DayOfYear == p.DataInizio.DayOfYear)
+                        result.Add(p as PrenotazioneSingola);
+                if (p.GetType() == typeof(PrenotazionePeriodica))
+                    foreach(PrenotazioneSingola ps in (p as PrenotazionePeriodica).Prenotazioni)
+                      if (_dataToFind.DayOfYear == ps.DataInizio.DayOfYear)
+                            result.Add(ps);
+
+
             }
 
             return result;

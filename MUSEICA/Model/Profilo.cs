@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
@@ -14,7 +14,7 @@ namespace MUSEICA.Model
         private string _telefono;
         private string _email;
 
-        public Profilo(string nomeCentro,string indirizzo,string telefono,string email)
+        public Profilo(string nomeCentro, string indirizzo, string telefono, string email)
         {
             NomeCentro = nomeCentro;
             Indirizzo = indirizzo;
@@ -22,7 +22,7 @@ namespace MUSEICA.Model
             Email = email;
         }
 
-       
+
 
         public string NomeCentro
         {

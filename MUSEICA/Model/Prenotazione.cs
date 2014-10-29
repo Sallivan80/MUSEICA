@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,12 +12,14 @@ namespace MUSEICA.Model
     public abstract class Prenotazione
     {
 
-        private  Cliente _cliente;
-        private  Sala _sala;
-        private  DateTime _data;
-        private  string _idPrenotazione;
+        private string _idPrenotazione;
+        private Cliente _cliente;
+        private Sala _sala;
+        private DateTime _dataInizio;        
+        protected float _totale;
+        
 
-       
+
         #region Property
         public string IdPrenotazione
         {
@@ -28,27 +30,35 @@ namespace MUSEICA.Model
         public Cliente Cliente
         {
             get { return _cliente; }
-            set { _cliente=value;  }
+            set { _cliente = value; }
         }
 
         public Sala Sala
         {
             get { return _sala; }
-            set { _sala= value; }
+            set { _sala = value; }
 
         }
 
-        public DateTime Data
+        public DateTime DataInizio
         {
-            get { return _data; }
-            set { _data= value; }
+            get { return _dataInizio; }
+            set { _dataInizio = value; }
 
         }
+
+      
+
+        public float Totale
+        {
+            set { _totale = value; }
+        }
+       
         #endregion
 
 
 
-        public abstract float getCosto();
+        public abstract float GetTotale();
 
     }//end Prenotazione
 }

@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using MUSEICA.Model;
 using MUSEICA.Persistence;
 using MUSEICA.Controllers;
-using MUSEICA.ProvaView;
+using MUSEICA.View;
 
 namespace MUSEICA
 {
@@ -22,7 +22,7 @@ namespace MUSEICA
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);               
-            Application.Run(new MuseicaView());
+            Application.Run(new MainView());
         }
     }
 }

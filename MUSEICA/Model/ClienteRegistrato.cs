@@ -9,10 +9,10 @@ namespace MUSEICA.Model
     public class ClienteRegistrato : Cliente
     {
         private readonly string _idTessera;
-        private  DateTime _scadenzaTessera;
+        private DateTime _scadenzaTessera;
 
-        public ClienteRegistrato(string nome,string cognome,string telefono,string indirizzo,string idTessera,DateTime scadenzaTessera)
-            : base(nome,cognome,telefono,indirizzo)
+        public ClienteRegistrato(string nome, string cognome, string telefono, string indirizzo, string idTessera, DateTime scadenzaTessera)
+            : base(nome, cognome, telefono, indirizzo)
         {
             this._idTessera = idTessera;
             this._scadenzaTessera = scadenzaTessera;
@@ -22,7 +22,7 @@ namespace MUSEICA.Model
         public string IdTessera
         {
             get { return _idTessera; }
-           
+
         }
 
         public DateTime ScadenzaTessera
@@ -34,8 +34,8 @@ namespace MUSEICA.Model
         public override string ToString()
         {
 
-            return String.Format("[IDTessera:{0},Scadenza:{1},Nome:{2},Cognome:{3},Telefono:{4},Indirizzo:{5}]",
-                IdTessera, ScadenzaTessera, Nome, Cognome, Telefono, Indirizzo);
+            return String.Format("{0} {1} IDTessera:{2}",
+                 Nome, Cognome,IdTessera);
         }
     }
 }

@@ -17,13 +17,13 @@
   <Sala>
     <IdSala>0003</IdSala>
     <NomeSala>Sala 3</NomeSala>
-    <Indirizzo>via irnerio 5</Indirizzo>
-    <Tipologia>Registrazione</Tipologia>
-    <Prezzo>10</Prezzo>
+    <Indirizzo>via irnerio 11</Indirizzo>
+    <Tipologia>Prova</Tipologia>
+    <Prezzo>5</Prezzo>
   </Sala>
   <Sala>
     <IdSala>00004</IdSala>
-    <Indirizzo>via sala 4</Indirizzo>
+    <Indirizzo>via sala 5</Indirizzo>
     <NomeSala>Sala 4</NomeSala>
     <Tipologia>Mixaggio</Tipologia>
     <Prezzo>2,7</Prezzo>

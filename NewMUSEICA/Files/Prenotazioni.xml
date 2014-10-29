@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Prenotazioni>
+  <PrenotazioneSingola>
+    <IdPrenotazione>S000938261805</IdPrenotazione>
+    <Cliente>
+      <IdTessera>000000000001</IdTessera>
+      <ScadenzaTessera>14/10/2014</ScadenzaTessera>
+      <Nome>Francesco</Nome>
+      <Cognome>Zobel</Cognome>
+      <Telefono>3331676789</Telefono>
+      <Indirizzo>via mura porta galliera 9</Indirizzo>
+    </Cliente>
+    <Sala>
+      <IdSala>0001</IdSala>
+      <Indirizzo>via mura di porta galliera 10</Indirizzo>
+      <NomeSala>Sala 1</NomeSala>
+      <Tipologia>Prova</Tipologia>
+      <Prezzo>4</Prezzo>
+    </Sala>
+    <Data>20/10/2014</Data>
+    <OraInizio>9</OraInizio>
+    <OraFine>10</OraFine>
+    <Note>
+    </Note>
+    <Totale>3,8</Totale>
+  </PrenotazioneSingola>
+  <PrenotazionePeriodica>
+    <DataFine>24/11/2014</DataFine>
+    <PrenotazioneSingola>
+      <IdPrenotazione>P000714948067</IdPrenotazione>
+      <Cliente>
+        <IdTessera>000000000003</IdTessera>
+        <ScadenzaTessera>30/10/2014</ScadenzaTessera>
+        <Nome>Nicolas</Nome>
+        <Cognome>Montesi</Cognome>
+        <Telefono>3334012070</Telefono>
+        <Indirizzo>via borgo 99</Indirizzo>
+      </Cliente>
+      <Sala>
+        <IdSala>00004</IdSala>
+        <Indirizzo>via sala 5</Indirizzo>
+        <NomeSala>Sala 4</NomeSala>
+        <Tipologia>Mixaggio</Tipologia>
+        <Prezzo>2,7</Prezzo>
+      </Sala>
+      <Data>20/10/2014 17:46:41</Data>
+      <OraInizio>9</OraInizio>
+      <OraFine>10</OraFine>
+      <Note>
+      </Note>
+      <Totale>2,7</Totale>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <IdPrenotazione>P000714948067</IdPrenotazione>
+      <Cliente>
+        <IdTessera>000000000003</IdTessera>
+        <ScadenzaTessera>30/10/2014</ScadenzaTessera>
+        <Nome>Nicolas</Nome>
+        <Cognome>Montesi</Cognome>
+        <Telefono>3334012070</Telefono>
+        <Indirizzo>via borgo 99</Indirizzo>
+      </Cliente>
+      <Sala>
+        <IdSala>00004</IdSala>
+        <Indirizzo>via sala 5</Indirizzo>
+        <NomeSala>Sala 4</NomeSala>
+        <Tipologia>Mixaggio</Tipologia>
+        <Prezzo>2,7</Prezzo>
+      </Sala>
+      <Data>27/10/2014 17:46:41</Data>
+      <OraInizio>9</OraInizio>
+      <OraFine>10</OraFine>
+      <Note>
+      </Note>
+      <Totale>2,7</Totale>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <IdPrenotazione>P000714948067</IdPrenotazione>
+      <Cliente>
+        <IdTessera>000000000003</IdTessera>
+        <ScadenzaTessera>30/10/2014</ScadenzaTessera>
+        <Nome>Nicolas</Nome>
+        <Cognome>Montesi</Cognome>
+        <Telefono>3334012070</Telefono>
+        <Indirizzo>via borgo 99</Indirizzo>
+      </Cliente>
+      <Sala>
+        <IdSala>00004</IdSala>
+        <Indirizzo>via sala 5</Indirizzo>
+        <NomeSala>Sala 4</NomeSala>
+        <Tipologia>Mixaggio</Tipologia>
+        <Prezzo>2,7</Prezzo>
+      </Sala>
+      <Data>03/11/2014 17:46:41</Data>
+      <OraInizio>9</OraInizio>
+      <OraFine>10</OraFine>
+      <Note>
+      </Note>
+      <Totale>2,7</Totale>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <IdPrenotazione>P000714948067</IdPrenotazione>
+      <Cliente>
+        <IdTessera>000000000003</IdTessera>
+        <ScadenzaTessera>30/10/2014</ScadenzaTessera>
+        <Nome>Nicolas</Nome>
+        <Cognome>Montesi</Cognome>
+        <Telefono>3334012070</Telefono>
+        <Indirizzo>via borgo 99</Indirizzo>
+      </Cliente>
+      <Sala>
+        <IdSala>00004</IdSala>
+        <Indirizzo>via sala 5</Indirizzo>
+        <NomeSala>Sala 4</NomeSala>
+        <Tipologia>Mixaggio</Tipologia>
+        <Prezzo>2,7</Prezzo>
+      </Sala>
+      <Data>10/11/2014 17:46:41</Data>
+      <OraInizio>9</OraInizio>
+      <OraFine>10</OraFine>
+      <Note>
+      </Note>
+      <Totale>2,7</Totale>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <IdPrenotazione>P000714948067</IdPrenotazione>
+      <Cliente>
+        <IdTessera>000000000003</IdTessera>
+        <ScadenzaTessera>30/10/2014</ScadenzaTessera>
+        <Nome>Nicolas</Nome>
+        <Cognome>Montesi</Cognome>
+        <Telefono>3334012070</Telefono>
+        <Indirizzo>via borgo 99</Indirizzo>
+      </Cliente>
+      <Sala>
+        <IdSala>00004</IdSala>
+        <Indirizzo>via sala 5</Indirizzo>
+        <NomeSala>Sala 4</NomeSala>
+        <Tipologia>Mixaggio</Tipologia>
+        <Prezzo>2,7</Prezzo>
+      </Sala>
+      <Data>17/11/2014 17:46:41</Data>
+      <OraInizio>9</OraInizio>
+      <OraFine>10</OraFine>
+      <Note>
+      </Note>
+      <Totale>2,7</Totale>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <IdPrenotazione>P000714948067</IdPrenotazione>
+      <Cliente>
+        <IdTessera>000000000003</IdTessera>
+        <ScadenzaTessera>30/10/2014</ScadenzaTessera>
+        <Nome>Nicolas</Nome>
+        <Cognome>Montesi</Cognome>
+        <Telefono>3334012070</Telefono>
+        <Indirizzo>via borgo 99</Indirizzo>
+      </Cliente>
+      <Sala>
+        <IdSala>00004</IdSala>
+        <Indirizzo>via sala 5</Indirizzo>
+        <NomeSala>Sala 4</NomeSala>
+        <Tipologia>Mixaggio</Tipologia>
+        <Prezzo>2,7</Prezzo>
+      </Sala>
+      <Data>22/10/2014 17:46:45</Data>
+      <OraInizio>9</OraInizio>
+      <OraFine>10</OraFine>
+      <Note>
+      </Note>
+      <Totale>2,7</Totale>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <IdPrenotazione>P000714948067</IdPrenotazione>
+      <Cliente>
+        <IdTessera>000000000003</IdTessera>
+        <ScadenzaTessera>30/10/2014</ScadenzaTessera>
+        <Nome>Nicolas</Nome>
+        <Cognome>Montesi</Cognome>
+        <Telefono>3334012070</Telefono>
+        <Indirizzo>via borgo 99</Indirizzo>
+      </Cliente>
+      <Sala>
+        <IdSala>00004</IdSala>
+        <Indirizzo>via sala 5</Indirizzo>
+        <NomeSala>Sala 4</NomeSala>
+        <Tipologia>Mixaggio</Tipologia>
+        <Prezzo>2,7</Prezzo>
+      </Sala>
+      <Data>29/10/2014 17:46:45</Data>
+      <OraInizio>9</OraInizio>
+      <OraFine>10</OraFine>
+      <Note>
+      </Note>
+      <Totale>2,7</Totale>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <IdPrenotazione>P000714948067</IdPrenotazione>
+      <Cliente>
+        <IdTessera>000000000003</IdTessera>
+        <ScadenzaTessera>30/10/2014</ScadenzaTessera>
+        <Nome>Nicolas</Nome>
+        <Cognome>Montesi</Cognome>
+        <Telefono>3334012070</Telefono>
+        <Indirizzo>via borgo 99</Indirizzo>
+      </Cliente>
+      <Sala>
+        <IdSala>00004</IdSala>
+        <Indirizzo>via sala 5</Indirizzo>
+        <NomeSala>Sala 4</NomeSala>
+        <Tipologia>Mixaggio</Tipologia>
+        <Prezzo>2,7</Prezzo>
+      </Sala>
+      <Data>05/11/2014 17:46:45</Data>
+      <OraInizio>9</OraInizio>
+      <OraFine>10</OraFine>
+      <Note>
+      </Note>
+      <Totale>2,7</Totale>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <IdPrenotazione>P000714948067</IdPrenotazione>
+      <Cliente>
+        <IdTessera>000000000003</IdTessera>
+        <ScadenzaTessera>30/10/2014</ScadenzaTessera>
+        <Nome>Nicolas</Nome>
+        <Cognome>Montesi</Cognome>
+        <Telefono>3334012070</Telefono>
+        <Indirizzo>via borgo 99</Indirizzo>
+      </Cliente>
+      <Sala>
+        <IdSala>00004</IdSala>
+        <Indirizzo>via sala 5</Indirizzo>
+        <NomeSala>Sala 4</NomeSala>
+        <Tipologia>Mixaggio</Tipologia>
+        <Prezzo>2,7</Prezzo>
+      </Sala>
+      <Data>12/11/2014 17:46:45</Data>
+      <OraInizio>9</OraInizio>
+      <OraFine>10</OraFine>
+      <Note>
+      </Note>
+      <Totale>2,7</Totale>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <IdPrenotazione>P000714948067</IdPrenotazione>
+      <Cliente>
+        <IdTessera>000000000003</IdTessera>
+        <ScadenzaTessera>30/10/2014</ScadenzaTessera>
+        <Nome>Nicolas</Nome>
+        <Cognome>Montesi</Cognome>
+        <Telefono>3334012070</Telefono>
+        <Indirizzo>via borgo 99</Indirizzo>
+      </Cliente>
+      <Sala>
+        <IdSala>00004</IdSala>
+        <Indirizzo>via sala 5</Indirizzo>
+        <NomeSala>Sala 4</NomeSala>
+        <Tipologia>Mixaggio</Tipologia>
+        <Prezzo>2,7</Prezzo>
+      </Sala>
+      <Data>19/11/2014 17:46:45</Data>
+      <OraInizio>9</OraInizio>
+      <OraFine>10</OraFine>
+      <Note>
+      </Note>
+      <Totale>2,7</Totale>
+    </PrenotazioneSingola>
+  </PrenotazionePeriodica>
+</Prenotazioni>

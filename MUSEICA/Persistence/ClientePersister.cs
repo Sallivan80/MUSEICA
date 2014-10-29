@@ -53,7 +53,7 @@ namespace MUSEICA.Persistence
 
         private class ClienteXmlRemover:IClienteRemover
         {
-             private readonly XDocument _xmlDocument;
+            
              private string _fileName;
 
             #region Costruttore
@@ -174,7 +174,7 @@ namespace MUSEICA.Persistence
                     if (cliente.Nome.ToLower().Equals(nome.ToLower()) && cliente.Cognome.ToLower().Equals(cognome.ToLower()))
                     {
                         node.SelectSingleNode("Telefono").InnerText = clientToSave.Telefono;
-                        node.SelectSingleNode("Indirizzo").InnerText = clientToSave.Indirizzo;
+                        node.SelectSingleNode("Indirizzo").InnerText = clientToSave.Indirizzo;                        
 
                         _xmlDocument.Save(_fileName);
                         trovato = true;

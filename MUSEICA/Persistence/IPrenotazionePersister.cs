@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Linq;
 using MUSEICA.Model;
 
 namespace MUSEICA.Persistence
@@ -12,6 +14,7 @@ namespace MUSEICA.Persistence
         IPrenotazioneLoader GetLoader(string typeFileLoader);
 
         IPrenotazioneSaver GetSaver(string typeFileLoader);
+        IPrenotazioneRemover GetRemover(string typeFileLoader);
     }
 
     public interface IPrenotazioneLoader
@@ -23,8 +26,16 @@ namespace MUSEICA.Persistence
 
     public interface IPrenotazioneSaver
     {
-        void SaveUpdatePrenotazioneSingola(PrenotazioneSingola prenotazione);
-        void SaveUpdatePrenotazionePeriodica(PrenotazionePeriodica prenotazione);
+        void SavePrenotazioneSingola(PrenotazioneSingola prenotazione);
+       /* void UpdatePrenotazioneSingola(PrenotazioneSingola prenotazione);*/
+        void SavePrenotazionePeriodica(PrenotazionePeriodica prenotazione);
+       // void UpdatePrenotazionePeriodica(PrenotazionePeriodica prenotazione);
+            
 
+    }
+
+    public interface IPrenotazioneRemover
+    {
+        void RemovePrenotazione(Prenotazione prenotazione);
     }
 }

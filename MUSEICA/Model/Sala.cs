@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
@@ -17,7 +17,7 @@ namespace MUSEICA.Model
 
 
 
-        public Sala(string idSala, string indirizzo, string nomeSala, ITipologiaSala tipoSala,float prezzo)
+        public Sala(string idSala, string indirizzo, string nomeSala, ITipologiaSala tipoSala, float prezzo)
         {
             this._idSala = idSala;
             this._indirizzo = indirizzo;
@@ -26,11 +26,7 @@ namespace MUSEICA.Model
             this._prezzo = prezzo;
 
         }
-
-        public Sala(string idSala)
-        {
-            this._idSala = idSala;
-        }
+       
 
         public override string ToString()
         {
@@ -64,7 +60,7 @@ namespace MUSEICA.Model
         public float Prezzo
         {
             get { return _prezzo; }
-            set {_prezzo=value; }
+            set { _prezzo = value; }
         }
         #endregion
 

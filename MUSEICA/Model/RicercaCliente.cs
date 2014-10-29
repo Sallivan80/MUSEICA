@@ -10,11 +10,13 @@ namespace MUSEICA.Model
     public class RicercaCliente : IRicercaProvider
     {
 
-        private Cliente _clienteToFind;
+        private string _nome;
+        private string _cognome;
 
-        public RicercaCliente(Cliente clienteToFind)
+        public RicercaCliente(string nome,string cognome)
         {
-            _clienteToFind = clienteToFind;
+            _nome = nome;
+            _cognome = cognome;
         }
 
         public List<Prenotazione> Ricerca(List<Prenotazione> prenotazioni)
@@ -22,10 +24,15 @@ namespace MUSEICA.Model
             List<Prenotazione> result = new List<Prenotazione>();
             foreach (Prenotazione p in prenotazioni)
             {
+                if(p.GetType()==typeof(PrenotazioneSingola))
+                    if (_cognome.ToLower()==p.Cliente.Cognome.ToLower()  &&  _nome.ToLower()== p.Cliente.Nome.ToLower()  )
+                         result.Add(p as PrenotazioneSingola);
+                if(p.GetType()==typeof(PrenotazionePeriodica))
+                    foreach (PrenotazioneSingola ps in (p as PrenotazionePeriodica).Prenotazioni)
+                        if (_cognome.ToLower() == ps.Cliente.Cognome.ToLower() && _nome.ToLower() == ps.Cliente.Nome.ToLower())
+                            result.Add(ps);             
                 
-                if (_clienteToFind.Cognome.ToLower()==p.Cliente.Cognome.ToLower()  && 
-                    _clienteToFind.Nome.ToLower()== p.Cliente.Nome.ToLower()  )
-                    result.Add(p);
+                  
             }
 
             return result;

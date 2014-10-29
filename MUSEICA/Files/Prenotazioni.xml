@@ -1,44 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Prenotazioni>
   <PrenotazioneSingola>
-    <IdPrenotazione>000000</IdPrenotazione>
+    <IdPrenotazione>S000450493314</IdPrenotazione>
     <Cliente>
+      <IdTessera>000690653049</IdTessera>
+      <ScadenzaTessera>25/12/2014</ScadenzaTessera>
       <Nome>Francesco</Nome>
-      <Cognome>Zobel</Cognome>
-      <Telefono>3334012070</Telefono>
-      <Indirizzo>Via ciao</Indirizzo>
+      <Cognome>Lattanzi</Cognome>
+      <Telefono>333456488</Telefono>
+      <Indirizzo>via senza una gioia</Indirizzo>
     </Cliente>
     <Sala>
-      <IdSala>0001</IdSala>
-      <Indirizzo>via della sala</Indirizzo>
-      <NomeSala>Sala 1</NomeSala>
+      <IdSala>00004</IdSala>
+      <Indirizzo>via sala 5</Indirizzo>
+      <NomeSala>Sala 4</NomeSala>
       <Tipologia>Mixaggio</Tipologia>
-      <Prezzo>3,000</Prezzo>
+      <Prezzo>2,7</Prezzo>
     </Sala>
-    <Data>28/08/2014 00:00:00</Data>
-    <OraInizio>16</OraInizio>
+    <DataInizio>26/10/2014 00:00:00</DataInizio>
+    <OraInizio>18</OraInizio>
     <OraFine>19</OraFine>
+    <Totale>2,7</Totale>
   </PrenotazioneSingola>
   <PrenotazioneSingola>
-    <IdPrenotazione>000002</IdPrenotazione>
+    <IdPrenotazione>S000340102048</IdPrenotazione>
     <Cliente>
-      <Nome>Francesco</Nome>
-      <Cognome>Zobel</Cognome>
+      <IdTessera>000000000003</IdTessera>
+      <ScadenzaTessera>30/10/2014</ScadenzaTessera>
+      <Nome>Nicolas</Nome>
+      <Cognome>Montesi</Cognome>
       <Telefono>3334012070</Telefono>
-      <Indirizzo>Via ciao</Indirizzo>
+      <Indirizzo>via borgo 99</Indirizzo>
     </Cliente>
     <Sala>
       <IdSala>0002</IdSala>
-      <Indirizzo>via della sala</Indirizzo>
+      <Indirizzo>via borgo di san pietro 99</Indirizzo>
       <NomeSala>Sala 2</NomeSala>
-      <Tipologia>Prova</Tipologia>
-      <Prezzo>3,000</Prezzo>
+      <Tipologia>Registrazione</Tipologia>
+      <Prezzo>5</Prezzo>
     </Sala>
-    <Data>26/08/2014 00:00:00</Data>
-    <OraInizio>16</OraInizio>
-    <OraFine>19</OraFine>
+    <DataInizio>25/10/2014 20:17:01</DataInizio>
+    <OraInizio>9</OraInizio>
+    <OraFine>10</OraFine>
+    <Totale>4,75</Totale>
   </PrenotazioneSingola>
-
-
-  
-
+  <PrenotazioneSingola>
+    <IdPrenotazione>S000125745797</IdPrenotazione>
+    <Cliente>
+      <IdTessera>000000000002</IdTessera>
+      <ScadenzaTessera>30/10/2014</ScadenzaTessera>
+      <Nome>Alessandro</Nome>
+      <Cognome>Stega</Cognome>
+      <Telefono>333458978</Telefono>
+      <Indirizzo>via dreambox 10</Indirizzo>
+    </Cliente>
+    <Sala>
+      <IdSala>0001</IdSala>
+      <Indirizzo>via mura di porta galliera 10</Indirizzo>
+      <NomeSala>Sala 1</NomeSala>
+      <Tipologia>Prova</Tipologia>
+      <Prezzo>4</Prezzo>
+    </Sala>
+    <DataInizio>25/10/2014 20:16:22</DataInizio>
+    <OraInizio>10</OraInizio>
+    <OraFine>11</OraFine>
+    <Totale>4</Totale>
+  </PrenotazioneSingola>
+  <PrenotazionePeriodica>
+    <IdPrenotazione>P000591753251</IdPrenotazione>
+    <Cliente>
+      <IdTessera>000000000002</IdTessera>
+      <ScadenzaTessera>30/10/2014</ScadenzaTessera>
+      <Nome>Alessandro</Nome>
+      <Cognome>Stega</Cognome>
+      <Telefono>333458978</Telefono>
+      <Indirizzo>via dreambox 10</Indirizzo>
+    </Cliente>
+    <Sala>
+      <IdSala>0002</IdSala>
+      <Indirizzo>via borgo di san pietro 99</Indirizzo>
+      <NomeSala>Sala 2</NomeSala>
+      <Tipologia>Registrazione</Tipologia>
+      <Prezzo>5</Prezzo>
+    </Sala>
+    <DataInizio>25/10/2014</DataInizio>
+    <DataFine>07/11/2014</DataFine>
+    <PrenotazioneSingola>
+      <DataInizio>28/10/2014</DataInizio>
+      <OraInizio>9</OraInizio>
+      <OraFine>10</OraFine>
+      <Totale>5</Totale>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <DataInizio>04/11/2014</DataInizio>
+      <OraInizio>9</OraInizio>
+      <OraFine>10</OraFine>
+      <Totale>5</Totale>
+    </PrenotazioneSingola>
+  </PrenotazionePeriodica>
+  <PrenotazioneSingola>
+    <IdPrenotazione>S000764126579</IdPrenotazione>
+    <Cliente>
+      <Nome>Elena</Nome>
+      <Cognome>Micheletti</Cognome>
+      <Telefono>12354856</Telefono>
+      <Indirizzo>asdasd</Indirizzo>
+    </Cliente>
+    <Sala>
+      <IdSala>0002</IdSala>
+      <Indirizzo>via borgo di san pietro 99</Indirizzo>
+      <NomeSala>Sala 2</NomeSala>
+      <Tipologia>Registrazione</Tipologia>
+      <Prezzo>5</Prezzo>
+    </Sala>
+    <DataInizio>27/10/2014 00:00:00</DataInizio>
+    <OraInizio>14</OraInizio>
+    <OraFine>15</OraFine>
+    <Totale>5</Totale>
+  </PrenotazioneSingola>
+  <PrenotazionePeriodica>
+    <IdPrenotazione>P000900217826</IdPrenotazione>
+    <Cliente>
+      <IdTessera>000000000002</IdTessera>
+      <ScadenzaTessera>30/10/2014</ScadenzaTessera>
+      <Nome>Alessandro</Nome>
+      <Cognome>Stega</Cognome>
+      <Telefono>333458978</Telefono>
+      <Indirizzo>via dreambox 10</Indirizzo>
+    </Cliente>
+    <Sala>
+      <IdSala>0002</IdSala>
+      <Indirizzo>via borgo di san pietro 99</Indirizzo>
+      <NomeSala>Sala 2</NomeSala>
+      <Tipologia>Registrazione</Tipologia>
+      <Prezzo>5</Prezzo>
+    </Sala>
+    <DataInizio>25/10/2014</DataInizio>
+    <DataFine>08/11/2014</DataFine>
+    <PrenotazioneSingola>
+      <DataInizio>30/10/2014</DataInizio>
+      <OraInizio>14</OraInizio>
+      <OraFine>16</OraFine>
+      <Totale>5</Totale>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <DataInizio>05/11/2014</DataInizio>
+      <OraInizio>9</OraInizio>
+      <OraFine>10</OraFine>
+      <Totale>5</Totale>
+    </PrenotazioneSingola>
+  </PrenotazionePeriodica>
 </Prenotazioni>

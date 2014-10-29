@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
@@ -9,14 +9,23 @@ namespace MUSEICA.Model
     public class PrenotazionePeriodica : Prenotazione
     {
 
-        private List<PrenotazioneSingola> _prenotazioni=new List<PrenotazioneSingola>();
+        private List<PrenotazioneSingola> _prenotazioni = null;
         private DateTime _dataFine;
         
 
-        public PrenotazionePeriodica(List<PrenotazioneSingola> prenotazioniRichieste,DateTime dataFine)            
+
+        public PrenotazionePeriodica(string idPrenotazione,Cliente cliente, Sala sala, DateTime dataInizio, DateTime dataFine, List<PrenotazioneSingola> prenotazioniRichieste)
         {
-            CreaPrenotazionePeriodica(prenotazioniRichieste, dataFine);
-        }        
+
+            this.IdPrenotazione = idPrenotazione;
+            this.Cliente = cliente;
+            this.Sala = sala;
+            this.DataInizio = dataInizio;
+            this.DataFine = dataFine;
+            _prenotazioni = prenotazioniRichieste;
+            
+            
+        }      
 
         public DateTime DataFine
         {
@@ -30,55 +39,20 @@ namespace MUSEICA.Model
             set { _prenotazioni = value; }
         }
 
-        public override float getCosto()
+        public override float GetTotale()
         {
 
             float totalePrenotazionePeriodica = 0;
             foreach (PrenotazioneSingola p in _prenotazioni)
-                totalePrenotazionePeriodica += p.getCosto();
-            return totalePrenotazionePeriodica;
+                totalePrenotazionePeriodica += p.GetTotale();
+            this.Totale = totalePrenotazionePeriodica;
+            return _totale;
         }
 
 
-        private void CreaPrenotazionePeriodica(List<PrenotazioneSingola> prenotazioniRichieste, DateTime dataFine)
-        {
-
-            foreach (PrenotazioneSingola p in prenotazioniRichieste)
-            {
-                /* int i=0;
-                   while(i<dataFine.DayOfYear-p.Data.DayOfYear)
-                   {
-                       DateTime dataTemp = p.Data.AddDays(i);
-                       if (dataTemp.CompareTo(dataFine) <= 0)
-                       {
-                         _prenotazioni.Add(new PrenotazioneSingola(p.IdPrenotazione, p.Cliente, p.Sala, dataTemp, p.OraInizio, p.OraFine));
-                         i += 7;
-                       }
-                   }*/
-
-                for (int i = 0; i < dataFine.DayOfYear - p.Data.DayOfYear; i++)
-                {
-                    DateTime dataTemp = p.Data.AddDays(7 * i);
-                    if (dataTemp.CompareTo(dataFine) < 0)
-                    {
-                        PrenotazioneSingola newPrenotazioneSingola = new PrenotazioneSingola(p.IdPrenotazione, p.Cliente, p.Sala, dataTemp, p.OraInizio, p.OraFine);
-                        foreach (PrenotazioneSingola ps in CentroSaleProve.GetIstance().Agenda.Prenotazioni)
-                        {
-                            if (ps.Data == newPrenotazioneSingola.Data)
-                            {
-                                if (ps.OraInizio == newPrenotazioneSingola.OraInizio)
-                                    throw new ArgumentException("ps.OraInizio == newPrenotazioneSingola.OraInizio");
-                                else if (ps.OraFine < newPrenotazioneSingola.OraInizio)
-                                    throw new ArgumentException("ps.OraFine < newPrenotazioneSingola.OraInizio");
-                            }
-                        }
-                        _prenotazioni.Add(newPrenotazioneSingola);
-
-
-                    }
-                }
-            }
-        }
+      
+           
+                
 
     }//end PrenotazionePeriodica
 }

@@ -78,43 +78,37 @@ namespace MUSEICA.Persistence
         private bool ReadPrenotazioni()
         {
             List<PrenotazioneSingola> _prenotazioniSingole = _prenotazionePersister.GetLoader("XML").LoadPrenotazioniSingole();
-            List<PrenotazionePeriodica> _prenotazioniPeriodiche = _prenotazionePersister.GetLoader("XML").LoadPrenotazioniPeriodiche();
-            if (_prenotazioniSingole == null || _prenotazioniPeriodiche == null)
+            List<PrenotazionePeriodica> _prenotazioniPeriodiche= _prenotazionePersister.GetLoader("XML").LoadPrenotazioniPeriodiche();
+            if (_prenotazioniSingole == null)
                 return false;
 
            
             foreach (PrenotazioneSingola p in _prenotazioniSingole)
                 CentroSaleProve.GetIstance().Agenda.AggiungiPrenotazione(p);
-            foreach (PrenotazionePeriodica pp in _prenotazioniPeriodiche)
-                foreach(PrenotazioneSingola ps in pp.Prenotazioni)
-                    CentroSaleProve.GetIstance().Agenda.AggiungiPrenotazione(ps);
+            foreach (PrenotazionePeriodica p in _prenotazioniPeriodiche)
+                CentroSaleProve.GetIstance().Agenda.AggiungiPrenotazione(p);
+            
 
             if (CentroSaleProve.GetIstance().Agenda.Prenotazioni == null)
                 return false;
 
             return true;
         }
-        #endregion
-
-
-        public bool SaveAll()
-        {
-            if (SavePrenotazioni() && SaveSale() &&  SaveClienti())
-                return true;
-            return false;
-        }
+        #endregion      
 
         #region SaveMethod
-        public bool SavePrenotazioni()
-        {
-            foreach (Prenotazione p in CentroSaleProve.GetIstance().Agenda.Prenotazioni)
-            {
-                if (p.GetType() == typeof(PrenotazioneSingola))
-                    _prenotazionePersister.GetSaver("XML").SaveUpdatePrenotazioneSingola((PrenotazioneSingola)p);
-                if (p.GetType() == typeof(PrenotazionePeriodica))
-                    _prenotazionePersister.GetSaver("XML").SaveUpdatePrenotazionePeriodica((PrenotazionePeriodica)p);
+        public bool SavePrenotazioneSingola(PrenotazioneSingola prenotazioneSingola)
+        {          
                 
-            }
+           _prenotazionePersister.GetSaver("XML").SavePrenotazioneSingola(prenotazioneSingola);   
+
+            return true;
+        }
+
+        public bool SavePrenotazionePeriodica(PrenotazionePeriodica prenotazionePeriodica)
+        {
+
+            _prenotazionePersister.GetSaver("XML").SavePrenotazionePeriodica(prenotazionePeriodica);
 
             return true;
         }
@@ -142,13 +136,37 @@ namespace MUSEICA.Persistence
        
         #endregion
 
-        #region Property
+        #region UpdatePrenotazioni
+
+        public bool UpdatePrenotazioneSingola(PrenotazioneSingola prenotazioneSingola)
+        {
+            _prenotazionePersister.GetRemover("XML").RemovePrenotazione(prenotazioneSingola);
+            _prenotazionePersister.GetSaver("XML").SavePrenotazioneSingola(prenotazioneSingola);
+            return true;
+        }
         
+        public bool UpdatePrenotazionePeriodica(PrenotazionePeriodica newPrenotazionePeriodica)
+        {
+            foreach(Prenotazione p in CentroSaleProve.GetIstance().Agenda.Prenotazioni)
+                if (p.IdPrenotazione == newPrenotazionePeriodica.IdPrenotazione && p.GetType() == typeof(PrenotazionePeriodica))
+                {
+                    _prenotazionePersister.GetRemover("XML").RemovePrenotazione(p);
+                    _prenotazionePersister.GetSaver("XML").SavePrenotazionePeriodica(newPrenotazionePeriodica);
+                    break;
+                }
+                    
+            return true;
+        }
 
        
         #endregion
 
 
-       
+
+
+        internal void DeletePrenotazione(Prenotazione prenotazione)
+        {
+            _prenotazionePersister.GetRemover("XML").RemovePrenotazione(prenotazione);
+        }
     }
 }

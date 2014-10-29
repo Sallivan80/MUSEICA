@@ -8,17 +8,19 @@ namespace MUSEICA.Model
 {
     public static class PrezzoProvider
     {      
-        public static float CalcolaScontoPrenotazionePeriodica(Prenotazione prenotazione,PoliticaCentro politica)
+        public static float CalcolaScontoPrenotazionePeriodica(Prenotazione prenotazione)
         {
 
-            return prenotazione.getCosto()-(prenotazione.getCosto() * politica.ScontoPrenotazionePeriodica);
+            prenotazione.Totale= prenotazione.GetTotale() - (prenotazione.GetTotale() * CentroSaleProve.GetIstance().Politica.ScontoPrenotazionePeriodica);
+            return prenotazione.GetTotale();
         }
 
        
-        public static float CalcolaScontoClienteRegistrato(Prenotazione prenotazione,PoliticaCentro politica)
+        public static float CalcolaScontoClienteRegistrato(Prenotazione prenotazione)
         {
 
-            return prenotazione.getCosto() - (prenotazione.getCosto() * politica.ScontoClienteRegistrato);
+            prenotazione.Totale= prenotazione.GetTotale() - (prenotazione.GetTotale() * CentroSaleProve.GetIstance().Politica.ScontoClienteRegistrato);
+            return prenotazione.GetTotale();
         }
 
         public static string StampaFattura()

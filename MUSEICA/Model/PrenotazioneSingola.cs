@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
@@ -12,14 +12,16 @@ namespace MUSEICA.Model
         private int _oraInizio;
         private int _oraFine;
 
-        public PrenotazioneSingola(string idPrenotazione,Cliente cliente,Sala sala,DateTime data,int oraInizio,int oraFine)           
+        public PrenotazioneSingola( string idPrenotazione,Cliente cliente, Sala sala, DateTime data, int oraInizio, int oraFine)
         {
+            
             this.IdPrenotazione = idPrenotazione;
             this.Cliente = cliente;
             this.Sala = sala;
-            this.Data = data;
+            this.DataInizio = data;
             OraInizio = oraInizio;
             OraFine = oraFine;
+            this._totale = sala.Prezzo * (_oraFine - _oraInizio);            
         }
 
         #region Property
@@ -35,12 +37,12 @@ namespace MUSEICA.Model
             set { _oraFine = value; }
         }
 
+
         #endregion
 
-        public override float getCosto()
+        public override float GetTotale()
         {
-
-            return Sala.Prezzo;
+            return _totale;        
         }
 
     }//end PrenotazioneSingola

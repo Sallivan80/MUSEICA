@@ -59,9 +59,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\AbstractController.cs" />
-    <Compile Include="Controllers\ControllerProfilo.cs" />
+    <Compile Include="Controllers\PrenotazioneController.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\PrenotazioneSingolaController.cs" />
+    <Compile Include="Controllers\PrenotazionePeriodicaController.cs" />
+    <Compile Include="Controllers\ProfiloController.cs" />
+    <Compile Include="Controllers\SalaController.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,8 +73,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Agenda.cs" />
-    <Compile Include="Model\Aggiunta.cs" />
-    <Compile Include="Model\CentroSaleProve.cs" />
+    <Compile Include="Model\CentroSaleProva.cs" />
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="Model\ClienteRegistrato.cs" />
     <Compile Include="Model\IRicercaProvider.cs" />
@@ -96,114 +99,54 @@
     <Compile Include="Persistence\SalaPersister.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ProvaView\SalaView.cs">
+    <Compile Include="View\AggiungiGiornoView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProvaView\SalaView.Designer.cs">
-      <DependentUpon>SalaView.cs</DependentUpon>
+    <Compile Include="View\AggiungiGiornoView.Designer.cs">
+      <DependentUpon>AggiungiGiornoView.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProvaView\ControlAggiungiGiorno.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ProvaView\ControlAggiungiGiorno.Designer.cs">
-      <DependentUpon>ControlAggiungiGiorno.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ProvaView\ControlAggiuntaStrumento.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ProvaView\ControlAggiuntaStrumento.Designer.cs">
-      <DependentUpon>ControlAggiuntaStrumento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ProvaView\MuseicaView.cs">
+    <Compile Include="View\ClienteView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProvaView\MuseicaView.Designer.cs">
-      <DependentUpon>MuseicaView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ProvaView\PrenotazionePeriodicaView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProvaView\PrenotazionePeriodicaView.Designer.cs">
-      <DependentUpon>PrenotazionePeriodicaView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ProvaView\PrenotazioneSingolaView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProvaView\PrenotazioneSingolaView.Designer.cs">
-      <DependentUpon>PrenotazioneSingolaView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ProvaView\ProfiloView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProvaView\ProfiloView.Designer.cs">
-      <DependentUpon>ProfiloView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ProvaView\ClienteView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProvaView\ClienteView.Designer.cs">
+    <Compile Include="View\ClienteView.Designer.cs">
       <DependentUpon>ClienteView.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProvaView\DescrizioneView.cs">
+    <Compile Include="View\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProvaView\DescrizioneView.Designer.cs">
-      <DependentUpon>DescrizioneView.cs</DependentUpon>
+    <Compile Include="View\MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProvaView\ConfermaView.cs">
+    <Compile Include="View\PrenotazionePeriodicaView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProvaView\ConfermaView.Designer.cs">
-      <DependentUpon>ConfermaView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ProvaView\StoricoView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProvaView\StoricoView.Designer.cs">
-      <DependentUpon>StoricoView.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="ProvaView\SalaView.resx">
-      <DependentUpon>SalaView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProvaView\ControlAggiungiGiorno.resx">
-      <DependentUpon>ControlAggiungiGiorno.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProvaView\ControlAggiuntaStrumento.resx">
-      <DependentUpon>ControlAggiuntaStrumento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProvaView\MuseicaView.resx">
-      <DependentUpon>MuseicaView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProvaView\PrenotazionePeriodicaView.resx">
+    <Compile Include="View\PrenotazionePeriodicaView.Designer.cs">
       <DependentUpon>PrenotazionePeriodicaView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProvaView\PrenotazioneSingolaView.resx">
+    </Compile>
+    <Compile Include="View\PrenotazioneSingolaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PrenotazioneSingolaView.Designer.cs">
       <DependentUpon>PrenotazioneSingolaView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProvaView\ProfiloView.resx">
+    </Compile>
+    <Compile Include="View\ProfiloView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ProfiloView.Designer.cs">
       <DependentUpon>ProfiloView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProvaView\ClienteView.resx">
-      <DependentUpon>ClienteView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProvaView\DescrizioneView.resx">
-      <DependentUpon>DescrizioneView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProvaView\ConfermaView.resx">
-      <DependentUpon>ConfermaView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProvaView\StoricoView.resx">
+    </Compile>
+    <Compile Include="View\SalaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SalaView.Designer.cs">
+      <DependentUpon>SalaView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\StoricoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\StoricoView.Designer.cs">
       <DependentUpon>StoricoView.cs</DependentUpon>
-    </EmbeddedResource>
+    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -236,8 +179,36 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Files\Clienti.xml" />
-    <Content Include="Files\Prenotazioni.xml" />
+    <Content Include="Files\Prenotazioni.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Files\Sale.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\AggiungiGiornoView.resx">
+      <DependentUpon>AggiungiGiornoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ClienteView.resx">
+      <DependentUpon>ClienteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PrenotazionePeriodicaView.resx">
+      <DependentUpon>PrenotazionePeriodicaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PrenotazioneSingolaView.resx">
+      <DependentUpon>PrenotazioneSingolaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ProfiloView.resx">
+      <DependentUpon>ProfiloView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SalaView.resx">
+      <DependentUpon>SalaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\StoricoView.resx">
+      <DependentUpon>StoricoView.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

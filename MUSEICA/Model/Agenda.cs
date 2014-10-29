@@ -35,21 +35,44 @@ namespace MUSEICA.Model
             return false;
         }
 
-        public List<Prenotazione> RicercaPrenotazioni()
+        public List<Prenotazione> RicercaPrenotazioni(List<Prenotazione> _prenotazioniDaFiltrare)
         {
-            return _iRicercaProvider.Ricerca(_prenotazioni);
+            return _iRicercaProvider.Ricerca(_prenotazioniDaFiltrare);
         }
-    
-        /*public bool ModificaPrenotazione(Prenotazione prenotazione)
+
+        internal PrenotazioneSingola ModificaPrenotazioneSingola(PrenotazioneSingola prenotazioneSingola)
         {
             foreach (Prenotazione p in _prenotazioni)
             {
-                if(prenotazione.IdPrenotazione.ToLower().Equals(p.IdPrenotazione.ToLower()))
+                if (p.IdPrenotazione==prenotazioneSingola.IdPrenotazione && p.GetType()==typeof(PrenotazioneSingola))
                 {
-                    _prenotazioni = prenotazione;
+                    (p as PrenotazioneSingola).DataInizio= prenotazioneSingola.DataInizio;
+                    (p as PrenotazioneSingola).OraInizio = prenotazioneSingola.OraInizio;
+                    (p as PrenotazioneSingola).OraFine = prenotazioneSingola.OraFine;
+                    (p as PrenotazioneSingola).Totale = prenotazioneSingola.GetTotale();
+
+                    return p as PrenotazioneSingola;
                 }
+
+
             }
-        }*/
+            return null;
+        }
+
+        internal PrenotazionePeriodica ModificaPrenotazionePeriodica(PrenotazioneSingola newPrenotazioneSingola,PrenotazioneSingola oldPrenotazioneSingola)
+        {
+            foreach (Prenotazione p in CentroSaleProve.GetIstance().Agenda.Prenotazioni)
+                if (p.IdPrenotazione == oldPrenotazioneSingola.IdPrenotazione && p.GetType()==typeof(PrenotazionePeriodica))
+                    foreach (PrenotazioneSingola ps in (p as PrenotazionePeriodica).Prenotazioni)
+                        if (ps.DataInizio == oldPrenotazioneSingola.DataInizio)
+                        {
+                            ps.DataInizio = newPrenotazioneSingola.DataInizio;
+                            ps.OraFine = newPrenotazioneSingola.OraFine;
+                            ps.OraInizio = newPrenotazioneSingola.OraInizio;
+                            return p as PrenotazionePeriodica;
+                        }
+            return null;
+        }
 
         #region Property
 
@@ -70,5 +93,7 @@ namespace MUSEICA.Model
 
         #endregion
 
+
+       
     }
 }
