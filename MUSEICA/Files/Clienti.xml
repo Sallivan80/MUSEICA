@@ -2,7 +2,7 @@
 <Clienti>
   <ClienteRegistrato>
     <IdTessera>000000000001</IdTessera>
-    <ScadenzaTessera>14/10/2014 00:00:00</ScadenzaTessera>
+    <ScadenzaTessera>14/06/2000 00.00.00</ScadenzaTessera>
     <Nome>Francesco</Nome>
     <Cognome>Zobel</Cognome>
     <Telefono>3331676789</Telefono>
@@ -10,7 +10,7 @@
   </ClienteRegistrato>
   <ClienteRegistrato>
     <IdTessera>000000000002</IdTessera>
-    <ScadenzaTessera>30/10/2014 13:45:40</ScadenzaTessera>
+    <ScadenzaTessera>30/10/2014 13.45.40</ScadenzaTessera>
     <Nome>Alessandro</Nome>
     <Cognome>Stega</Cognome>
     <Telefono>333458978</Telefono>
@@ -18,18 +18,10 @@
   </ClienteRegistrato>
   <ClienteRegistrato>
     <IdTessera>000000000003</IdTessera>
-    <ScadenzaTessera>30/10/2014 13:50:02</ScadenzaTessera>
+    <ScadenzaTessera>30/10/2014 13.50.02</ScadenzaTessera>
     <Nome>Nicolas</Nome>
     <Cognome>Montesi</Cognome>
     <Telefono>3334012070</Telefono>
     <Indirizzo>via borgo 99</Indirizzo>
-  </ClienteRegistrato>
-  <ClienteRegistrato>
-    <IdTessera>000690653049</IdTessera>
-    <ScadenzaTessera>25/12/2014 15:27:21</ScadenzaTessera>
-    <Nome>Francesco</Nome>
-    <Cognome>Lattanzi</Cognome>
-    <Telefono>333456488</Telefono>
-    <Indirizzo>via senza una gioia</Indirizzo>
   </ClienteRegistrato>
 </Clienti>

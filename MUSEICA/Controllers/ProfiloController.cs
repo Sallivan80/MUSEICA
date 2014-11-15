@@ -81,5 +81,19 @@ namespace MUSEICA.Controllers
             _salaSelected = _controllerSala.FindSalaByName(nomeSala);
             _controllerSala.EliminaSala(_salaSelected);
         }
+
+        internal void SetParameters(string nome, string indirizzo, string email, string telefono, string disdetta, string scontoClienteRegistrato, string scontoPrenPeriodica)
+        {
+            Profilo profilo = new Profilo(nome, indirizzo, telefono, email);
+            PoliticaCentro politica = new PoliticaCentro(Convert.ToSingle(scontoClienteRegistrato)/100, Convert.ToSingle(scontoPrenPeriodica)/100, Convert.ToInt32(disdetta));
+            DialogResult result = DialogResult.No;
+            result = MessageBox.Show("Vuoi salvare le modifiche?", "Conferma Modifiche", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                CentroSaleProve.GetIstance().Profilo = profilo;
+                CentroSaleProve.GetIstance().Politica = politica;
+                MessageBox.Show("Modifiche salvate con successo!");
+            }
+        }
     }
 }

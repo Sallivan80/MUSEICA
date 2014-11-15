@@ -47,8 +47,11 @@ namespace MUSEICA.View
             }
             else
                 MessageBox.Show("ERRORE: orario già occupato");
-               
+        }
 
+        private void _annullaButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
 

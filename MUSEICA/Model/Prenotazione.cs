@@ -51,6 +51,7 @@ namespace MUSEICA.Model
 
         public float Totale
         {
+            get { return _totale; }
             set { _totale = value; }
         }
        

@@ -48,11 +48,11 @@ namespace MUSEICA.Model
             switch (nome_tipologia)
             {
                 case "Registrazione":
-                    return new TipologiaSala(nome_tipologia, "descrizione strumentistica");
+                    return new TipologiaSala(nome_tipologia, "E' uno spazio progettato per l'acquisizione ed editing del suono. In uno studio di registrazione è possibile registrare band musicali, artisti solisti, show radiofonici, suoni per colonne sonore, spot pubblicitari.");
                 case "Mixaggio":
-                    return new TipologiaSala(nome_tipologia, "descrizione strumentistica");
+                    return new TipologiaSala(nome_tipologia, "E' una sala che dispone di apparecchiature per manipolare i suoni e mixarli insieme");
                 case "Prova":
-                    return new TipologiaSala(nome_tipologia, "descrizione strumentistica");
+                    return new TipologiaSala(nome_tipologia, "E' una sala dove e' presente una vasta gamma di strumenti musicali: batteria, amplificatori per basso e chitarra, con wattaggi diversi, microfoni,aste e cavistica necessaria");
                 default:
                     throw new ArgumentException(nome_tipologia + " non consentita ");
             }

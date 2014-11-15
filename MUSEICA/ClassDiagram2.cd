@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MUSEICA.Controllers.ClienteController" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAEAAAAAIAAQAAAAAAAAAQ=</HashCode>
+      <FileName>Controllers\ClienteController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.Controllers.MainController" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAEAAAAAAAAAAAAAAQAEACAgAAAAAAAAIgACAAAAAAA=</HashCode>
+      <FileName>Controllers\MainController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.Controllers.PrenotazioneController" Collapsed="true">
+    <Position X="4" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAIAAAAAAAAAACIAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\PrenotazioneController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.Controllers.PrenotazionePeriodicaController" Collapsed="true">
+    <Position X="2.25" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAQEABAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\PrenotazionePeriodicaController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.Controllers.PrenotazioneSingolaController" Collapsed="true">
+    <Position X="5.25" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAIAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\PrenotazioneSingolaController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.Controllers.ProfiloController" Collapsed="true">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEAAAAAAAAAAAAAAAAAAAIAQIAAAAQAAAAAiAAAAQA=</HashCode>
+      <FileName>Controllers\ProfiloController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.Controllers.SalaController" Collapsed="true">
+    <Position X="9.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAEAAAAAAAU=</HashCode>
+      <FileName>Controllers\SalaController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.Form1" Collapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.Program" Collapsed="true">
+    <Position X="17.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.Model.Agenda" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAIAABAACEAgCAAAAAAAgAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Agenda.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.Model.CentroSaleProve" Collapsed="true">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAABAIAAAAAAAAAaAACIAAAAAAQABKABAAgEAEEAAAE=</HashCode>
+      <FileName>Model\CentroSaleProva.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.Model.Cliente" Collapsed="true">
+    <Position X="5.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAIAAAAgAAAAAEACAABAAAAAgAAAAAAAAAAgEAAAA=</HashCode>
+      <FileName>Model\Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.Model.ClienteRegistrato" Collapsed="true">
+    <Position X="5.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAMAAAAAAAAEAAAAAAAAAIAAAAAAAE=</HashCode>
+      <FileName>Model\ClienteRegistrato.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.Model.PoliticaCentro" Collapsed="true">
+    <Position X="15.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAABAAAAAAQAAAAAAAAAAQBAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Model\PoliticaCentro.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.Model.Prenotazione" Collapsed="true">
+    <Position X="1.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAJAAIAAiAAAAAAACAAAAAAAAAQAIAAAIAAIAAAAA=</HashCode>
+      <FileName>Model\Prenotazione.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.Model.PrenotazionePeriodica" Collapsed="true">
+    <Position X="0.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAABAAAAACAAAAAAAAgAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\PrenotazionePeriodica.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.Model.PrenotazioneSingola" Collapsed="true">
+    <Position X="2.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAhAAAAAAAAAAAAAAAQAACAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Model\PrenotazioneSingola.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.Model.PrezzoProvider" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAQAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\PrezzoProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.Model.Profilo" Collapsed="true">
+    <Position X="14" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAICAAAAAAASAAAAAAAAgAAAAAAAAAAgAAAAE=</HashCode>
+      <FileName>Model\Profilo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.Model.RicercaCliente" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Model\RicercaCliente.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MUSEICA.Model.RicercaData" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAgAA=</HashCode>
+      <FileName>Model\RicercaData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MUSEICA.Model.RicercaSala" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Model\RicercaSala.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MUSEICA.Model.RicercaTipo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Model\RicercaTipo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MUSEICA.Model.Sala" Collapsed="true">
+    <Position X="15.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QUAAAAAAAQAAAAQEACAAAAAAAAAgAgAAIAAAAAAAAAQ=</HashCode>
+      <FileName>Model\Sala.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.Model.TipologiaSalaFactory" Collapsed="true">
+    <Position X="14" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAEAAAAAEAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Model\TipologiaSalaFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.Persistence.ClientePersister" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAACAAAAAAABgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Persistence\ClientePersister.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MUSEICA.Persistence.DataManager" Collapsed="true">
+    <Position X="21" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAAAAACABAAAIAAAMAIAAAIAIACAIEBIAAAAAAAgAAA=</HashCode>
+      <FileName>Persistence\DataManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.Persistence.PrenotazionePersister" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAABAAACAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Persistence\PrenotazionePersister.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MUSEICA.Persistence.SalaPersister" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAACAAAAAAABAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Persistence\SalaPersister.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MUSEICA.Properties.Settings" Collapsed="true">
+    <Position X="21" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.View.AggiungiGiornoView" Collapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAQIAAAACGAAAIgAACAABACAAAAAAAAACAwAAEYAkA=</HashCode>
+      <FileName>View\AggiungiGiornoView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.View.ClienteView" Collapsed="true">
+    <Position X="19.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BYAAQAAAQCAAUAIQAACABEECAAgTCIACASAAAIAAAIE=</HashCode>
+      <FileName>View\ClienteView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.View.MainView" Collapsed="true">
+    <Position X="14" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DRiAACsBACAIAbAAAICAIAgCAggaRYIABmAAA0iIEAA=</HashCode>
+      <FileName>View\MainView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.View.PrenotazionePeriodicaView" Collapsed="true">
+    <Position X="17.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAMAaASBACKQsBQyAACIAABCAAkAALEAAyAAoAUAEKA=</HashCode>
+      <FileName>View\PrenotazionePeriodicaView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.View.PrenotazioneSingolaView" Collapsed="true">
+    <Position X="21" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAMAeAQBQSOAmA6SAACICBBCAUkAGIEAAyQUAAEAAqE=</HashCode>
+      <FileName>View\PrenotazioneSingolaView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.View.ProfiloView" Collapsed="true">
+    <Position X="15.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EYAAgQAwACIQEBAAEAngBAIWIEAAEaQiAQmAUW0QiSA=</HashCode>
+      <FileName>View\ProfiloView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.View.SalaView" Collapsed="true">
+    <Position X="19.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KAAwQAAAgCKAEBMQAACAAAACAAkACAACAyAAgAAAAIA=</HashCode>
+      <FileName>View\SalaView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MUSEICA.View.StoricoView" Collapsed="true">
+    <Position X="12.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACEAACAAABAAAACAACACAAAAAIAAAAACAEAAAAA=</HashCode>
+      <FileName>View\StoricoView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="MUSEICA.Model.IRicercaProvider" Collapsed="true">
+    <Position X="15.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Model\IRicercaProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MUSEICA.Model.ITipologiaSala" Collapsed="true">
+    <Position X="14" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\ITipologiaSala.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MUSEICA.Persistence.IClientePersister" Collapsed="true">
+    <Position X="14" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAACAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Persistence\IClientePersister.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MUSEICA.Persistence.IClienteRemover" Collapsed="true">
+    <Position X="15.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Persistence\IClientePersister.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MUSEICA.Persistence.IClienteLoader" Collapsed="true">
+    <Position X="12.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Persistence\IClientePersister.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MUSEICA.Persistence.IClienteSaver" Collapsed="true">
+    <Position X="17.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Persistence\IClientePersister.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MUSEICA.Persistence.IPrenotazionePersister" Collapsed="true">
+    <Position X="21" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAACAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Persistence\IPrenotazionePersister.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MUSEICA.Persistence.IPrenotazioneLoader" Collapsed="true">
+    <Position X="19.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Persistence\IPrenotazionePersister.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MUSEICA.Persistence.IPrenotazioneSaver" Collapsed="true">
+    <Position X="14" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Persistence\IPrenotazionePersister.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MUSEICA.Persistence.IPrenotazioneRemover" Collapsed="true">
+    <Position X="12.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Persistence\IPrenotazionePersister.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MUSEICA.Persistence.ISalaPersister" Collapsed="true">
+    <Position X="19.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAACAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Persistence\ISalaPersister.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MUSEICA.Persistence.ISalaRemover" Collapsed="true">
+    <Position X="21" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Persistence\ISalaPersister.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MUSEICA.Persistence.ISalaLoader" Collapsed="true">
+    <Position X="17.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Persistence\ISalaPersister.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MUSEICA.Persistence.ISalaSaver" Collapsed="true">
+    <Position X="12.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Persistence\ISalaPersister.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

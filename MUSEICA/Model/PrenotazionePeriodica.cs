@@ -49,10 +49,5 @@ namespace MUSEICA.Model
             return _totale;
         }
 
-
-      
-           
-                
-
     }//end PrenotazionePeriodica
 }

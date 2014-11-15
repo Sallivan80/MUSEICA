@@ -26,11 +26,10 @@ namespace MUSEICA.Controllers
             if (CheckPrenotazione(prenotazionePeriodica))
             {
                 DialogResult result = DialogResult.No;
-                PrezzoProvider.CalcolaScontoClienteRegistrato(prenotazionePeriodica);
                 PrezzoProvider.CalcolaScontoPrenotazionePeriodica(prenotazionePeriodica);
                 string resoconto = String.Format(" IdPrenotazione: {0} \r\n Cliente: {1} {2} \r\n Sala: {3} \r\n DataInizio:{4}  \r\n DatFine:{5} \r\n Totale: {6} €",
                     prenotazionePeriodica.IdPrenotazione, prenotazionePeriodica.Cliente.Nome, prenotazionePeriodica.Cliente.Cognome, prenotazionePeriodica.Sala.NomeSala, prenotazionePeriodica.DataInizio.ToShortDateString(),
-                    prenotazionePeriodica.DataFine, prenotazionePeriodica.GetTotale());
+                    prenotazionePeriodica.DataFine, prenotazionePeriodica.Totale);
                 result = MessageBox.Show(resoconto, "Conferma Prenotazione", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {

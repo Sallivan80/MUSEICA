@@ -29,6 +29,10 @@ namespace MUSEICA.View
             base.OnLoad(e);
             this.Text = "Aggiungi Nuova Prenotazione Periodica";
             _buttonOK.Text = "Aggiungi";
+            _textBoxNomeCliente.Enabled = false;
+            _textBoxCognomeCliente.Enabled = false;
+            _textBoxIndirizzoCliente.Enabled = false;
+            _textBoxTelefono.Enabled = false;
             AggiungiModeComponents();
 
 
@@ -134,6 +138,8 @@ namespace MUSEICA.View
                 PrenotazionePeriodica prenotazionePeriodica = new PrenotazionePeriodica(_idPrenotazione, _selectedClienteRegistrato, _selectedSala, _dateTimePickerInizioPeriodo.Value, _dateTimePickerFinePeriodo.Value, new List<PrenotazioneSingola>());
                 _controllerPrenotazione.AggiungiPrenotazionePeriodica(prenotazionePeriodica,_prenotazioniSingole);
             }
+
+            this.Close();
         }
 
         private bool CheckParameters()
@@ -141,6 +147,11 @@ namespace MUSEICA.View
             if (_prenotazioniSingole.Count == 0)
                 return false;
             return true;
+        }
+
+        private void _buttonAnnulla_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
 

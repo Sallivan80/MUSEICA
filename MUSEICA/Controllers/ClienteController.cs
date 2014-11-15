@@ -19,7 +19,7 @@ namespace MUSEICA.Controllers
              string[] splitString = nomeCognomeCliente.Split(new Char[] { ' ', ',', '.', ':', '\t' });
              var query = (from cliente in CentroSaleProve.GetIstance().Clienti
                           where cliente.GetType() == typeof(ClienteRegistrato)
-                          && cliente.Nome == splitString[0] && cliente.Cognome == splitString[1]
+                          && cliente.Nome == splitString[0].Trim() && cliente.Cognome == splitString[1].Trim()
                           select cliente);      
 
              return query.ToList().Count==0 ? null : query.First() as ClienteRegistrato;
@@ -27,7 +27,7 @@ namespace MUSEICA.Controllers
 
         internal bool AggiungiClienteResitrato(ClienteRegistrato cliente)
         {
-            if (FindClienteRegistratoByName(cliente.Nome + " " + cliente.Cognome) == null)
+            if (FindClienteRegistratoByName(cliente.Nome.Trim() + " " + cliente.Cognome.Trim()) == null)
             {
                 ShowConfirm("Aggiungi",cliente);              
                 return true;

@@ -189,6 +189,8 @@ namespace MUSEICA.View
                 else if (_idPrenotazione.StartsWith("P"))
                     ModificaPrenotazionePeriodica(newPrenotazioneSingola,_selectedPrenotazione);
             }
+
+            this.Close();
         }
 
         private void ModificaPrenotazionePeriodica(PrenotazioneSingola newPrenotazioneSingola, PrenotazioneSingola oldPrenotazioneSingola)
@@ -235,6 +237,11 @@ namespace MUSEICA.View
             }
             return true;
                 
+        }
+
+        private void _buttonAnnulla_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

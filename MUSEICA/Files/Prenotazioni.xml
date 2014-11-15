@@ -150,4 +150,98 @@
       <Totale>5</Totale>
     </PrenotazioneSingola>
   </PrenotazionePeriodica>
+  <PrenotazionePeriodica>
+    <IdPrenotazione>P000150992775</IdPrenotazione>
+    <Cliente>
+      <IdTessera>000000000001</IdTessera>
+      <ScadenzaTessera>14/06/2000</ScadenzaTessera>
+      <Nome>Francesco</Nome>
+      <Cognome>Zobel</Cognome>
+      <Telefono>3331676789</Telefono>
+      <Indirizzo>via mura porta galliera 9</Indirizzo>
+    </Cliente>
+    <Sala>
+      <IdSala>0002</IdSala>
+      <Indirizzo>via borgo di san pietro 99</Indirizzo>
+      <NomeSala>Sala 2</NomeSala>
+      <Tipologia>Registrazione</Tipologia>
+      <Prezzo>5</Prezzo>
+    </Sala>
+    <DataInizio>15/11/2014</DataInizio>
+    <DataFine>07/12/2014</DataFine>
+    <PrenotazioneSingola>
+      <DataInizio>15/11/2014</DataInizio>
+      <OraInizio>9</OraInizio>
+      <OraFine>11</OraFine>
+      <Totale>10</Totale>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <DataInizio>22/11/2014</DataInizio>
+      <OraInizio>9</OraInizio>
+      <OraFine>11</OraFine>
+      <Totale>10</Totale>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <DataInizio>29/11/2014</DataInizio>
+      <OraInizio>9</OraInizio>
+      <OraFine>11</OraFine>
+      <Totale>10</Totale>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <DataInizio>06/12/2014</DataInizio>
+      <OraInizio>9</OraInizio>
+      <OraFine>11</OraFine>
+      <Totale>10</Totale>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <DataInizio>19/11/2014</DataInizio>
+      <OraInizio>9</OraInizio>
+      <OraFine>11</OraFine>
+      <Totale>10</Totale>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <DataInizio>26/11/2014</DataInizio>
+      <OraInizio>9</OraInizio>
+      <OraFine>11</OraFine>
+      <Totale>10</Totale>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <DataInizio>03/12/2014</DataInizio>
+      <OraInizio>9</OraInizio>
+      <OraFine>11</OraFine>
+      <Totale>10</Totale>
+    </PrenotazioneSingola>
+  </PrenotazionePeriodica>
+  <PrenotazionePeriodica>
+    <IdPrenotazione>P000903668906</IdPrenotazione>
+    <Cliente>
+      <IdTessera>000000000001</IdTessera>
+      <ScadenzaTessera>14/06/2000</ScadenzaTessera>
+      <Nome>Francesco</Nome>
+      <Cognome>Zobel</Cognome>
+      <Telefono>3331676789</Telefono>
+      <Indirizzo>via mura porta galliera 9</Indirizzo>
+    </Cliente>
+    <Sala>
+      <IdSala>0001</IdSala>
+      <Indirizzo>via mura di porta galliera 10</Indirizzo>
+      <NomeSala>Sala 1</NomeSala>
+      <Tipologia>Prova</Tipologia>
+      <Prezzo>4</Prezzo>
+    </Sala>
+    <DataInizio>15/11/2014</DataInizio>
+    <DataFine>26/11/2014</DataFine>
+    <PrenotazioneSingola>
+      <DataInizio>15/11/2014</DataInizio>
+      <OraInizio>9</OraInizio>
+      <OraFine>11</OraFine>
+      <Totale>8</Totale>
+    </PrenotazioneSingola>
+    <PrenotazioneSingola>
+      <DataInizio>22/11/2014</DataInizio>
+      <OraInizio>9</OraInizio>
+      <OraFine>11</OraFine>
+      <Totale>8</Totale>
+    </PrenotazioneSingola>
+  </PrenotazionePeriodica>
 </Prenotazioni>

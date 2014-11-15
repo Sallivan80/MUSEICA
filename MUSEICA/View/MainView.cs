@@ -18,7 +18,6 @@ namespace MUSEICA.View
         MainController _controller;
         private List<Prenotazione> _prenotazioniCercate;
         private List<Prenotazione> _prenotazioniFiltrate;
-        private PrenotazioneSingola _prenotazioneSingolaSelected;
         private PrenotazioneSingolaController _controllerPrenotazione=new PrenotazioneSingolaController();
         public MainView()
         {
@@ -193,6 +192,11 @@ namespace MUSEICA.View
                 _labelRisultati.Text = "Risultati: 0 corrispondenze trovate";
             else
                  SetValueListBoxRisultati(_prenotazioniCercate);
+        }
+
+        private void esciToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }     
        
     }

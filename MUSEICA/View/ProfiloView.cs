@@ -169,6 +169,19 @@ namespace MUSEICA.View
                 _controller.DeleteSala(_listBoxSale.SelectedItem.ToString());
         }
 
+        private void _buttonOK_Click(object sender, EventArgs e)
+        {
+            if(this._checkBoxModificheProfilo.Checked || this._comboBoxModifichePolitica.Checked)
+                _controller.SetParameters(this._textBoxNomeCentroSaleProva.Text, this._textBoxIndirizzo.Text, this._textBoxEmail.Text, this._textBoxTelefono.Text,
+                                            this._textBoxPreavvisoDisdetta.Text, this._comboBoxScontoClienteRegistrato.SelectedItem.ToString(), this._comboBoxScontoPrenotazionePeriodica.SelectedItem.ToString());
+            this.Close();
+        }
+
+        private void _buttonAnnulla_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
 
     }
 }

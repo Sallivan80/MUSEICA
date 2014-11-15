@@ -118,6 +118,11 @@ namespace MUSEICA.View
             return true;
         }
 
+        private void _buttonAnnulla_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
        
 
       
