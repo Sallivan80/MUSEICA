@@ -16,9 +16,6 @@ namespace MUSEICA.Controllers
       
         public PrenotazioneSingolaController() : base() { }    
 
-
-       
-
         internal bool AggiungiPrenotazioneSingola(PrenotazioneSingola prenotazioneSingola)
         {
             if (CheckPrenotazione(prenotazioneSingola))

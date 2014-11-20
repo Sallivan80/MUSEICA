@@ -90,6 +90,15 @@ namespace MUSEICA.Controllers
                 case "PrenotazionePeriodicaView":
                      ShowView(new PrenotazionePeriodicaView());
                     break;
+                case "Registrazione":
+                    ShowView(new DescrizioneView("Registrazione"));
+                    break;
+                case "Mixaggio":
+                    ShowView(new DescrizioneView("Mixaggio"));
+                    break;
+                case "Prova":
+                    ShowView(new DescrizioneView("Prova"));
+                    break;
                 default:
                     throw new ArgumentException();
             }

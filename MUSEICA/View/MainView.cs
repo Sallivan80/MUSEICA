@@ -197,6 +197,21 @@ namespace MUSEICA.View
         private void esciToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void registrazioneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this._controller.ChangeView("Registrazione", null, null);
+        }
+
+        private void mixaggioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this._controller.ChangeView("Mixaggio", null, null);
+        }
+
+        private void provaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this._controller.ChangeView("Prova", null, null);
         }     
        
     }

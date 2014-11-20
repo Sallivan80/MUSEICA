@@ -111,6 +111,12 @@
     <Compile Include="View\ClienteView.Designer.cs">
       <DependentUpon>ClienteView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\DescrizioneView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DescrizioneView.Designer.cs">
+      <DependentUpon>DescrizioneView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ClienteView.resx">
       <DependentUpon>ClienteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DescrizioneView.resx">
+      <DependentUpon>DescrizioneView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>

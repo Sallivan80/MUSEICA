@@ -92,7 +92,7 @@
             // esciToolStripMenuItem
             // 
             this.esciToolStripMenuItem.Name = "esciToolStripMenuItem";
-            this.esciToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.esciToolStripMenuItem.Size = new System.Drawing.Size(94, 22);
             this.esciToolStripMenuItem.Text = "Esci";
             this.esciToolStripMenuItem.Click += new System.EventHandler(this.esciToolStripMenuItem_Click);
             // 
@@ -170,20 +170,23 @@
             // registrazioneToolStripMenuItem
             // 
             this.registrazioneToolStripMenuItem.Name = "registrazioneToolStripMenuItem";
-            this.registrazioneToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.registrazioneToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.registrazioneToolStripMenuItem.Text = "Registrazione";
+            this.registrazioneToolStripMenuItem.Click += new System.EventHandler(this.registrazioneToolStripMenuItem_Click);
             // 
             // mixaggioToolStripMenuItem
             // 
             this.mixaggioToolStripMenuItem.Name = "mixaggioToolStripMenuItem";
-            this.mixaggioToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.mixaggioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.mixaggioToolStripMenuItem.Text = "Mixaggio";
+            this.mixaggioToolStripMenuItem.Click += new System.EventHandler(this.mixaggioToolStripMenuItem_Click);
             // 
             // provaToolStripMenuItem
             // 
             this.provaToolStripMenuItem.Name = "provaToolStripMenuItem";
-            this.provaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.provaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.provaToolStripMenuItem.Text = "Prova";
+            this.provaToolStripMenuItem.Click += new System.EventHandler(this.provaToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -204,9 +207,9 @@
             this._groupBoxRicercaPrenotazioni.Controls.Add(this._comboBoxCriterioRicerca);
             this._groupBoxRicercaPrenotazioni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this._groupBoxRicercaPrenotazioni.Location = new System.Drawing.Point(467, 32);
-            this._groupBoxRicercaPrenotazioni.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._groupBoxRicercaPrenotazioni.Margin = new System.Windows.Forms.Padding(2);
             this._groupBoxRicercaPrenotazioni.Name = "_groupBoxRicercaPrenotazioni";
-            this._groupBoxRicercaPrenotazioni.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._groupBoxRicercaPrenotazioni.Padding = new System.Windows.Forms.Padding(2);
             this._groupBoxRicercaPrenotazioni.Size = new System.Drawing.Size(318, 238);
             this._groupBoxRicercaPrenotazioni.TabIndex = 3;
             this._groupBoxRicercaPrenotazioni.TabStop = false;
@@ -217,7 +220,7 @@
             this._comboBoxSalaTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this._comboBoxSalaTipo.FormattingEnabled = true;
             this._comboBoxSalaTipo.Location = new System.Drawing.Point(160, 74);
-            this._comboBoxSalaTipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._comboBoxSalaTipo.Margin = new System.Windows.Forms.Padding(2);
             this._comboBoxSalaTipo.Name = "_comboBoxSalaTipo";
             this._comboBoxSalaTipo.Size = new System.Drawing.Size(131, 21);
             this._comboBoxSalaTipo.TabIndex = 33;
@@ -294,7 +297,7 @@
             this._listBoxRisultatiRicerca.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this._listBoxRisultatiRicerca.FormattingEnabled = true;
             this._listBoxRisultatiRicerca.Location = new System.Drawing.Point(9, 299);
-            this._listBoxRisultatiRicerca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._listBoxRisultatiRicerca.Margin = new System.Windows.Forms.Padding(2);
             this._listBoxRisultatiRicerca.Name = "_listBoxRisultatiRicerca";
             this._listBoxRisultatiRicerca.Size = new System.Drawing.Size(672, 277);
             this._listBoxRisultatiRicerca.Sorted = true;
@@ -338,9 +341,9 @@
             this._groupBoxAgenda.Controls.Add(this.panel1);
             this._groupBoxAgenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this._groupBoxAgenda.Location = new System.Drawing.Point(10, 32);
-            this._groupBoxAgenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._groupBoxAgenda.Margin = new System.Windows.Forms.Padding(2);
             this._groupBoxAgenda.Name = "_groupBoxAgenda";
-            this._groupBoxAgenda.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._groupBoxAgenda.Padding = new System.Windows.Forms.Padding(2);
             this._groupBoxAgenda.Size = new System.Drawing.Size(430, 238);
             this._groupBoxAgenda.TabIndex = 4;
             this._groupBoxAgenda.TabStop = false;
@@ -350,7 +353,7 @@
             // 
             this.panel1.Controls.Add(this.monthCalendar1);
             this.panel1.Location = new System.Drawing.Point(6, 24);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(416, 190);
             this.panel1.TabIndex = 7;
@@ -358,7 +361,7 @@
             // monthCalendar1
             // 
             this.monthCalendar1.Location = new System.Drawing.Point(3, 3);
-            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 0;
             this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
@@ -377,7 +380,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this._buttonModifica);
             this.Controls.Add(this.button2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainView";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "MainView";
